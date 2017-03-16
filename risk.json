@@ -1,0 +1,593 @@
+{
+  "default_expr": {
+    "vals": [
+      "age"
+    ],
+    "pipe": [
+      "sum",
+      "cross-entropy",
+      "sigmoid"
+    ]
+  },
+  "studies": {
+    "olmsted": {
+      "n": 60666,
+      "ethnicities": [
+        "White",
+        "German",
+        "Norwegian",
+        "Irish",
+        "English"
+      ],
+      "age": {
+        "30-39": 1.89549249600724,
+        "40-49": 2.73716568581642,
+        "50-59": 11.326078497068,
+        "60-69": 30,
+        "70-79": 94.5570698594758,
+        "80+": 73.8103215395919,
+        "_denominator": 100000
+      },
+      "expr": [
+        {
+          "key": "age",
+          "type": "map",
+          "take": 1
+        }
+      ],
+      "ref": [
+        {
+          "id": "http://zotero.org/users/843109/items/WZEDUEDB",
+          "type": "article-journal",
+          "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
+          "container-title": "Ophthalmology",
+          "page": "882 - 886",
+          "volume": "108",
+          "issue": "5",
+          "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
+          "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
+          "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
+          "ISSN": "0161-6420",
+          "author": [
+            {
+              "family": "Schoff",
+              "given": "Erik O."
+            },
+            {
+              "family": "Hattenhauer",
+              "given": "Matthew G."
+            },
+            {
+              "family": "Ing",
+              "given": "Helen H."
+            },
+            {
+              "family": "Hodge",
+              "given": "David O."
+            },
+            {
+              "family": "Kennedy",
+              "given": "Robert H."
+            },
+            {
+              "family": "Herman",
+              "given": "David C."
+            },
+            {
+              "family": "Johnson",
+              "given": "Douglas H."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2001"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "http://zotero.org/users/843109/items/JC8J5XII",
+          "type": "report",
+          "title": "Census 2000",
+          "publisher-place": "United States of America",
+          "genre": "Census",
+          "event-place": "United States of America",
+          "URL": "https://www.census.gov/main/www/cen2000.html",
+          "author": [
+            {
+              "family": "United States Census Bureau",
+              "given": ""
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2000"
+              ]
+            ]
+          },
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                16
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "framingham": {
+      "n": 2631,
+      "ethnicities": [
+        "White",
+        "England",
+        "Scotland",
+        "Wales",
+        "Ireland",
+        "Italy",
+        "Canadian",
+        "Europe"
+      ],
+      "age": {
+        "all": 1.29228430254656024300,
+        "<65": 0.94066570188133140300,
+        "65-74": 1.87573270808909730300,
+        "75+": 1.26262626262626262600,
+        "_denominator": 100
+      },
+      "agenda": [
+        {
+          "gender": "male",
+          "age": "all",
+          "n": 1107,
+          "oags": 21,
+          "meth2_prevalence": 0.019,
+          "meth3_prevalence": 0.022
+        },
+        {
+          "gender": "male",
+          "age": "52-64",
+          "n": 601,
+          "oags": 6,
+          "meth2_prevalence": 0.01,
+          "meth3_prevalence": 0.012
+        },
+        {
+          "gender": "male",
+          "age": "65-74",
+          "n": 346,
+          "oags": 9,
+          "meth2_prevalence": 0.026,
+          "meth3_prevalence": 0.029
+        },
+        {
+          "gender": "male",
+          "age": "75-85",
+          "n": 160,
+          "oags": 6,
+          "meth2_prevalence": 0.038,
+          "meth3_prevalence": 0.056
+        },
+        {
+          "gender": "female",
+          "age": "all",
+          "n": 1524,
+          "oags": 10,
+          "meth2_prevalence": 0.007,
+          "meth3_prevalence": 0.011
+        },
+        {
+          "gender": "female",
+          "age": "52-64",
+          "n": 781,
+          "oags": 3,
+          "meth2_prevalence": 0.004,
+          "meth3_prevalence": 0.005
+        },
+        {
+          "gender": "female",
+          "age": "65-74",
+          "n": 507,
+          "oags": 2,
+          "meth2_prevalence": 0.004,
+          "meth3_prevalence": 0.008
+        },
+        {
+          "gender": "female",
+          "age": "75-85",
+          "n": 236,
+          "oags": 5,
+          "meth2_prevalence": 0.021,
+          "meth3_prevalence": 0.039
+        },
+        {
+          "gender": "both",
+          "age": "all",
+          "n": 2631,
+          "oags": 31,
+          "meth2_prevalence": 0.012,
+          "meth3_prevalence": 0.016
+        },
+        {
+          "gender": "both",
+          "age": "52-64",
+          "n": 1382,
+          "oags": 9,
+          "meth2_prevalence": 0.007,
+          "meth3_prevalence": 0.008
+        },
+        {
+          "gender": "both",
+          "age": "65-74",
+          "n": 853,
+          "oags": 11,
+          "meth2_prevalence": 0.013,
+          "meth3_prevalence": 0.017
+        },
+        {
+          "gender": "both",
+          "age": "75-85",
+          "n": 396,
+          "oags": 11,
+          "meth2_prevalence": 0.028,
+          "meth3_prevalence": 0.047
+        }
+      ],
+      "expr": [
+        {
+          "key": "agenda",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "take": 1,
+          "extract": "meth3_prevalence"
+        }
+      ],
+      "ref": [
+        {
+          "id": "http://zotero.org/users/843109/items/GB5I6PVS",
+          "type": "article-journal",
+          "title": "The Framingham eye study: Introduction to the monograph",
+          "container-title": "Survey of Ophthalmology",
+          "page": "614-620",
+          "volume": "24",
+          "issue": "6",
+          "abstract": "This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.",
+          "URL": "http://dx.doi.org/10.1016/0039-6257(80)90122-8",
+          "DOI": "10.1016/0039-6257(80)90122-8",
+          "ISSN": "0039-6257",
+          "author": [
+            {
+              "family": "Krueger",
+              "given": "Dean E"
+            },
+            {
+              "family": "Milton",
+              "given": "Roy C"
+            },
+            {
+              "family": "Maunder",
+              "given": "Lucinda R"
+            }
+          ],
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                14
+              ]
+            ]
+          }
+        },
+        {
+          "id": "http://zotero.org/users/843109/items/KHCNRZE3",
+          "type": "article-journal",
+          "title": "Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.",
+          "container-title": "American journal of epidemiology",
+          "page": "769-776",
+          "volume": "111",
+          "issue": "6",
+          "ISSN": "0002-9262 0002-9262",
+          "note": "PMID: 7386451",
+          "journalAbbreviation": "Am J Epidemiol",
+          "language": "eng",
+          "author": [
+            {
+              "family": "Kahn",
+              "given": "H. A."
+            },
+            {
+              "family": "Milton",
+              "given": "R. C."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "1980",
+                6
+              ]
+            ]
+          },
+          "PMID": "7386451"
+        },
+        {
+          "id": "http://zotero.org/users/843109/items/X9TI96I9",
+          "type": "article-journal",
+          "title": "Genetics of the Framingham Heart Study Population",
+          "container-title": "Advances in genetics",
+          "page": "33-65",
+          "volume": "62",
+          "abstract": "This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.",
+          "DOI": "10.1016/S0065-2660(08)00602-0",
+          "ISSN": "0065-2660",
+          "note": "PMID: 19010253",
+          "journalAbbreviation": "Adv Genet",
+          "language": "eng",
+          "author": [
+            {
+              "family": "Govindaraju",
+              "given": "Diddahally R."
+            },
+            {
+              "family": "Cupples",
+              "given": "L. Adrienne"
+            },
+            {
+              "family": "Kannel",
+              "given": "William B."
+            },
+            {
+              "family": "O’Donnell",
+              "given": "Christopher J."
+            },
+            {
+              "family": "Atwood",
+              "given": "Larry D."
+            },
+            {
+              "family": "D’Agostino",
+              "given": "Ralph B."
+            },
+            {
+              "family": "Fox",
+              "given": "Caroline S."
+            },
+            {
+              "family": "Larson",
+              "given": "Marty"
+            },
+            {
+              "family": "Levy",
+              "given": "Daniel"
+            },
+            {
+              "family": "Morabito",
+              "given": "Joanne"
+            },
+            {
+              "family": "Vasan",
+              "given": "Ramachandran S."
+            },
+            {
+              "family": "Splansky",
+              "given": "Greta Lee"
+            },
+            {
+              "family": "Wolf",
+              "given": "Philip A."
+            },
+            {
+              "family": "Benjamin",
+              "given": "Emelia J."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2008"
+              ]
+            ]
+          },
+          "PMID": "19010253"
+        }
+      ]
+    },
+    "barbados": {
+      "n": 3427,
+      "normal_tension": true,
+      "ethnicities": [
+        "Black",
+        "African",
+        "Afro-Barbadian",
+        "Mulatto",
+        "Mixed"
+      ],
+      "agenda": [
+        {
+          "gender": "female",
+          "age": "40-49",
+          "n over n at Risk": "6/546",
+          "Incidence, % (95% CI)": "1.1 (0.4-2.4)",
+          "max_incidence": 2.4
+        },
+        {
+          "gender": "male",
+          "age": "40-49",
+          "n over n at Risk": "6/434",
+          "Incidence, % (95% CI)": "1.4 (0.5-3.0)",
+          "max_incidence": 3
+        },
+        {
+          "gender": "all",
+          "age": "40-49",
+          "n over n at Risk": "12/980",
+          "Incidence, % (95% CI)": "1.2 (0.6-2.1)",
+          "max_incidence": 2.1
+        },
+        {
+          "gender": "female",
+          "age": "50-59",
+          "n over n at Risk": "6/504",
+          "Incidence, % (95% CI)": "1.2 (0.4-2.6)",
+          "max_incidence": 2.6
+        },
+        {
+          "gender": "male",
+          "age": "50-59",
+          "n over n at Risk": "6/317",
+          "Incidence, % (95% CI)": "1.9 (0.7-4.1)",
+          "max_incidence": 4.1
+        },
+        {
+          "gender": "all",
+          "age": "50-59",
+          "n over n at Risk": "12/821",
+          "Incidence, % (95% CI)": "1.5 (0.8-2.5)",
+          "max_incidence": 2.5
+        },
+        {
+          "gender": "female",
+          "age": "60-69",
+          "n over n at Risk": "11/430",
+          "Incidence, % (95% CI)": "2.6 (1.3-4.5)",
+          "max_incidence": 4.5
+        },
+        {
+          "gender": "male",
+          "age": "60-69",
+          "n over n at Risk": "11/252",
+          "Incidence, % (95% CI)": "4.4 (2.2-7.7)",
+          "max_incidence": 7.7
+        },
+        {
+          "gender": "all",
+          "age": "60-69",
+          "n over n at Risk": "22/682",
+          "Incidence, % (95% CI)": "3.2 (2.0-4.8)",
+          "max_incidence": 4.8
+        },
+        {
+          "gender": "female",
+          "age": ">=70",
+          "n over n at Risk": "11/285",
+          "Incidence, % (95% CI)": "3.9 (1.9-6.8)",
+          "max_incidence": 6.8
+        },
+        {
+          "gender": "male",
+          "age": ">=70",
+          "n over n at Risk": "10/221",
+          "Incidence, % (95% CI)": "4.5 (2.2-8.2)",
+          "max_incidence": 8.2
+        },
+        {
+          "gender": "all",
+          "age": ">=70",
+          "n over n at Risk": "21/506",
+          "Incidence, % (95% CI)": "4.2 (2.6-6.3)",
+          "max_incidence": 6.3
+        },
+        {
+          "age": "all",
+          "male n over n at Risk": "33/1224",
+          "male Incidence, % (95% CI)": "2.7 (1.9-3.8)",
+          "male_max_incidence": 3.8,
+          "female n over n at Risk": "34/1765",
+          "female Incidence, % (95% CI)": "1.9 (1.3-2.7)",
+          "female_max_incidence": 2.7,
+          "all n over n at Risk": "67/2989",
+          "all Incidence, % (95% CI)": "2.2 (1.7-2.8)",
+          "all_max_incidence": 2.8
+        }
+      ],
+      "expr": [
+        {
+          "key": "agenda",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "take": 1,
+          "extract": "max_incidence"
+        }
+      ],
+      "ref": [
+        {
+          "id": "http://zotero.org/users/843109/items/IIXJ7IV8",
+          "type": "article-journal",
+          "title": "Incidence of open-angle glaucoma: The barbados eye studies",
+          "container-title": "Archives of Ophthalmology",
+          "page": "89-95",
+          "volume": "119",
+          "issue": "1",
+          "abstract": "Objective \nTo measure the 4-year risk of open-angle glaucoma (OAG) in a black population.Design\nPopulation-based cohort study with 4 years of follow-up.Setting\nSimple random sample of residents of Barbados, West Indies, aged 40 years or older.Participants\nA total of 3427 members of the cohort (85% of those eligible).Main Outcome Measure\nDevelopment of glaucoma visual field defects and optic disc damage, confirmed by automated perimetry, independent fundus photographic gradings, and standardized ophthalmologic examinations.Results\nThe 4-year risk of OAG in black participants was 2.2% (95% confidence interval, 1.7%-2.8%), based on 67 newly developed cases of OAG. Incidence rates increased from 1.2% at ages 40 to 49 years to 4.2% at ages of 70 years or more, tending to be higher in men than women (2.7% vs 1.9%). About half of the incident cases were undiagnosed previously, and the rest were receiving OAG treatment. Of the 67 new cases of OAG, 32 had intraocular pressure of 21 mm Hg or less at baseline (1.2% incidence) and 35 had higher pressures(9% incidence). Risk was highest among persons classified as having suspect OAG at baseline (26.1%), followed by those with ocular hypertension (4.9%) and lowest in the remaining population (0.8%).Conclusions\nThis longitudinal study provides new information on OAG risk, as well as the first incidence measurement in a black population. Although intraocular pressure increased risk, about half of the new cases had baseline pressures of 21 mm Hg or less. Results substantiate the high OAG risk in the population of African origin, especially in older adults; the relative role of intraocular pressure; and the considerable underdetection of new disease after 4 years of follow-up.",
+          "URL": "http://dx.doi.org/10-1001/pubs.Ophthalmol.-ISSN-0003-9950-119-1-eeb90032",
+          "ISSN": "0003-9950",
+          "journalAbbreviation": "Archives of Ophthalmology",
+          "author": [
+            {
+              "literal": "Leske M"
+            },
+            {
+              "literal": "Connell AS"
+            },
+            {
+              "literal": "Wu S"
+            },
+            {
+              "literal": "et al"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2001",
+                1,
+                1
+              ]
+            ]
+          }
+        },
+        {
+          "id": "http://zotero.org/users/843109/items/WC34ZE84",
+          "type": "report",
+          "title": "2010 population and housing census",
+          "publisher": "Barbados Statistical Service",
+          "publisher-place": "Barbados",
+          "genre": "Census",
+          "event-place": "Barbados",
+          "URL": "www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf",
+          "author": [
+            {
+              "family": "Barbados Statistical Service",
+              "given": ""
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2010"
+              ]
+            ]
+          },
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                17
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+
