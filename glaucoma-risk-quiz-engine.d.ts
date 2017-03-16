@@ -2,12 +2,17 @@ declare const glaucoma_risk_quiz_engine: glaucoma_risk_quiz_engine.glaucoma_risk
 
 declare module glaucoma_risk_quiz_engine {
     export interface glaucoma_risk_quiz_engine {
-        in_range(range: string, num: number);
-        risk_from_study(risk_json: IRiskJson, input: IInput);
+        in_range(range: string, num: number): boolean;
+        risk_from_study(risk_json: IRiskJson, input: IInput): number;
+        list_ethnicities(risk_json: IRiskJson): DictOfStringArray;
+    }
+
+    export interface DictOfStringArray {
+        [study: string]: string[];
     }
 
     export interface IInput {
-        study: 'framingham'|'olmsted'|'barbados';
+        study: 'framingham' | 'olmsted' | 'barbados';
         age: number;
         gender?: string;
         _meta?: string[];
