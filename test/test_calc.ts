@@ -19,7 +19,7 @@ it('barbados', () => {
 });
 
 it('framingham', () => {
-    expect(risk_from_study(risk_json, Object.assign({
+    expect (risk_from_study(risk_json, Object.assign({
         study: 'framingham'
     }, trans))).to.eql(0.012);
 });

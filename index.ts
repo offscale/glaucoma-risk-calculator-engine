@@ -1,4 +1,5 @@
 import { isArray, isNullOrUndefined, isNumber } from 'util';
+import { exists, readFile, writeFile } from 'fs';
 import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 
 export function ethnicities_pretty(ethnicities: DictOfStringArray | any) {
@@ -59,6 +60,30 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
     return isNumber(out1) ? out1 : out1[study.expr[0].extract];
 }
 
+export function risks_from_study(risk_json: IRiskJson, study: string): number[] {
+    if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
+    else if (isNullOrUndefined(study)) throw TypeError('`study` must be defined');
+
+    function ensure_map(k): boolean {
+        if (k === 'map') return true;
+        throw TypeError(`Expected map, got ${k}`)
+    }
+
+    const study_: IBarbados = risk_json.studies[study] as IBarbados;
+    const out0 = study_[study_.expr[0].key];
+    return out0.map(k => k[study_.expr[0].extract]).filter(k => !isNullOrUndefined(k));
+}
+
+export function place_in_array(entry: any, a: any[]): number {
+    if (isNullOrUndefined(entry)) throw TypeError('`entry` must be defined');
+    else if (isNullOrUndefined(a)) throw TypeError('`a` must be defined');
+
+    const sortedA = a.sort();
+    for (let i = 0; i < sortedA.length; i++)
+        if (sortedA[i] === entry) return i;
+    return -1;
+}
+
 export function list_ethnicities(risk_json: IRiskJson): DictOfStringArray {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     return <any>Object.keys(risk_json.studies).map(k => {
@@ -67,5 +92,16 @@ export function list_ethnicities(risk_json: IRiskJson): DictOfStringArray {
 }
 
 if (require.main === module) {
-    console.info(JSON.stringify(require('./risk'), null, '\t'));
+    exists('./risk.json', fs_exists => {
+        console.error(`fs_exists = ${fs_exists}`);
+        writeFile("/tmp/a.txt", `fs_exists = ${fs_exists}`, err => {
+            if (err) throw err;
+            console.info('saved');
+            readFile('./risk.json', 'utf8', (err, data) => {
+                if (err) throw err;
+                console.info(data)
+            })
+            //fs_exists && console.info(JSON.stringify(require('./risk'), null, '\t'))
+        });
+    });
 }

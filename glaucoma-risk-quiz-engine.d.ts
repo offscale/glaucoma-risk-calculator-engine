@@ -4,8 +4,10 @@ declare module glaucoma_risk_quiz_engine {
     export interface glaucoma_risk_quiz_engine {
         in_range(range: string, num: number): boolean;
         risk_from_study(risk_json: IRiskJson, input: IInput): number;
+        risks_from_study(risk_json: IRiskJson, study: string): number[];
         list_ethnicities(risk_json: IRiskJson): DictOfStringArray;
         ethnicities_pretty(ethnicities: DictOfStringArray | any);
+        place_in_array(entry: any, a: any[]): number;
         s_col_to_s(s: string): string;
         risk_json: IRiskJson;
     }
