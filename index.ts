@@ -1,6 +1,8 @@
 import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 import { isArray, isNullOrUndefined, isNumber } from 'util';
 
+export const risk_json: IRiskJson = require('./risk');
+
 export function in_range(range: string, num: number): boolean {
     if (range === 'all' || range[0] === '_') return false;
     const dash = range.indexOf('-');

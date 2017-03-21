@@ -14,3 +14,9 @@ Glaucoma risk calculator compute engine
 Then
 
     node index.js
+
+## Generate dist repo
+
+On a mchine with GNU findutils and `cpio`:
+
+    find -type f -not -name "*.ts" -and -not -path "./.git/*" -and -not -path "./node-modules/*" -and -not -name '*.map' | cpio -pdamv ../glaucoma-risk-calc-engine-dist

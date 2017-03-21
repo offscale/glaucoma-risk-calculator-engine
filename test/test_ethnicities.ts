@@ -1,7 +1,5 @@
 import { expect } from 'chai';
-import { list_ethnicities } from './..';
-import { IRiskJson } from '../glaucoma-risk-quiz-engine';
-const risk_json: IRiskJson = require('../risk');
+import { list_ethnicities, risk_json } from './..';
 
 it('lists ethnicities', () => {
     const ethnicity_list = list_ethnicities(risk_json);
