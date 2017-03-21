@@ -1,5 +1,8 @@
 import { expect } from 'chai';
-import { risk_from_study, risk_json } from './..';
+import { IRiskJson } from '../glaucoma-risk-quiz-engine';
+import { risk_from_study } from './..';
+
+const risk_json: IRiskJson = require('../risk');
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;

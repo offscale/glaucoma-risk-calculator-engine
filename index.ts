@@ -1,7 +1,15 @@
-import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 import { isArray, isNullOrUndefined, isNumber } from 'util';
+import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 
-export const risk_json: IRiskJson = require('./risk');
+export function ethnicities_pretty(ethnicities: DictOfStringArray | any) {
+    return ethnicities.map(study =>
+        (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0])
+    );
+}
+
+export function s_col_to_s(s: string): string {
+    return s.slice(0, s.indexOf(':'));
+}
 
 export function in_range(range: string, num: number): boolean {
     if (range === 'all' || range[0] === '_') return false;
@@ -56,4 +64,8 @@ export function list_ethnicities(risk_json: IRiskJson): DictOfStringArray {
     return <any>Object.keys(risk_json.studies).map(k => {
         return {[k]: risk_json.studies[k].ethnicities}
     });
+}
+
+if (require.main === module) {
+    console.info(JSON.stringify(require('./risk'), null, '\t'));
 }
