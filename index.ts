@@ -144,10 +144,9 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
         throw TypeError(`Expected map, got ${k}`)
     }
 
+    preprocess_studies(risk_json);
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
-
-    preprocess_studies(risk_json);
 
     const out1 = isArray(study_vals) ? study_vals.filter(o =>
         study.expr[0].filter.every(k =>
