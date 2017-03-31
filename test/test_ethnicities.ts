@@ -1,11 +1,11 @@
 import { expect } from 'chai';
-import { IRiskJson } from '../glaucoma-risk-quiz-engine';
+import { DictOfStringArray, IRiskJson } from '../glaucoma-risk-quiz-engine';
 import { list_ethnicities } from './..';
 
 const risk_json: IRiskJson = require('../risk');
 
 it('lists ethnicities', () => {
-    const ethnicity_list = list_ethnicities(risk_json);
+    const ethnicity_list: DictOfStringArray = list_ethnicities(risk_json);
     expect(ethnicity_list).to.be.an.instanceof(Array);
     expect(ethnicity_list).to.be.eql([
         {olmsted: ['White', 'German', 'Norwegian', 'Irish', 'English']},

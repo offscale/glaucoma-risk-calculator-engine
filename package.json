@@ -1,6 +1,6 @@
 {
   "name": "glaucoma-risk-quiz-engine",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,18 @@
   },
   "author": "Samuel Marks <samuel@offscale.io>",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/glaucoma-australia/glaucoma-risk-calculator-engine"
+  },
   "dependencies": {
-    "@types/node": "^7.0.8"
+    "@types/node": "^7.0.12"
   },
   "devDependencies": {
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.40",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "ts-node": "^2.1.1",
-    "typescript": "^2.2.1"
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
   }
 }
