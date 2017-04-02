@@ -5,6 +5,7 @@ import * as assert from 'assert';
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
+    values<T>(o: { [s: string]: T }): T[];
 }
 
 declare const Object: IObjectCtor;
@@ -135,14 +136,14 @@ export function sort_ranges(ranges: string[]): string[] {
     );
 }
 
+function ensure_map(k): boolean {
+    if (k === 'map') return true;
+    throw TypeError(`Expected map, got ${k}`)
+}
+
 export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     else if (isNullOrUndefined(input)) throw TypeError('`input` must be defined');
-
-    function ensure_map(k): boolean {
-        if (k === 'map') return true;
-        throw TypeError(`Expected map, got ${k}`)
-    }
 
     preprocess_studies(risk_json);
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
@@ -152,22 +153,29 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
         study.expr[0].filter.every(k =>
             k === 'age' ? in_range(o.age, input.age) : input.hasOwnProperty(k) ? o[k] === input[k] : true
         )
-    )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0] :
-        study_vals[ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(k =>
+    )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
+        : study_vals[ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(k =>
             in_range(k, input[study.expr[0].key])
         )[study.expr[0].take - 1]];
-    if (!out1)
-        throw TypeError('Expected out to match something');
 
+    if (!out1) throw TypeError('Expected out to match something');
     return isNumber(out1) ? out1 : out1[study.expr[0].extract];
 }
 
-export function risks_from_study(risk_json: IRiskJson, study: string): number[] {
+export function risks_from_study(risk_json: IRiskJson, study_name: string): number[] {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
-    else if (isNullOrUndefined(study)) throw TypeError('`study` must be defined');
+    else if (isNullOrUndefined(study_name)) throw TypeError('`study_name` must be defined');
 
-    const study_: IBarbados = risk_json.studies[study] as IBarbados;
-    return study_[study_.expr[0].key].map(k => k[study_.expr[0].extract]).filter(k => !isNullOrUndefined(k));
+    preprocess_studies(risk_json);
+    const study: IBarbados = risk_json.studies[study_name] as IBarbados;
+    const study_vals = study[study.expr[0].key];
+
+    const out1 = isArray(study_vals) ?
+        study_vals.map(o => o[study.expr[0].extract])
+        : ensure_map(study.expr[0].type) && Object.values(study_vals);
+
+    if (!out1) throw TypeError('Expected out to match something');
+    return out1;
 }
 
 export function place_in_array(entry: any, a: any[]): number {
