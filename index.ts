@@ -72,6 +72,17 @@ export function uniq(a: any[]): any[] {
     }).filter(k => k !== undefined);
 }
 
+export function uniq2(arr: {}[]): {}[] {
+    const keys = arr.length === 0 ? [] : Object.keys(arr[0]);
+    const seen = new Map();
+    arr.forEach((a) => {
+        const key = keys.map(k => a[k]).join('|');
+        if (!seen.has(key))
+            seen.set(key, a);
+    });
+    return Array.from(seen.values());
+}
+
 export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
     /* Preprocesses studies in risk_json.
      *
@@ -81,12 +92,23 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
     Object.keys(risk_json.studies).forEach(study_name => {
         if (risk_json.studies[study_name].hasOwnProperty('age')) {
             const sr: string[] = sort_ranges(Object.keys(risk_json.studies[study_name].age));
+
+            // Lower bound
             if (sr[0][0] !== '<') {
                 const lt = `<${parseInt(sr[0])}`;
                 risk_json.studies[study_name].age = Object.assign(
                     {[lt]: risk_json.studies[study_name].age[sr[0]]},
                     risk_json.studies[study_name].age
                 );
+            }
+
+            // Upper bound
+            if (['>', '+'].indexOf(sr[sr.length - 1][0].slice(-1)) === -1) {
+                const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1]), r]).filter(
+                    (n: [number, string]) => !isNaN(n[0])).sort();
+                const top_bar: [number, string] = top_bars[top_bars.length - 1] as [number, string];
+                if (['>', '+'].indexOf(top_bar[1].slice(-1)) === -1)
+                    risk_json.studies[study_name].age[`${top_bar}+`] = risk_json.studies[study_name].age[top_bar[1]];
             }
         }
 
@@ -97,11 +119,12 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
 
             let gendersAssigned: number = 0;
             all_genders_seen.forEach(gender => {
-                const sr: Array<string> = sort_ranges(risk_json.studies[study_name].agenda.filter(agenda =>
+                const sr: string[] = sort_ranges(risk_json.studies[study_name].agenda.filter(agenda =>
                     agenda.gender === gender
                 ).map(agenda => agenda.age)) as any;
 
                 if (sr.length) {
+                    // Lower bound
                     const lowest_bar: string = sr.find(
                         o => ['=<', '<='].indexOf(o.slice(0, 2)) === -1 && ['<', '>'].indexOf(o[0][0]) === -1
                     );
@@ -116,9 +139,22 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
                             {age: `<${lt}`}
                         )
                     );
+
+                    // Upper bound
+                    const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1]), r]).filter(
+                        (n: [number, string]) => !isNaN(n[0])).sort();
+                    const top_bar = top_bars[top_bars.length - 1];
+                    if (top_bar)
+                        risk_json.studies[study_name].agenda.push(
+                            risk_json.studies[study_name].agenda.filter(
+                                agenda => agenda.age === top_bar[1] && agenda.gender === gender
+                            ).map(o => Object.assign({}, o, {age: `${top_bar[0]}+`}))[0]
+                        )
                 }
             });
             assert.equal(gendersAssigned, all_genders_seen.length, 'Genders assigned != all genders');
+
+            risk_json.studies[study_name].agenda = uniq2(risk_json.studies[study_name].agenda);
         }
     });
 
@@ -149,7 +185,7 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
 
-    const out1 = isArray(study_vals) ? study_vals.filter(o =>
+    const out = isArray(study_vals) ? study_vals.filter(o =>
         study.expr[0].filter.every(k =>
             k === 'age' ? in_range(o.age, input.age) : input.hasOwnProperty(k) ? o[k] === input[k] : true
         )
@@ -158,24 +194,25 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
             in_range(k, input[study.expr[0].key])
         )[study.expr[0].take - 1]];
 
-    if (!out1) throw TypeError('Expected out to match something');
-    return isNumber(out1) ? out1 : out1[study.expr[0].extract];
+    if (!out) throw TypeError('Expected out to match something');
+    return isNumber(out) ? out : out[study.expr[0].extract];
 }
 
-export function risks_from_study(risk_json: IRiskJson, study_name: string): number[] {
+export function risks_from_study(risk_json: IRiskJson, input: IInput): number[] {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
-    else if (isNullOrUndefined(study_name)) throw TypeError('`study_name` must be defined');
+    else if (isNullOrUndefined(input)) throw TypeError('`input` must be defined');
 
     preprocess_studies(risk_json);
-    const study: IBarbados = risk_json.studies[study_name] as IBarbados;
+    const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
 
-    const out1 = isArray(study_vals) ?
-        study_vals.map(o => o[study.expr[0].extract])
-        : ensure_map(study.expr[0].type) && Object.values(study_vals);
+    const out = isArray(study_vals) ?
+        study_vals.filter(o => input.gender ? o.gender === input.gender : true).map(o => o[study.expr[0].extract])
+        : ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(
+            k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
 
-    if (!out1) throw TypeError('Expected out to match something');
-    return out1;
+    if (!out) throw TypeError('Expected out to match something');
+    return uniq(out);
 }
 
 export function place_in_array(entry: any, a: any[]): number {

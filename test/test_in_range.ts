@@ -19,6 +19,7 @@ describe('test in_range', () => {
         expect(in_range('55>', 56)).to.be.true;
         expect(in_range('55>=', 66)).to.be.true;
         expect(in_range('55+', 50)).to.be.false;
+        expect(in_range('85+', 100)).to.be.true;
     });
 })
 ;
