@@ -1,7 +1,9 @@
 import { isArray, isNullOrUndefined, isNumber } from 'util';
 import { exists, readFile, writeFile } from 'fs';
-import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 import * as assert from 'assert';
+import * as math from 'mathjs';
+import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
+
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
@@ -195,7 +197,37 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
         )[study.expr[0].take - 1]];
 
     if (!out) throw TypeError('Expected out to match something');
-    return isNumber(out) ? out : out[study.expr[0].extract];
+    const risk: number = isNumber(out) ? out : out[study.expr[0].extract];
+    //console.info(study.hasOwnProperty('sibling'))
+    return risk
+}
+
+export function familial_risks_from_study(risk_json: IRiskJson, input: IInput, warn: boolean = true): number[] {
+    const study = risk_json.studies[input.study];
+    const res = [];
+
+    if (!study.hasOwnProperty('sibling_pc')) {
+        warn && console.warn(`Using sibling from ${risk_json.default_family_history.from_study}`);
+        study['sibling_pc'] = risk_json.default_family_history.sibling_pc;
+    }
+    input.sibling && res.push(study['sibling_pc']);
+    if (!study.hasOwnProperty('parents_pc')) {
+        warn && console.warn(`Using parents_pc from ${risk_json.default_family_history.from_study}`);
+        study['parents_pc'] = risk_json.default_family_history.parents_pc;
+        risk_json.default_family_history.ref.forEach(ref => study.ref.push(ref));
+        //risk_json.default_family_history.ref.map(study.ref.push.bind(study));
+
+    }
+    input.parent && res.push(study['sibling_pc']);
+
+    return res;
+}
+
+export function combined_risk(familial_risks_from_study_l: number[],
+                              risk_from_study: number): number {
+    return math.add(familial_risks_from_study_l.map(
+        r => math.multiply(math.divide(r, 100), risk_from_study)
+    ).reduce(math.add), risk_from_study)
 }
 
 export function risks_from_study(risk_json: IRiskJson, input: IInput): number[] {

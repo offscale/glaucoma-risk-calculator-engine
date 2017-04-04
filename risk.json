@@ -9,6 +9,58 @@
       "sigmoid"
     ]
   },
+  "default_family_history": {
+    "from_study": "Rotterdam",
+    "sibling_pc": 10.4,
+    "parents_pc": 1.1,
+    "ref": [
+      [
+        {
+          "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+          "type": "article-journal",
+          "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+          "container-title": "Archives of Ophthalmology",
+          "page": "1640-1645",
+          "volume": "116",
+          "issue": "12",
+          "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
+          "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+          "DOI": "10.1001/archopht.116.12.1640",
+          "ISSN": "0003-9950",
+          "journalAbbreviation": "Archives of Ophthalmology",
+          "author": [
+            {
+              "literal": "Wolfs RW"
+            },
+            {
+              "literal": "Klaver CW"
+            },
+            {
+              "literal": "Ramrattan RS"
+            },
+            {
+              "literal": "van Duijn CM"
+            },
+            {
+              "literal": "Hofman A"
+            },
+            {
+              "literal": "de Jong PM"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "1998",
+                12,
+                1
+              ]
+            ]
+          }
+        }
+      ]
+    ]
+  },
   "studies": {
     "olmsted": {
       "n": 60666,
