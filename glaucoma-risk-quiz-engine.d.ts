@@ -11,6 +11,7 @@ declare module glaucoma_risk_quiz_engine {
         ethnicities_pretty(ethnicities: DictOfStringArray | any);
         place_in_array(entry: any, a: any[]): number;
         s_col_to_s(s: string): string;
+        pos_in_range(ranges: string[], num: number): number
         risk_json: IRiskJson;
     }
 

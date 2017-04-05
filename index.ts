@@ -164,15 +164,15 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
 }
 
 export function sort_ranges(ranges: string[]): string[] {
-    const collator = new Intl.Collator(undefined, {
-        numeric: true,
-        sensitivity: 'base',
-        ignorePunctuation: true
+    return ranges.sort((a: string, b: string): number => {
+        if (a[0] === '<') return -1;
+        else if (a[0] === '>') return a[0].charCodeAt(0) - b[0].charCodeAt(0);
+        else if (isNaN(parseInt(a[0])) || b[0] === '<') return 1;
+        else if (b[0] === '>' || isNaN(parseInt(b[0]))) return -1;
+        return parseInt(a.split('-')[0]) - parseInt(b.split('-')[0])
     });
-    return ranges.sort((a: string, b: string): number =>
-        a[0] === '>' && !isNaN(parseInt(b[0])) ? 1 : collator.compare(a, b)
-    );
 }
+
 
 function ensure_map(k): boolean {
     if (k === 'map') return true;
@@ -254,6 +254,14 @@ export function place_in_array(entry: any, a: any[]): number {
     const sortedA = a.sort();
     for (let i = 0; i < sortedA.length; i++)
         if (sortedA[i] === entry) return i;
+    return -1;
+}
+
+export function pos_in_range(ranges: string[], num: number): number {
+    ranges = sort_ranges(ranges);
+    for (let i = 0; i < ranges.length; i++)
+        if (in_range(ranges[i], num))
+            return i;
     return -1;
 }
 
