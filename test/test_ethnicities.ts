@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import { DictOfStringArray, IRiskJson } from '../glaucoma-risk-quiz-engine';
 import { list_ethnicities } from './..';
 
+/* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
 
 it('lists ethnicities', () => {

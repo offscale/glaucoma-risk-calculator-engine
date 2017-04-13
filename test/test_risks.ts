@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import { IRiskJson } from '../glaucoma-risk-quiz-engine';
 import { place_in_array, risks_from_study } from './..';
 
+/* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
 
 describe('tests risks', () => {

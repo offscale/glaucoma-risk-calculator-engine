@@ -4,6 +4,8 @@ import { in_range, pos_in_range } from '../';
 describe('tests in range', () => {
     const ranges = ['<40', '40-49', '50-59', '60-69', '>=70'];
 
+    /* tslint:disable:no-unused-expression */
+
     it('edge', () => {
         expect(in_range('all', 55)).to.be.false;
     });

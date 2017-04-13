@@ -4,7 +4,6 @@ import * as assert from 'assert';
 import * as math from 'mathjs';
 import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
 
-
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
     values<T>(o: { [s: string]: T }): T[];
@@ -12,6 +11,7 @@ export interface IObjectCtor extends ObjectConstructor {
 
 declare const Object: IObjectCtor;
 
+/* tslint:disable:interface-name */
 interface Array<T> extends ArrayConstructor {
     find(predicate: (search: T) => boolean): T;
 }
@@ -31,13 +31,13 @@ export function in_range(range: string, num: number): boolean {
     const dash = range.indexOf('-');
 
     if (dash !== -1)
-        return num >= parseInt(range.slice(0, dash - range.length)) && num <= parseInt(range.slice(-dash));
+        return num >= parseInt(range.slice(0, dash - range.length), 10) && num <= parseInt(range.slice(-dash), 10);
 
     let last = range.slice(-2);
-    if (!isNaN(parseInt(last[0]))) last = last[1];
+    if (!isNaN(parseInt(last[0], 10))) last = last[1];
 
-    if (isNaN(parseInt(last))) {
-        const rest = parseInt(range);
+    if (isNaN(parseInt(last, 10))) {
+        const rest = parseInt(range, 10);
         const operators = Object.freeze({
             '>': num > rest,
             '+': num >= rest,
@@ -48,32 +48,34 @@ export function in_range(range: string, num: number): boolean {
             throw TypeError(`Invalid operation of \`${last}\``);
         return operators[last];
     }
-    const op = range.slice(0, 2), rest = parseInt(range.slice(2));
+    const op = range.slice(0, 2);
+    const rest = parseInt(range.slice(2), 10);
 
     if (op === '<=' || op === '=<')
         return num <= rest;
     else if (op[0] === '<')
-        return num < parseInt(range.slice(1));
+        return num < parseInt(range.slice(1), 10);
     else if (op === '>=' || op === '=>')
         return num >= rest;
 
-    return <any>range === num;
+    return range === num as any;
 }
 
 export function lowest_range(ranges: string[]): number {
     return ranges.reduce((prevNum: number, currentValue: string): number => {
-        const curNum: number = parseInt(currentValue);
+        const curNum: number = parseInt(currentValue, 10);
         return curNum < prevNum ? curNum : prevNum;
     }, 100);
 }
 
 export function uniq(a: any[]): any[] {
     const seen = {};
-    return a.filter(function (item) {
-        return seen.hasOwnProperty(item) ? false : (seen[item] = true);
-    }).filter(k => k !== undefined);
+    return a.filter(item =>
+        seen.hasOwnProperty(item) ? false : (seen[item] = true)
+    ).filter(k => k !== undefined);
 }
 
+/* tslint:disable:array-type */
 export function uniq2(arr: {}[]): {}[] {
     const keys = arr.length === 0 ? [] : Object.keys(arr[0]);
     const seen = new Map();
@@ -97,7 +99,7 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
 
             // Lower bound
             if (sr[0][0] !== '<') {
-                const lt = `<${parseInt(sr[0])}`;
+                const lt = `<${parseInt(sr[0], 10)}`;
                 risk_json.studies[study_name].age = Object.assign(
                     {[lt]: risk_json.studies[study_name].age[sr[0]]},
                     risk_json.studies[study_name].age
@@ -106,7 +108,7 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
 
             // Upper bound
             if (['>', '+'].indexOf(sr[sr.length - 1][0].slice(-1)) === -1) {
-                const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1]), r]).filter(
+                const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1], 10), r]).filter(
                     (n: [number, string]) => !isNaN(n[0])).sort();
                 const top_bar: [number, string] = top_bars[top_bars.length - 1] as [number, string];
                 if (['>', '+'].indexOf(top_bar[1].slice(-1)) === -1)
@@ -132,7 +134,7 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
                     );
                     gendersAssigned++;
 
-                    const lt = parseInt(lowest_bar);
+                    const lt = parseInt(lowest_bar, 10);
                     assert(!isNaN(lt), `${lowest_bar} unexpectedly pareses to NaN`);
                     risk_json.studies[study_name].agenda.unshift(
                         Object.assign({},
@@ -143,7 +145,7 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
                     );
 
                     // Upper bound
-                    const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1]), r]).filter(
+                    const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1], 10), r]).filter(
                         (n: [number, string]) => !isNaN(n[0])).sort();
                     const top_bar = top_bars[top_bars.length - 1];
                     if (top_bar)
@@ -151,7 +153,7 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
                             risk_json.studies[study_name].agenda.filter(
                                 agenda => agenda.age === top_bar[1] && agenda.gender === gender
                             ).map(o => Object.assign({}, o, {age: `${top_bar[0]}+`}))[0]
-                        )
+                        );
                 }
             });
             assert.equal(gendersAssigned, all_genders_seen.length, 'Genders assigned != all genders');
@@ -167,16 +169,15 @@ export function sort_ranges(ranges: string[]): string[] {
     return ranges.sort((a: string, b: string): number => {
         if (a[0] === '<') return -1;
         else if (a[0] === '>') return a[0].charCodeAt(0) - b[0].charCodeAt(0);
-        else if (isNaN(parseInt(a[0])) || b[0] === '<') return 1;
-        else if (b[0] === '>' || isNaN(parseInt(b[0]))) return -1;
-        return parseInt(a.split('-')[0]) - parseInt(b.split('-')[0])
+        else if (isNaN(parseInt(a[0], 10)) || b[0] === '<') return 1;
+        else if (b[0] === '>' || isNaN(parseInt(b[0], 10))) return -1;
+        return parseInt(a.split('-')[0], 10) - parseInt(b.split('-')[0], 10);
     });
 }
 
-
 function ensure_map(k): boolean {
     if (k === 'map') return true;
-    throw TypeError(`Expected map, got ${k}`)
+    throw TypeError(`Expected map, got ${k}`);
 }
 
 export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
@@ -197,12 +198,14 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
         )[study.expr[0].take - 1]];
 
     if (!out) throw TypeError('Expected out to match something');
-    const risk: number = isNumber(out) ? out : out[study.expr[0].extract];
-    //console.info(study.hasOwnProperty('sibling'))
-    return risk
+    /* const risk: number = */
+    return isNumber(out) ? out : out[study.expr[0].extract];
+    // console.info(study.hasOwnProperty('sibling'))
+    // return risk;
 }
 
 export function familial_risks_from_study(risk_json: IRiskJson, input: IInput, warn: boolean = true): number[] {
+    /* tslint:disable:no-unused-expression */
     const study = risk_json.studies[input.study];
     const res = [];
 
@@ -215,7 +218,7 @@ export function familial_risks_from_study(risk_json: IRiskJson, input: IInput, w
         warn && console.warn(`Using parents_pc from ${risk_json.default_family_history.from_study}`);
         study['parents_pc'] = risk_json.default_family_history.parents_pc;
         risk_json.default_family_history.ref.forEach(ref => study.ref.push(ref));
-        //risk_json.default_family_history.ref.map(study.ref.push.bind(study));
+        // risk_json.default_family_history.ref.map(study.ref.push.bind(study));
 
     }
     input.parent && res.push(study['sibling_pc']);
@@ -227,7 +230,7 @@ export function combined_risk(familial_risks_from_study_l: number[],
                               risk_from_study: number): number {
     return math.add(familial_risks_from_study_l.map(
         r => math.multiply(math.divide(r, 100), risk_from_study)
-    ).reduce(math.add), risk_from_study)
+    ).reduce(math.add), risk_from_study);
 }
 
 export function risks_from_study(risk_json: IRiskJson, input: IInput): number[] {
@@ -267,22 +270,22 @@ export function pos_in_range(ranges: string[], num: number): number {
 
 export function list_ethnicities(risk_json: IRiskJson): DictOfStringArray {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
-    return <any>Object.keys(risk_json.studies).map(k => {
-        return {[k]: risk_json.studies[k].ethnicities}
-    });
+    return Object.keys(risk_json.studies).map(k => {
+        return {[k]: risk_json.studies[k].ethnicities};
+    }) as DictOfStringArray | any;
 }
 
 if (require.main === module) {
     exists('./risk.json', fs_exists => {
         console.error(`fs_exists = ${fs_exists}`);
-        writeFile("/tmp/a.txt", `fs_exists = ${fs_exists}`, err => {
+        writeFile('/tmp/a.txt', `fs_exists = ${fs_exists}`, err => {
             if (err) throw err;
-            console.info('saved');
-            readFile('./risk.json', 'utf8', (err, data) => {
-                if (err) throw err;
-                console.info(data)
-            })
-            //fs_exists && console.info(JSON.stringify(require('./risk'), null, '\t'))
+            readFile('./risk.json', 'utf8', (e, data) => {
+                if (e) throw e;
+                /* tslint:disable:no-console */
+                console.info(data);
+            });
+            // fs_exists && console.info(JSON.stringify(require('./risk'), null, '\t'))
         });
     });
 }

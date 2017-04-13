@@ -3,6 +3,7 @@ import * as math from 'mathjs';
 import { IInput, IRiskJson } from '../glaucoma-risk-quiz-engine';
 import { combined_risk, familial_risks_from_study, risk_from_study, risks_from_study } from './..';
 
+/* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
 
 export interface IObjectCtor extends ObjectConstructor {
@@ -26,16 +27,16 @@ describe('test calc', () => {
 
         it('calculates risk_from_study', () => {
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[0]))).to.eql(4.1);
 
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[1]))).to.eql(2.4);
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study: study}, trans[2]);
+            const input: IInput = Object.assign({study}, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(8.2);
             const risks = risks_from_study(risk_json, input);
@@ -43,14 +44,14 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study: <any>study};
-            const fam: IInput = Object.assign({study: study}, trans[4]);
+            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
+            const fam: IInput = Object.assign({study}, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
             expect(no_fam_risk).to.eql(4.1);
             expect(fam_risk).to.be.gt(no_fam_risk);
-        })
+        });
     });
 
     describe('framingham', () => {
@@ -58,16 +59,16 @@ describe('test calc', () => {
 
         it('calculates risk_from_study', () => {
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[0]))).to.eql(0.012);
 
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[1]))).to.eql(0.005);
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study: study}, trans[2]);
+            const input: IInput = Object.assign({study}, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(0.056);
             const risks = risks_from_study(risk_json, input);
@@ -75,14 +76,14 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study: <any>study};
-            const fam: IInput = Object.assign({study: study}, trans[4]);
+            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
+            const fam: IInput = Object.assign({study}, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
             expect(no_fam_risk).to.eql(0.012);
             expect(fam_risk).to.be.gt(no_fam_risk);
-        })
+        });
     });
 
     describe('olmsted', () => {
@@ -90,16 +91,16 @@ describe('test calc', () => {
 
         it('calculates risk_from_study', () => {
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[0]))).to.eql(11.326078497068);
 
             expect(risk_from_study(risk_json, Object.assign({
-                study: study
+                study
             }, trans[1]))).to.eql(1.89549249600724);
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study: study}, trans[2]);
+            const input: IInput = Object.assign({study}, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(73.8103215395919);
             const risks = risks_from_study(risk_json, input);
@@ -107,13 +108,13 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study: <any>study};
-            const fam: IInput = Object.assign({study: study}, trans[4]);
+            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
+            const fam: IInput = Object.assign({study}, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
             expect(no_fam_risk).to.eql(11.326078497068);
             expect(fam_risk).to.be.gt(no_fam_risk);
-        })
+        });
     });
 });

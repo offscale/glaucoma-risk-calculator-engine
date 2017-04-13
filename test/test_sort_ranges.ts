@@ -27,5 +27,5 @@ describe('range sorting', () => {
         const arr = ['<40', '40-49', '50-59', '60-69', '>=70'];
         for (let i = 0; i < arr.length * 2; i++)
             expect(sort_ranges(shuffleArray(arr))).to.be.eql(arr);
-    })
+    });
 });
