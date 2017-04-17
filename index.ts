@@ -3,6 +3,7 @@ import { exists, readFile, writeFile } from 'fs';
 import * as assert from 'assert';
 import * as math from 'mathjs';
 import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
+import MathType = mathjs.MathType;
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
@@ -16,17 +17,14 @@ interface Array<T> extends ArrayConstructor {
     find(predicate: (search: T) => boolean): T;
 }
 
-export function ethnicities_pretty(ethnicities: DictOfStringArray | any): DictOfStringArray {
-    return ethnicities.map(study =>
+export const ethnicities_pretty = (ethnicities: DictOfStringArray | any): DictOfStringArray =>
+    ethnicities.map(study =>
         (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0])
     );
-}
 
-export function s_col_to_s(s: string): string {
-    return s.slice(0, s.indexOf(':'));
-}
+export const s_col_to_s = (s: string): string => s.slice(0, s.indexOf(':'));
 
-export function in_range(range: string, num: number): boolean {
+export const in_range = (range: string, num: number): boolean => {
     if (range === 'all' || range[0] === '_') return false;
     const dash = range.indexOf('-');
 
@@ -59,24 +57,23 @@ export function in_range(range: string, num: number): boolean {
         return num >= rest;
 
     return range === num as any;
-}
+};
 
-export function lowest_range(ranges: string[]): number {
-    return ranges.reduce((prevNum: number, currentValue: string): number => {
+export const lowest_range = (ranges: string[]): number =>
+    ranges.reduce((prevNum: number, currentValue: string): number => {
         const curNum: number = parseInt(currentValue, 10);
         return curNum < prevNum ? curNum : prevNum;
     }, 100);
-}
 
-export function uniq(a: any[]): any[] {
+export const uniq = (a: any[]): any[] => {
     const seen = {};
     return a.filter(item =>
         seen.hasOwnProperty(item) ? false : (seen[item] = true)
     ).filter(k => k !== undefined);
-}
+};
 
 /* tslint:disable:array-type */
-export function uniq2(arr: {}[]): {}[] {
+export const uniq2 = (arr: {}[]): {}[] => {
     const keys = arr.length === 0 ? [] : Object.keys(arr[0]);
     const seen = new Map();
     arr.forEach((a) => {
@@ -85,9 +82,9 @@ export function uniq2(arr: {}[]): {}[] {
             seen.set(key, a);
     });
     return Array.from(seen.values());
-}
+};
 
-export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
+export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
     /* Preprocesses studies in risk_json.
      *
      * Currently:
@@ -163,24 +160,23 @@ export function preprocess_studies(risk_json: IRiskJson): IRiskJson {
     });
 
     return risk_json;
-}
+};
 
-export function sort_ranges(ranges: string[]): string[] {
-    return ranges.sort((a: string, b: string): number => {
+export const sort_ranges = (ranges: string[]): string[] =>
+    ranges.sort((a: string, b: string): number => {
         if (a[0] === '<') return -1;
         else if (a[0] === '>') return a[0].charCodeAt(0) - b[0].charCodeAt(0);
         else if (isNaN(parseInt(a[0], 10)) || b[0] === '<') return 1;
         else if (b[0] === '>' || isNaN(parseInt(b[0], 10))) return -1;
         return parseInt(a.split('-')[0], 10) - parseInt(b.split('-')[0], 10);
     });
-}
 
-function ensure_map(k): boolean {
+const ensure_map = (k): boolean => {
     if (k === 'map') return true;
     throw TypeError(`Expected map, got ${k}`);
-}
+};
 
-export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
+export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     else if (isNullOrUndefined(input)) throw TypeError('`input` must be defined');
 
@@ -202,9 +198,9 @@ export function risk_from_study(risk_json: IRiskJson, input: IInput): number {
     return isNumber(out) ? out : out[study.expr[0].extract];
     // console.info(study.hasOwnProperty('sibling'))
     // return risk;
-}
+};
 
-export function familial_risks_from_study(risk_json: IRiskJson, input: IInput, warn: boolean = true): number[] {
+export const familial_risks_from_study = (risk_json: IRiskJson, input: IInput, warn: boolean = true): number[] => {
     /* tslint:disable:no-unused-expression */
     const study = risk_json.studies[input.study];
     const res = [];
@@ -224,16 +220,14 @@ export function familial_risks_from_study(risk_json: IRiskJson, input: IInput, w
     input.parent && res.push(study['sibling_pc']);
 
     return res;
-}
+};
 
-export function combined_risk(familial_risks_from_study_l: number[],
-                              risk_from_study: number): number {
-    return math.add(familial_risks_from_study_l.map(
-        r => math.multiply(math.divide(r, 100), risk_from_study)
-    ).reduce(math.add), risk_from_study);
-}
+export const combined_risk = (familial_risks_from_study_l: number[], risk_from_studies: number): MathType =>
+    math.add(familial_risks_from_study_l.map(
+        r => math.multiply(math.divide(r, 100), risk_from_studies)
+    ).reduce(math.add as (p: number, c: number) => number), risk_from_studies);
 
-export function risks_from_study(risk_json: IRiskJson, input: IInput): number[] {
+export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     else if (isNullOrUndefined(input)) throw TypeError('`input` must be defined');
 
@@ -248,9 +242,9 @@ export function risks_from_study(risk_json: IRiskJson, input: IInput): number[] 
 
     if (!out) throw TypeError('Expected out to match something');
     return uniq(out);
-}
+};
 
-export function place_in_array(entry: any, a: any[]): number {
+export const place_in_array = (entry: any, a: any[]): number => {
     if (isNullOrUndefined(entry)) throw TypeError('`entry` must be defined');
     else if (isNullOrUndefined(a)) throw TypeError('`a` must be defined');
 
@@ -258,22 +252,28 @@ export function place_in_array(entry: any, a: any[]): number {
     for (let i = 0; i < sortedA.length; i++)
         if (sortedA[i] === entry) return i;
     return -1;
-}
+};
 
-export function pos_in_range(ranges: string[], num: number): number {
+export const pos_in_range = (ranges: string[], num: number): number => {
     ranges = sort_ranges(ranges);
     for (let i = 0; i < ranges.length; i++)
         if (in_range(ranges[i], num))
             return i;
     return -1;
-}
+};
 
-export function list_ethnicities(risk_json: IRiskJson): DictOfStringArray {
+export const list_ethnicities = (risk_json: IRiskJson): DictOfStringArray => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     return Object.keys(risk_json.studies).map(k => {
         return {[k]: risk_json.studies[k].ethnicities};
     }) as DictOfStringArray | any;
-}
+};
+
+/*
+ export const get_risk_pc = (pc => ((r => r > 100 ? 100 : r)(fam_risk.reduce((a, b) => a + b, 1) + pc)))(math.multiply(
+ math.divide(risks.lastIndexOf(risk) + 1, risks.length), 100
+ ));
+ */
 
 if (require.main === module) {
     exists('./risk.json', fs_exists => {

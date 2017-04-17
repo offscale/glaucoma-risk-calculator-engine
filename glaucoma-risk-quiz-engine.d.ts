@@ -1,91 +1,25 @@
-declare const glaucoma_risk_quiz_engine: glaucoma_risk_quiz_engine.glaucoma_risk_quiz_engine;
-
-/* tslint:disable:no-namespace no-internal-module */
-declare module glaucoma_risk_quiz_engine {
-    /* tslint:disable:interface-name class-name */
-    export interface glaucoma_risk_quiz_engine {
-        risk_json: IRiskJson;
-        in_range(range: string, num: number): boolean;
-        risk_from_study(risk_json: IRiskJson, input: IInput): number;
-        risks_from_study(risk_json: IRiskJson, input: IInput): number[];
-        familial_risks_from_study(risk_json: IRiskJson, input: IInput, warn: boolean): number[];
-        combined_risk(familial_risks_from_study_l: number[], risk_from_study: number): number;
-        list_ethnicities(risk_json: IRiskJson): DictOfStringArray;
-        ethnicities_pretty(ethnicities: DictOfStringArray | any);
-        place_in_array(entry: any, a: any[]): number;
-        s_col_to_s(s: string): string;
-        pos_in_range(ranges: string[], num: number): number;
-    }
-
-    export interface DictOfStringArray {
-        [study: string]: string[];
-    }
-
-    export interface IInput {
-        study: 'framingham' | 'olmsted' | 'barbados';
-        age: number;
-        gender?: string;
-        sibling?: boolean;
-        parent?: boolean;
-        _meta?: string[];
-        _extra?: any[];
-    }
-
-    export interface IRiskJson {
-        default_expr: {};
-        default_family_history: {
-            from_study: string,
-            sibling_pc: number,
-            parents_pc: number,
-            ref: Array<{}>
-        };
-        studies: {
-            olmsted: IOlmsted,
-            framingham: IFramingham,
-            barbados: IBarbados;
-        };
-    }
-
-    interface IStudy {
-        n: number;
-        ethnicities: string[];
-        expr: Array<{
-            key: string,
-            take: number,
-            type?: string,
-            filter?: string[],
-            extract?: string
-        }>;
-        ref: Array<{}>;
-    }
-
-    export interface IOlmsted extends IStudy {
-        age: { [idx: string]: number };
-        agenda?: undefined;
-    }
-
-    export interface IFramingham extends IStudy {
-        age: { [idx: string]: number };
-        agenda: Array<{
-            gender: 'male' | 'female',
-            age: string,
-            n: number,
-            oags: number,
-            meth2_prevalence: number;
-            meth3_prevalence: number;
-        }>;
-    }
-
-    export interface IBarbados extends IStudy {
-        normal_tension: boolean;
-        agenda: Array<{
-            gender: 'male' | 'female',
-            age: string,
-            'n over n at Risk': string,
-            'Incidence, % (95% CI)': string,
-            max_incidence: number
-        }>;
-    }
+/// <reference types="mathjs" />
+import { DictOfStringArray, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
+import MathType = mathjs.MathType;
+export interface IObjectCtor extends ObjectConstructor {
+    assign(target: any, ...sources: any[]): any;
+    values<T>(o: {
+        [s: string]: T;
+    }): T[];
 }
-
-export = glaucoma_risk_quiz_engine;
+export declare const ethnicities_pretty: (ethnicities: any) => DictOfStringArray;
+export declare const s_col_to_s: (s: string) => string;
+export declare const in_range: (range: string, num: number) => boolean;
+export declare const lowest_range: (ranges: string[]) => number;
+export declare const uniq: (a: any[]) => any[];
+/* tslint:disable:array-type */
+export declare const uniq2: (arr: {}[]) => {}[];
+export declare const preprocess_studies: (risk_json: IRiskJson) => IRiskJson;
+export declare const sort_ranges: (ranges: string[]) => string[];
+export declare const risk_from_study: (risk_json: IRiskJson, input: IInput) => number;
+export declare const familial_risks_from_study: (risk_json: IRiskJson, input: IInput, warn?: boolean) => number[];
+export declare const combined_risk: (familial_risks_from_study_l: number[], risk_from_studies: number) => MathType;
+export declare const risks_from_study: (risk_json: IRiskJson, input: IInput) => number[];
+export declare const place_in_array: (entry: any, a: any[]) => number;
+export declare const pos_in_range: (ranges: string[], num: number) => number;
+export declare const list_ethnicities: (risk_json: IRiskJson) => DictOfStringArray;
