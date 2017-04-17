@@ -2,7 +2,8 @@ import { isArray, isNullOrUndefined, isNumber } from 'util';
 import { exists, readFile, writeFile } from 'fs';
 import * as assert from 'assert';
 import * as math from 'mathjs';
-import { DictOfStringArray, IBarbados, IInput, IRiskJson } from './glaucoma-risk-quiz-engine';
+import { IBarbados, IDictOfStringArray, IInput, IRiskJson } from './glaucoma-risk-calculator-engine';
+
 import MathType = mathjs.MathType;
 
 export interface IObjectCtor extends ObjectConstructor {
@@ -17,7 +18,7 @@ interface Array<T> extends ArrayConstructor {
     find(predicate: (search: T) => boolean): T;
 }
 
-export const ethnicities_pretty = (ethnicities: DictOfStringArray | any): DictOfStringArray =>
+export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
     ethnicities.map(study =>
         (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0])
     );
@@ -262,11 +263,11 @@ export const pos_in_range = (ranges: string[], num: number): number => {
     return -1;
 };
 
-export const list_ethnicities = (risk_json: IRiskJson): DictOfStringArray => {
+export const list_ethnicities = (risk_json: IRiskJson): IDictOfStringArray => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     return Object.keys(risk_json.studies).map(k => {
         return {[k]: risk_json.studies[k].ethnicities};
-    }) as DictOfStringArray | any;
+    }) as IDictOfStringArray | any;
 };
 
 /*

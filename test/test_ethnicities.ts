@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { DictOfStringArray, IRiskJson } from '../glaucoma-risk-quiz-engine';
+import { DictOfStringArray, IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { list_ethnicities } from './..';
 
 /* tslint:disable:no-var-requires */

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { IRiskJson } from '../glaucoma-risk-quiz-engine';
+import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { place_in_array, risks_from_study } from './..';
 
 /* tslint:disable:no-var-requires */

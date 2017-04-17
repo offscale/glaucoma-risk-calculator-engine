@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import * as math from 'mathjs';
-import { IInput, IRiskJson } from '../glaucoma-risk-quiz-engine';
+import { IInput, IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { combined_risk, familial_risks_from_study, risk_from_study, risks_from_study } from './..';
 
 /* tslint:disable:no-var-requires */
