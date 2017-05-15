@@ -33,11 +33,11 @@ interface IStudy {
     n: number;
     ethnicities: string[];
     expr: Array<{
-        key: string,
-        take: number,
-        type?: string,
-        filter?: string[],
-        extract?: string
+        key: string;
+        take: number;
+        type?: string;
+        filter?: string[];
+        extract?: string;
     }>;
     ref: Array<{}>;
 }
@@ -62,11 +62,11 @@ export interface IFramingham extends IStudy {
 export interface IBarbados extends IStudy {
     normal_tension: boolean;
     agenda: Array<{
-        gender: 'male' | 'female',
-        age: string,
-        'n over n at Risk': string,
-        'Incidence, % (95% CI)': string,
-        max_incidence: number
+        gender: 'male' | 'female';
+        age: string;
+        'n over n at Risk': string;
+        'Incidence, % (95% CI)': string;
+        max_incidence: number;
     }>;
 }
 

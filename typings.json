@@ -1,0 +1,6 @@
+{
+  "name": "glaucoma-risk-calculator-engine",
+  "dependencies": {
+    "glaucoma-risk-calculator-engine": "github:glaucoma-australia/glaucoma-risk-calculator-engine/glaucoma-risk-calculator-engine.d.ts"
+  }
+}
