@@ -3,11 +3,11 @@ import { exists, readFile, writeFile } from 'fs';
 import * as assert from 'assert';
 import * as math from 'mathjs';
 import { IBarbados, IDictOfStringArray, IInput, IRiskJson } from './glaucoma-risk-calculator-engine';
-
 import MathType = mathjs.MathType;
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
+
     values<T>(o: { [s: string]: T }): T[];
 }
 
