@@ -65,11 +65,11 @@
     "olmsted": {
       "n": 60666,
       "ethnicities": [
-        "White",
-        "German",
-        "Norwegian",
-        "Irish",
-        "English"
+        "White (Rotterdam)",
+        "German (Framingham)",
+        "Norwegian (Framingham)",
+        "Irish (Framingham)",
+        "English (Framingham)"
       ],
       "age": {
         "30-39": 1.89549249600724,
@@ -174,14 +174,14 @@
     "framingham": {
       "n": 2631,
       "ethnicities": [
-        "White",
-        "England",
-        "Scotland",
-        "Wales",
-        "Ireland",
-        "Italy",
-        "Canadian",
-        "Europe"
+        "White (Framingham)",
+        "English (Framingham)",
+        "Scottish (Framingham)",
+        "Wales (Framingham)",
+        "Irish (Framingham)",
+        "Italian (Framingham)",
+        "Canadian (Framingham)",
+        "European (Framingham)"
       ],
       "age": {
         "all": 1.29228430254656024300,
@@ -454,11 +454,11 @@
       "n": 3427,
       "normal_tension": true,
       "ethnicities": [
-        "Black",
-        "African",
+        "Black (Barbados)",
+        "African (Barbados, Lesser Antilles, Caribbean)",
         "Afro-Barbadian",
         "Mulatto",
-        "Mixed"
+        "Mixed (Barbados)"
       ],
       "agenda": [
         {
@@ -634,6 +634,109 @@
                 "2017",
                 3,
                 17
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "st_lucia": {
+      "n": 1679,
+      "TODO": true
+    },
+    "ghana": {
+      "n": 1785,
+      "ethnicities": [
+        "Black (Ghana)",
+        "African (Ghana)",
+        "Ghanaian",
+        "Akwapim",
+        "Ewe",
+        "Ga",
+        "Adangbe"
+      ],
+      "age": {
+        "30-34": 6,
+        "35-39": 6.7,
+        "40-44": 6.2,
+        "45-49": 6.5,
+        "50-54": 7.3,
+        "55-59": 6.5,
+        "60-64": 7.9,
+        "65-69": 10,
+        "70-74": 13.3,
+        "75-79": 27.1,
+        "80-84": 26.5,
+        "85-89": 0,
+        "90-94": 33.3,
+        "95-100": 16.7,
+        "all": 8.4,
+        "_denominator": 100
+      },
+      "expr": [
+        {
+          "key": "age",
+          "type": "map",
+          "take": 1
+        }
+      ],
+      "ref": [
+        {
+          "id": "http://zotero.org/users/843109/items/UK2A2K8C",
+          "type": "article-journal",
+          "title": "Prevalence of glaucoma in an African population",
+          "container-title": "Eye",
+          "page": "491-497",
+          "volume": "18",
+          "issue": "5",
+          "source": "CrossRef",
+          "URL": "http://www.nature.com/doifinder/10.1038/sj.eye.6700674",
+          "DOI": "10.1038/sj.eye.6700674",
+          "ISSN": "0950-222X, 1476-5454",
+          "author": [
+            {
+              "family": "Ntim-Amponsah",
+              "given": "C T"
+            },
+            {
+              "family": "Amoaku",
+              "given": "W M K"
+            },
+            {
+              "family": "Ofosu-Amaah",
+              "given": "S"
+            },
+            {
+              "family": "Ewusi",
+              "given": "R K"
+            },
+            {
+              "family": "Idirisuriya-Khair",
+              "given": "R"
+            },
+            {
+              "family": "Nyatepe-Coo",
+              "given": "E"
+            },
+            {
+              "family": "Adu-Darko",
+              "given": "M"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2004",
+                5
+              ]
+            ]
+          },
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                5,
+                18
               ]
             ]
           }
