@@ -71,12 +71,15 @@ export interface IBarbados extends IStudy {
 }
 
 import MathType = mathjs.MathType;
+
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
+
     values<T>(o: {
         [s: string]: T;
     }): T[];
 }
+
 export declare const ethnicities_pretty: (ethnicities: any) => any;
 export declare const s_col_to_s: (s: string) => string;
 export declare const in_range: (range: string, num: number) => boolean;
@@ -92,3 +95,4 @@ export declare const risks_from_study: (risk_json: any, input: any) => number[];
 export declare const place_in_array: (entry: any, a: any[]) => number;
 export declare const pos_in_range: (ranges: string[], num: number) => number;
 export declare const list_ethnicities: (risk_json: any) => any;
+export declare const ethnicity2study: (risk_json: IRiskJson) => {};
