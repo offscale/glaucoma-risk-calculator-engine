@@ -270,6 +270,14 @@ export const list_ethnicities = (risk_json: IRiskJson): IDictOfStringArray => {
     }) as IDictOfStringArray | any;
 };
 
+export const ethnicity2study = (risk_json: IRiskJson) => {
+    const o = {};
+    Object.keys(risk_json.studies).map(study_name =>
+        risk_json.studies[study_name].ethnicities.map(ethnicity => ({[ethnicity]: study_name}))
+    ).reduce((a, b) => a.concat(b), []).forEach(obj => Object.assign(o, obj));
+    return o;
+};
+
 /*
  export const get_risk_pc = (pc => ((r => r > 100 ? 100 : r)(fam_risk.reduce((a, b) => a + b, 1) + pc)))(math.multiply(
  math.divide(risks.lastIndexOf(risk) + 1, risks.length), 100

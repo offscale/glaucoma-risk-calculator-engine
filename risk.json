@@ -65,11 +65,11 @@
     "olmsted": {
       "n": 60666,
       "ethnicities": [
-        "White (Rotterdam)",
-        "German (Framingham)",
-        "Norwegian (Framingham)",
-        "Irish (Framingham)",
-        "English (Framingham)"
+        "White (Olmsted)",
+        "German (Olmsted)",
+        "Norwegian (Olmsted)",
+        "Irish (Olmsted)",
+        "English (Olmsted)"
       ],
       "age": {
         "30-39": 1.89549249600724,
@@ -640,10 +640,6 @@
         }
       ]
     },
-    "st_lucia": {
-      "n": 1679,
-      "TODO": true
-    },
     "ghana": {
       "n": 1785,
       "ethnicities": [
@@ -742,6 +738,11 @@
           }
         }
       ]
+    }
+  },
+  "TODO": {
+    "st_lucia": {
+      "n": 1679
     }
   }
 }
