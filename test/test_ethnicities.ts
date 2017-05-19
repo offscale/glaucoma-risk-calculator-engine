@@ -12,40 +12,40 @@ describe('ethnicities', () => {
 
         expect(ethnicity_list).to.contain({
             olmsted: [
-                'White (Olmsted)',
-                'German (Olmsted)',
-                'Norwegian (Olmsted)',
-                'Irish (Olmsted)',
-                'English (Olmsted)'
+                'White [Olmsted]',
+                'German [Olmsted]',
+                'Norwegian [Olmsted]',
+                'Irish [Olmsted]',
+                'English [Olmsted]'
             ]
         });
         expect(ethnicity_list).to.contain(
             {
                 framingham: [
-                    'White (Framingham)',
-                    'English (Framingham)',
-                    'Scottish (Framingham)',
-                    'Wales (Framingham)',
-                    'Irish (Framingham)',
-                    'Italian (Framingham)',
-                    'Canadian (Framingham)',
-                    'European (Framingham)'
+                    'White [Framingham]',
+                    'English [Framingham]',
+                    'Scottish [Framingham]',
+                    'Wales [Framingham]',
+                    'Irish [Framingham]',
+                    'Italian [Framingham]',
+                    'Canadian [Framingham]',
+                    'European [Framingham]'
                 ]
             });
         expect(ethnicity_list).to.contain(
             {
                 barbados: [
-                    'Black (Barbados)',
-                    'African (Barbados, Lesser Antilles, Caribbean)',
+                    'Black [Barbados]',
+                    'African [Barbados, Lesser Antilles, Caribbean]',
                     'Afro-Barbadian',
                     'Mulatto',
-                    'Mixed (Barbados)'
+                    'Mixed [Barbados]'
                 ]
             });
         expect(ethnicity_list).to.contain({
             ghana: [
-                'Black (Ghana)',
-                'African (Ghana)',
+                'Black [Ghana]',
+                'African [Ghana]',
                 'Ghanaian',
                 'Akwapim',
                 'Ewe',
@@ -57,7 +57,8 @@ describe('ethnicities', () => {
 
     it('ethnicity2study', () => {
         const ethnicity2study_res = ethnicity2study(risk_json);
-        expect(ethnicity2study_res).to.include.keys('White (Olmsted)');
-        expect(ethnicity2study_res['White (Olmsted)']).to.be.eql('olmsted');
+        expect(ethnicity2study_res).to.include.keys('White [Olmsted]');
+        expect(ethnicity2study_res['White [Olmsted]']).to.be.eql('olmsted');
+        expect(Object.keys(ethnicity2study_res)).to.have.length(25);
     });
 });

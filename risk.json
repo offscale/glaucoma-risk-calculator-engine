@@ -61,15 +61,195 @@
       ]
     ]
   },
+  "default_multiplicative_risks": {
+    "myopia": {
+      "existent": 4
+    },
+    "family_history": {
+      "existent": 3
+    },
+    "diabetes": {
+      "existent": 3
+    },
+    "age": {
+      "<50": 1,
+      "50-80": 3,
+      "80+": 12
+    },
+    "ref": [
+      {
+        "id": "http://zotero.org/users/843109/items/6NK5N3CX",
+        "type": "article-journal",
+        "title": "[Update on Current Care Guideline: Glaucoma]",
+        "container-title": "Duodecim; laaketieteellinen aikakauskirja",
+        "page": "356—358",
+        "volume": "131",
+        "issue": "4",
+        "URL": "http://europepmc.org/abstract/MED/26241991",
+        "ISSN": "0012-7183",
+        "author": [
+          {
+            "family": "Tuulonen",
+            "given": "Anja"
+          },
+          {
+            "family": "Forsman",
+            "given": "Eva"
+          },
+          {
+            "family": "Hagman",
+            "given": "Juha"
+          },
+          {
+            "family": "Harju",
+            "given": "Mika"
+          },
+          {
+            "family": "Kari",
+            "given": "Osmo"
+          },
+          {
+            "family": "Lumme",
+            "given": "Pirkko"
+          },
+          {
+            "family": "Luodonpää",
+            "given": "Marja"
+          },
+          {
+            "family": "Määttä",
+            "given": "Marko"
+          },
+          {
+            "family": "Saarela",
+            "given": "Ville"
+          },
+          {
+            "family": "Vaajanen",
+            "given": "Anu"
+          },
+          {
+            "family": "Komulainen",
+            "given": "Jorma"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              "2015"
+            ]
+          ]
+        }
+      },
+      {
+        "id": "http://zotero.org/users/843109/items/2BAWXSAQ",
+        "type": "report",
+        "title": "Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma",
+        "publisher-place": "Australia",
+        "genre": "Guideline",
+        "event-place": "Australia",
+        "URL": "https://www.nhmrc.gov.au/guidelines-publications/cp113-cp113b",
+        "language": "English",
+        "author": [
+          {
+            "family": "(National Health and Medical Research Council)",
+            "given": "NHMRC"
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              "2010",
+              11
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "general_stats": [
+    {
+      "Racial origin": "Africa",
+      "Location": "Gambia, West Africa",
+      "Age": "30+",
+      "POAG (%)": 1.2
+    },
+    {
+      "Racial origin": "Africa",
+      "Location": "Barbados, West Indies",
+      "Age": "40–84",
+      "POAG (%)": 7.1
+    },
+    {
+      "Racial origin": "Africa",
+      "Location": "St Lucia, Caribbean",
+      "Age": "30+",
+      "POAG (%)": 8.8
+    },
+    {
+      "Racial origin": "European",
+      "Location": "Baltimore, USA",
+      "Age": "40+",
+      "POAG (%)": 4.74
+    },
+    {
+      "Racial origin": "Africa",
+      "Location": "Akwapim-South district,",
+      "Age": "30+",
+      "POAG (%)": 7.7
+    },
+    {
+      "Racial origin": "Africa",
+      "Location": "Ghana, West Africa",
+      "Age": "40+",
+      "POAG (%)": 8.5
+    },
+    {
+      "Racial origin": "European",
+      "Location": "Rotterdam, Netherlands",
+      "Age": "55+",
+      "POAG (%)": 1.1
+    },
+    {
+      "Racial origin": "Africa",
+      "Location": "Barbados, West Indies",
+      "Age": "40–84",
+      "POAG (%)": 0.8
+    },
+    {
+      "Racial origin": "European",
+      "Location": "Baltimore, USA",
+      "Age": "40+",
+      "POAG (%)": 1.29
+    },
+    {
+      "Racial origin": "Australia",
+      "Location": "Sydney, Australia",
+      "Age": "49+",
+      "POAG (%)": 3
+    },
+    {
+      "Racial origin": "Australia",
+      "Location": "Victoria, Australia",
+      "Age": "40+",
+      "POAG (%)": 1.8
+    },
+    {
+      "Racial origin": "Mixed race",
+      "Location": "Barbados, West Indies",
+      "Age": "40–84",
+      "POAG (%)": 3.3
+    }
+  ],
   "studies": {
     "olmsted": {
       "n": 60666,
       "ethnicities": [
-        "White (Olmsted)",
-        "German (Olmsted)",
-        "Norwegian (Olmsted)",
-        "Irish (Olmsted)",
-        "English (Olmsted)"
+        "White [Olmsted]",
+        "German [Olmsted]",
+        "Norwegian [Olmsted]",
+        "Irish [Olmsted]",
+        "English [Olmsted]"
       ],
       "age": {
         "30-39": 1.89549249600724,
@@ -174,14 +354,14 @@
     "framingham": {
       "n": 2631,
       "ethnicities": [
-        "White (Framingham)",
-        "English (Framingham)",
-        "Scottish (Framingham)",
-        "Wales (Framingham)",
-        "Irish (Framingham)",
-        "Italian (Framingham)",
-        "Canadian (Framingham)",
-        "European (Framingham)"
+        "White [Framingham]",
+        "English [Framingham]",
+        "Scottish [Framingham]",
+        "Wales [Framingham]",
+        "Irish [Framingham]",
+        "Italian [Framingham]",
+        "Canadian [Framingham]",
+        "European [Framingham]"
       ],
       "age": {
         "all": 1.29228430254656024300,
@@ -454,11 +634,11 @@
       "n": 3427,
       "normal_tension": true,
       "ethnicities": [
-        "Black (Barbados)",
-        "African (Barbados, Lesser Antilles, Caribbean)",
+        "Black [Barbados]",
+        "African [Barbados, Lesser Antilles, Caribbean]",
         "Afro-Barbadian",
         "Mulatto",
-        "Mixed (Barbados)"
+        "Mixed [Barbados]"
       ],
       "agenda": [
         {
@@ -643,8 +823,8 @@
     "ghana": {
       "n": 1785,
       "ethnicities": [
-        "Black (Ghana)",
-        "African (Ghana)",
+        "Black [Ghana]",
+        "African [Ghana]",
         "Ghanaian",
         "Akwapim",
         "Ewe",

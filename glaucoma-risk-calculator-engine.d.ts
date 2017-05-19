@@ -22,11 +22,31 @@ export interface IRiskJson {
         parents_pc: number;
         ref: Array<{}>;
     };
+    default_multiplicative_risks: {
+        myopia: {
+            existent: number
+        },
+        family_history: {
+            existent: number
+        },
+        diabetes: {
+            existent: number
+        },
+        age: {},
+        ref: Array<{}>
+    };
     studies: {
         olmsted: IOlmsted,
         framingham: IFramingham,
         barbados: IBarbados;
     };
+}
+
+export interface IMultiplicativeRisks {
+    myopia: string | boolean;
+    family_history: string | boolean;
+    diabetes: string | boolean;
+    age: string | number;
 }
 
 interface IStudy {
@@ -96,3 +116,5 @@ export declare const place_in_array: (entry: any, a: any[]) => number;
 export declare const pos_in_range: (ranges: string[], num: number) => number;
 export declare const list_ethnicities: (risk_json: any) => any;
 export declare const ethnicity2study: (risk_json: IRiskJson) => {};
+export declare const calc_default_multiplicative_risks: (risk_json: IRiskJson,
+                                                         user: IMultiplicativeRisks) => IMultiplicativeRisks;

@@ -2,7 +2,13 @@ import { isArray, isNullOrUndefined, isNumber } from 'util';
 import { exists, readFile, writeFile } from 'fs';
 import * as assert from 'assert';
 import * as math from 'mathjs';
-import { IBarbados, IDictOfStringArray, IInput, IRiskJson } from './glaucoma-risk-calculator-engine';
+import {
+    IBarbados,
+    IDictOfStringArray,
+    IInput,
+    IMultiplicativeRisks,
+    IRiskJson
+} from './glaucoma-risk-calculator-engine';
 import MathType = mathjs.MathType;
 
 export interface IObjectCtor extends ObjectConstructor {
@@ -276,6 +282,18 @@ export const ethnicity2study = (risk_json: IRiskJson): {} => {
         risk_json.studies[study_name].ethnicities.map(ethnicity => ({[ethnicity]: study_name}))
     ).reduce((a, b) => a.concat(b), []).forEach(obj => Object.assign(o, obj));
     return o;
+};
+
+export const calc_default_multiplicative_risks = (risk_json: IRiskJson,
+                                                  user: IMultiplicativeRisks): IMultiplicativeRisks => {
+    return {
+        age: `${risk_json.default_multiplicative_risks.age[
+            Object.keys(risk_json.default_multiplicative_risks.age).filter(range =>
+                in_range(range, user.age as number))[0]]}x`,
+        myopia: `${user.myopia ? risk_json.default_multiplicative_risks.myopia.existent : 1}x`,
+        family_history: `${user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1}x`,
+        diabetes: `${user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1}x`
+    };
 };
 
 /*
