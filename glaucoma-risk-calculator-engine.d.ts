@@ -43,10 +43,10 @@ export interface IRiskJson {
 }
 
 export interface IMultiplicativeRisks {
-    myopia: string | boolean;
-    family_history: string | boolean;
-    diabetes: string | boolean;
-    age: string | number;
+    myopia: number | boolean;
+    family_history: number | boolean;
+    diabetes: number | boolean;
+    age: number;
 }
 
 interface IStudy {

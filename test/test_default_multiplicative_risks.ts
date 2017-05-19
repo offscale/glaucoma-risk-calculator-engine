@@ -24,10 +24,10 @@ describe('default_multiplicative_risks', () => {
             age: 81
         };
         const user_risk: IMultiplicativeRisks = {
-            myopia: '4x',
-            diabetes: '3x',
-            family_history: '3x',
-            age: '12x'
+            myopia: 4,
+            diabetes: 3,
+            family_history: 3,
+            age: 12
         };
 
         test(user, user_risk);
@@ -41,10 +41,10 @@ describe('default_multiplicative_risks', () => {
             age: 80
         };
         const user_risk: IMultiplicativeRisks = {
-            myopia: '1x',
-            family_history: '1x',
-            diabetes: '1x',
-            age: '3x'
+            myopia: 1,
+            family_history: 1,
+            diabetes: 1,
+            age: 3
         };
 
         test(user, user_risk);
@@ -58,10 +58,10 @@ describe('default_multiplicative_risks', () => {
             age: 49
         };
         const user_risk: IMultiplicativeRisks = {
-            myopia: '1x',
-            family_history: '1x',
-            diabetes: '1x',
-            age: '1x'
+            myopia: 1,
+            family_history: 1,
+            diabetes: 1,
+            age: 1
         };
 
         test(user, user_risk);

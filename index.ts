@@ -245,7 +245,7 @@ export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] 
     const out = isArray(study_vals) ?
         study_vals.filter(o => input.gender ? o.gender === input.gender : true).map(o => o[study.expr[0].extract])
         : ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(
-            k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
+        k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
 
     if (!out) throw TypeError('Expected out to match something');
     return uniq(out);
@@ -287,12 +287,12 @@ export const ethnicity2study = (risk_json: IRiskJson): {} => {
 export const calc_default_multiplicative_risks = (risk_json: IRiskJson,
                                                   user: IMultiplicativeRisks): IMultiplicativeRisks => {
     return {
-        age: `${risk_json.default_multiplicative_risks.age[
+        age: risk_json.default_multiplicative_risks.age[
             Object.keys(risk_json.default_multiplicative_risks.age).filter(range =>
-                in_range(range, user.age as number))[0]]}x`,
-        myopia: `${user.myopia ? risk_json.default_multiplicative_risks.myopia.existent : 1}x`,
-        family_history: `${user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1}x`,
-        diabetes: `${user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1}x`
+                in_range(range, user.age as number))[0]],
+        myopia: user.myopia ? risk_json.default_multiplicative_risks.myopia.existent : 1,
+        family_history: user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1,
+        diabetes: user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1
     };
 };
 
