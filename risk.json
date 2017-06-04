@@ -631,111 +631,126 @@
       ]
     },
     "barbados": {
-      "n": 3427,
+      "n": 4498,
       "normal_tension": true,
       "ethnicities": [
         "Black [Barbados]",
         "African [Barbados, Lesser Antilles, Caribbean]",
         "Afro-Barbadian",
-        "Mulatto",
         "Mixed [Barbados]"
       ],
       "agenda": [
         {
-          "gender": "female",
-          "age": "40-49",
-          "n over n at Risk": "6/546",
-          "Incidence, % (95% CI)": "1.1 (0.4-2.4)",
-          "max_incidence": 2.4
-        },
-        {
           "gender": "male",
           "age": "40-49",
-          "n over n at Risk": "6/434",
-          "Incidence, % (95% CI)": "1.4 (0.5-3.0)",
-          "max_incidence": 3
+          "max_prevalence": 1.9,
+          "ci": "0.9-3.3",
+          "_denominator": 100
+        },
+        {
+          "gender": "female",
+          "age": "40-49",
+          "max_prevalence": 1.0,
+          "ci": "0.4-2.0",
+          "_denominator": 100
         },
         {
           "gender": "all",
           "age": "40-49",
-          "n over n at Risk": "12/980",
-          "Incidence, % (95% CI)": "1.2 (0.6-2.1)",
-          "max_incidence": 2.1
-        },
-        {
-          "gender": "female",
-          "age": "50-59",
-          "n over n at Risk": "6/504",
-          "Incidence, % (95% CI)": "1.2 (0.4-2.6)",
-          "max_incidence": 2.6
+          "max_prevalence": 1.4,
+          "ci": "0.8-2.2",
+          "_denominator": 100
         },
         {
           "gender": "male",
           "age": "50-59",
-          "n over n at Risk": "6/317",
-          "Incidence, % (95% CI)": "1.9 (0.7-4.1)",
-          "max_incidence": 4.1
+          "max_prevalence": 4.6,
+          "ci": "2.9-7.0",
+          "_denominator": 100
+        },
+        {
+          "gender": "female",
+          "age": "50-59",
+          "max_prevalence": 3.7,
+          "ci": "2.4-5.4",
+          "_denominator": 100
         },
         {
           "gender": "all",
           "age": "50-59",
-          "n over n at Risk": "12/821",
-          "Incidence, % (95% CI)": "1.5 (0.8-2.5)",
-          "max_incidence": 2.5
-        },
-        {
-          "gender": "female",
-          "age": "60-69",
-          "n over n at Risk": "11/430",
-          "Incidence, % (95% CI)": "2.6 (1.3-4.5)",
-          "max_incidence": 4.5
+          "max_prevalence": 4.1,
+          "ci": "3.0-5.4",
+          "_denominator": 100
         },
         {
           "gender": "male",
           "age": "60-69",
-          "n over n at Risk": "11/252",
-          "Incidence, % (95% CI)": "4.4 (2.2-7.7)",
-          "max_incidence": 7.7
+          "max_prevalence": 9.4,
+          "ci": "6.8-12.6",
+          "_denominator": 100
+        },
+        {
+          "gender": "female",
+          "age": "60-69",
+          "max_prevalence": 4.9,
+          "ci": "3.4-6.9",
+          "_denominator": 100
         },
         {
           "gender": "all",
           "age": "60-69",
-          "n over n at Risk": "22/682",
-          "Incidence, % (95% CI)": "3.2 (2.0-4.8)",
-          "max_incidence": 4.8
-        },
-        {
-          "gender": "female",
-          "age": ">=70",
-          "n over n at Risk": "11/285",
-          "Incidence, % (95% CI)": "3.9 (1.9-6.8)",
-          "max_incidence": 6.8
+          "max_prevalence": 6.7,
+          "ci": "5.3-8.4",
+          "_denominator": 100
         },
         {
           "gender": "male",
-          "age": ">=70",
-          "n over n at Risk": "10/221",
-          "Incidence, % (95% CI)": "4.5 (2.2-8.2)",
-          "max_incidence": 8.2
+          "age": "70-79",
+          "max_prevalence": 17.5,
+          "ci": "13.8-21.8",
+          "_denominator": 100
+        },
+        {
+          "gender": "female",
+          "age": "70-79",
+          "max_prevalence": 12.7,
+          "ci": "9.8-16.1",
+          "_denominator": 100
         },
         {
           "gender": "all",
-          "age": ">=70",
-          "n over n at Risk": "21/506",
-          "Incidence, % (95% CI)": "4.2 (2.6-6.3)",
-          "max_incidence": 6.3
+          "age": "70-79",
+          "max_prevalence": 14.8,
+          "ci": "12.5-17.4",
+          "_denominator": 100
         },
         {
+          "gender": "male",
+          "age": "80-86",
+          "max_prevalence": 24.8,
+          "ci": "16.7-34.3",
+          "_denominator": 100
+        },
+        {
+          "gender": "female",
+          "age": "80-86",
+          "max_prevalence": 22,
+          "ci": "15.0-30.3",
+          "_denominator": 100
+        },
+        {
+          "gender": "all",
+          "age": "80-86",
+          "max_prevalence": 23.2,
+          "ci": "17.9-29.3",
+          "_denominator": 100
+        },
+        {
+          "gender": "all",
           "age": "all",
-          "male n over n at Risk": "33/1224",
-          "male Incidence, % (95% CI)": "2.7 (1.9-3.8)",
-          "male_max_incidence": 3.8,
-          "female n over n at Risk": "34/1765",
-          "female Incidence, % (95% CI)": "1.9 (1.3-2.7)",
-          "female_max_incidence": 2.7,
-          "all n over n at Risk": "67/2989",
-          "all Incidence, % (95% CI)": "2.2 (1.7-2.8)",
-          "all_max_incidence": 2.8
+          "max_prevalence": 10.6,
+          "ci": "9.7-11.5",
+          "_denominator": 100
         }
       ],
       "expr": [
@@ -746,42 +761,42 @@
             "gender"
           ],
           "take": 1,
-          "extract": "max_incidence"
+          "extract": "max_prevalence"
         }
       ],
       "ref": [
         {
-          "id": "http://zotero.org/users/843109/items/IIXJ7IV8",
+          "id": "http://zotero.org/users/843109/items/GP2J8UM3",
           "type": "article-journal",
-          "title": "Incidence of open-angle glaucoma: The barbados eye studies",
+          "title": "The barbados eye study: Prevalence of open angle glaucoma",
           "container-title": "Archives of Ophthalmology",
-          "page": "89-95",
-          "volume": "119",
-          "issue": "1",
-          "abstract": "Objective \nTo measure the 4-year risk of open-angle glaucoma (OAG) in a black population.Design\nPopulation-based cohort study with 4 years of follow-up.Setting\nSimple random sample of residents of Barbados, West Indies, aged 40 years or older.Participants\nA total of 3427 members of the cohort (85% of those eligible).Main Outcome Measure\nDevelopment of glaucoma visual field defects and optic disc damage, confirmed by automated perimetry, independent fundus photographic gradings, and standardized ophthalmologic examinations.Results\nThe 4-year risk of OAG in black participants was 2.2% (95% confidence interval, 1.7%-2.8%), based on 67 newly developed cases of OAG. Incidence rates increased from 1.2% at ages 40 to 49 years to 4.2% at ages of 70 years or more, tending to be higher in men than women (2.7% vs 1.9%). About half of the incident cases were undiagnosed previously, and the rest were receiving OAG treatment. Of the 67 new cases of OAG, 32 had intraocular pressure of 21 mm Hg or less at baseline (1.2% incidence) and 35 had higher pressures(9% incidence). Risk was highest among persons classified as having suspect OAG at baseline (26.1%), followed by those with ocular hypertension (4.9%) and lowest in the remaining population (0.8%).Conclusions\nThis longitudinal study provides new information on OAG risk, as well as the first incidence measurement in a black population. Although intraocular pressure increased risk, about half of the new cases had baseline pressures of 21 mm Hg or less. Results substantiate the high OAG risk in the population of African origin, especially in older adults; the relative role of intraocular pressure; and the considerable underdetection of new disease after 4 years of follow-up.",
-          "URL": "http://dx.doi.org/10-1001/pubs.Ophthalmol.-ISSN-0003-9950-119-1-eeb90032",
-          "ISSN": "0003-9950",
-          "journalAbbreviation": "Archives of Ophthalmology",
+          "page": "821-829",
+          "volume": "112",
+          "issue": "6",
+          "URL": "+ http://dx.doi.org/10.1001/archopht.1994.01090180121046",
+          "DOI": "10.1001/archopht.1994.01090180121046",
           "author": [
             {
-              "literal": "Leske M"
+              "family": "M",
+              "given": "Leske"
             },
             {
-              "literal": "Connell AS"
+              "family": "AS",
+              "given": "Connell"
             },
             {
-              "literal": "Wu S"
+              "family": "AP",
+              "given": "Schachat"
             },
             {
-              "literal": "et al"
+              "family": "L",
+              "given": "Hyman"
             }
           ],
           "issued": {
             "date-parts": [
               [
-                "2001",
-                1,
-                1
+                "1994"
               ]
             ]
           }

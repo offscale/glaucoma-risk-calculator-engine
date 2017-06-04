@@ -4,10 +4,13 @@ export interface IDictOfStringArray {
     [study: string]: string[];
 }
 
+export type Study = 'framingham' | 'olmsted' | 'barbados';
+export type Gender = 'male' | 'female';
+
 export interface IInput {
-    study: 'framingham' | 'olmsted' | 'barbados';
+    study: Study;
     age: number;
-    gender?: string;
+    gender?: Gender;
     sibling?: boolean;
     parent?: boolean;
     _meta?: string[];
@@ -70,7 +73,7 @@ export interface IOlmsted extends IStudy {
 export interface IFramingham extends IStudy {
     age: { [idx: string]: number };
     agenda: Array<{
-        gender: 'male' | 'female',
+        gender: Gender,
         age: string,
         n: number,
         oags: number,
@@ -82,7 +85,7 @@ export interface IFramingham extends IStudy {
 export interface IBarbados extends IStudy {
     normal_tension: boolean;
     agenda: Array<{
-        gender: 'male' | 'female';
+        gender: Gender;
         age: string;
         'n over n at Risk': string;
         'Incidence, % (95% CI)': string;
@@ -98,6 +101,34 @@ export interface IObjectCtor extends ObjectConstructor {
     values<T>(o: {
         [s: string]: T;
     }): T[];
+}
+
+interface IRiskPerStudyStats {
+    _denominator?: 100;
+    age: string;
+    ci?: string;
+    gender?: Gender;
+    max_prevalence: number;
+}
+
+export interface IRelativeRisk {
+    age: number;
+    gender?: Gender;
+    study: Study;
+    rr: { [study: /*Study*/ string]: number };
+    risk_per_study: {
+        barbados: IRiskPerStudyStats,
+        framingham: {
+            age: string
+            gender: Gender
+            meth2_prevalence: number
+            meth3_prevalence: number
+            n: number
+            oags: number
+        },
+        ghana: IRiskPerStudyStats
+        olmsted: IRiskPerStudyStats
+    };
 }
 
 export declare const ethnicities_pretty: (ethnicities: any) => any;
@@ -118,3 +149,4 @@ export declare const list_ethnicities: (risk_json: any) => any;
 export declare const ethnicity2study: (risk_json: IRiskJson) => {};
 export declare const calc_default_multiplicative_risks: (risk_json: IRiskJson,
                                                          user: IMultiplicativeRisks) => IMultiplicativeRisks;
+export declare const calc_relative_risk: (risk_json: IRiskJson, input: IInput) => IRelativeRisk;

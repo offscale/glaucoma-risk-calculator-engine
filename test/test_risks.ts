@@ -7,11 +7,11 @@ const risk_json: IRiskJson = require('../risk');
 
 describe('tests risks', () => {
     it('barbados', () => {
-        const risk_distribution = [2.1, 3, 2.4, 2.6, 4.1, 2.5, 4.5, 7.7, 4.8, 6.8, 8.2, 6.3];
+        const risk_distribution = [1.9, 1, 1.4, 4.6, 3.7, 4.1, 9.4, 4.9, 6.7, 17.5, 12.7, 14.8, 24.8, 22, 23.2, 10.6];
         expect(risks_from_study(risk_json, {study: 'barbados', age: null})).to.have.members(risk_distribution);
-        expect(place_in_array(2.1, risk_distribution)).to.eql(0);
-        expect(place_in_array(8.2, risk_distribution)).to.eql(risk_distribution.indexOf(8.2));
-        expect(place_in_array(6.3, risk_distribution)).to.eql(risk_distribution.lastIndexOf(6.3));
+        expect(place_in_array(1, risk_distribution)).to.eql(0);
+        expect(place_in_array(6.7, risk_distribution)).to.eql(risk_distribution.indexOf(6.7));
+        expect(place_in_array(24.8, risk_distribution)).to.eql(risk_distribution.lastIndexOf(24.8));
     });
 
     it('framingham', () => {

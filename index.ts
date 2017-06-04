@@ -7,6 +7,7 @@ import {
     IDictOfStringArray,
     IInput,
     IMultiplicativeRisks,
+    IRelativeRisk,
     IRiskJson
 } from './glaucoma-risk-calculator-engine';
 import MathType = mathjs.MathType;
@@ -294,6 +295,36 @@ export const calc_default_multiplicative_risks = (risk_json: IRiskJson,
         family_history: user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1,
         diabetes: user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1
     };
+};
+
+export const calc_relative_risk = (risk_json: IRiskJson,
+                                   input: IInput): IRelativeRisk => {
+    const has_gender = input.gender != null;
+    const risk_per_study = has_gender ? Object.keys(risk_json.studies).map(study_name => ({
+        [study_name]:
+            risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda.filter(stat =>
+                input.gender === stat.gender && in_range(stat.age, input.age)
+            )[0] : (age_range => ({
+                max_prevalence: risk_json.studies[study_name].age[age_range],
+                age: age_range[0]
+            }))(Object.keys(risk_json.studies[study_name].age).filter(
+                age_range => in_range(age_range, input.age)) as any)
+    })).reduce((obj, item) => {
+        const k = Object.keys(item)[0];
+        obj[k] = item[k];
+        return obj;
+    }, {}) : null;
+
+    return Object.assign({
+        age: input.age,
+        study: input.study,
+        relative_risk: Object.keys(risk_per_study).map(study_name => ({
+            [study_name]: risk_per_study[study_name][
+                Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
+                    'max_prevalence' : 'meth3_prevalence']
+        })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any),
+        risk_per_study
+    }, has_gender ? {gender: input.gender} : {});
 };
 
 /*
