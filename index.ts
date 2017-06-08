@@ -321,8 +321,8 @@ export const calc_relative_risk = (risk_json: IRiskJson,
                 'max_prevalence' : 'meth3_prevalence']
     })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
     const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
-        const k = Object.keys(atoi)[0];
-        return {name: k, size: atoi[k], value: atoi[k]};
+        const study_name = Object.keys(atoi)[0];
+        return {name: risk_json.studies[study_name].ethnicities[0], size: atoi[study_name], value: atoi[study_name]};
     });
 
     return Object.assign({
