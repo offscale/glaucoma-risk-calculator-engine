@@ -115,7 +115,8 @@ export interface IRelativeRisk {
     age: number;
     gender?: Gender;
     study: Study;
-    rr: { [study: /*Study*/ string]: number };
+    rr: Array<{ [study: /*Study*/ string]: number }>;
+    graphed_rr: ITreeMapData[];
     risk_per_study: {
         barbados: IRiskPerStudyStats,
         framingham: {
@@ -129,6 +130,13 @@ export interface IRelativeRisk {
         ghana: IRiskPerStudyStats
         olmsted: IRiskPerStudyStats
     };
+}
+
+export interface ITreeMapData {
+    name: string;
+    value: number;
+    size?: number;
+    children?: ITreeMapData[];
 }
 
 export declare const ethnicities_pretty: (ethnicities: any) => any;

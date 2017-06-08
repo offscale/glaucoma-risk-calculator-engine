@@ -8,7 +8,8 @@ import {
     IInput,
     IMultiplicativeRisks,
     IRelativeRisk,
-    IRiskJson
+    IRiskJson,
+    ITreeMapData
 } from './glaucoma-risk-calculator-engine';
 import MathType = mathjs.MathType;
 
@@ -314,17 +315,47 @@ export const calc_relative_risk = (risk_json: IRiskJson,
         obj[k] = item[k];
         return obj;
     }, {}) : null;
+    const relative_risk: { [study: /*Study*/ string]: number }[] = Object.keys(risk_per_study).map(study_name => ({
+        [study_name]: risk_per_study[study_name][
+            Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
+                'max_prevalence' : 'meth3_prevalence']
+    })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
+    const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
+        const k = Object.keys(atoi)[0];
+        return {name: k, size: atoi[k], value: atoi[k]};
+    });
 
     return Object.assign({
         age: input.age,
         study: input.study,
+        relative_risk,
+        risk_per_study,
+        graphed_rr
+    }, has_gender ? {gender: input.gender} : {});
+};
+
+export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
+    // TODO
+    const risk_per_study = Object.keys(risk_json.studies).map(study_name => ({
+        [study_name]:
+            risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda : (age_range => ({
+                max_prevalence: risk_json.studies[study_name].age[age_range],
+                age: age_range[0]
+            }))(Object.keys(risk_json.studies[study_name].age) as any)
+    })).reduce((obj, item) => {
+        const k = Object.keys(item)[0];
+        obj[k] = item[k];
+        return obj;
+    }, {});
+
+    return {
         relative_risk: Object.keys(risk_per_study).map(study_name => ({
             [study_name]: risk_per_study[study_name][
                 Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
                     'max_prevalence' : 'meth3_prevalence']
         })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any),
         risk_per_study
-    }, has_gender ? {gender: input.gender} : {});
+    };
 };
 
 /*

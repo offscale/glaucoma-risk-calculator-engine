@@ -20,11 +20,11 @@ const trans = Object.freeze([
     Object.freeze({age: 50, gender: 'male', offspring: true})
 ]);
 
-describe('test comparative calc', () => {
+describe('test calc_relative_risk', () => {
     describe('barbados', () => {
         const study: string = 'barbados';
 
-        it('calculates risk_from_study', () => {
+        it('calculates relative risk', () => {
             expect(calc_relative_risk(risk_json, Object.assign({
                 study
             }, trans[0]))).to.eql({
