@@ -53,6 +53,6 @@ describe('ethnicities', () => {
         const ethnicity2study_res = ethnicity2study(risk_json);
         expect(ethnicity2study_res).to.include.keys('White [Olmsted]');
         expect(ethnicity2study_res['White [Olmsted]']).to.be.eql('olmsted');
-        expect(Object.keys(ethnicity2study_res)).to.have.length(24);
+        expect(Object.keys(ethnicity2study_res)).to.have.length(26);
     });
 });

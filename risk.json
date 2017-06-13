@@ -252,13 +252,13 @@
         "English [Olmsted]"
       ],
       "age": {
-        "30-39": 1.89549249600724,
-        "40-49": 2.73716568581642,
-        "50-59": 11.326078497068,
-        "60-69": 30,
-        "70-79": 94.5570698594758,
-        "80+": 73.8103215395919,
-        "_denominator": 100000
+        "30-39": 0.1895492496,
+        "40-49": 0.2737165686,
+        "50-59": 1.13260785,
+        "60-69": 3,
+        "70-79": 9.455706986,
+        "80+": 7.381032154,
+        "_denominator": 100
       },
       "expr": [
         {
@@ -930,6 +930,113 @@
                 "2017",
                 5,
                 18
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "japanese": {
+      "n": 2874,
+      "ethnicities": [
+        "Tajima [Japanese]",
+        "Japanese"
+      ],
+      "age": {
+        "30-39": 1.89549249600724,
+        "40-49": 2.73716568581642,
+        "50-59": 11.326078497068,
+        "60-69": 30,
+        "70-79": 94.5570698594758,
+        "80+": 73.8103215395919,
+        "_denominator": 100000,
+        "_TODO": true
+      },
+      "expr": [
+        {
+          "key": "age",
+          "type": "map",
+          "take": 1
+        }
+      ],
+      "ref": [
+        {
+          "id": "http://zotero.org/users/843109/items/WZEDUEDB",
+          "type": "article-journal",
+          "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
+          "container-title": "Ophthalmology",
+          "page": "882 - 886",
+          "volume": "108",
+          "issue": "5",
+          "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
+          "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
+          "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
+          "ISSN": "0161-6420",
+          "author": [
+            {
+              "family": "Schoff",
+              "given": "Erik O."
+            },
+            {
+              "family": "Hattenhauer",
+              "given": "Matthew G."
+            },
+            {
+              "family": "Ing",
+              "given": "Helen H."
+            },
+            {
+              "family": "Hodge",
+              "given": "David O."
+            },
+            {
+              "family": "Kennedy",
+              "given": "Robert H."
+            },
+            {
+              "family": "Herman",
+              "given": "David C."
+            },
+            {
+              "family": "Johnson",
+              "given": "Douglas H."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2001"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "http://zotero.org/users/843109/items/JC8J5XII",
+          "type": "report",
+          "title": "Census 2000",
+          "publisher-place": "United States of America",
+          "genre": "Census",
+          "event-place": "United States of America",
+          "URL": "https://www.census.gov/main/www/cen2000.html",
+          "author": [
+            {
+              "family": "United States Census Bureau",
+              "given": ""
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                "2000"
+              ]
+            ]
+          },
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                16
               ]
             ]
           }

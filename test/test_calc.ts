@@ -60,17 +60,17 @@ describe('test calc', () => {
         it('calculates risk_from_study', () => {
             expect(risk_from_study(risk_json, Object.assign({
                 study
-            }, trans[0]))).to.eql(0.012);
+            }, trans[0]))).to.eql(1.2);
 
             expect(risk_from_study(risk_json, Object.assign({
                 study
-            }, trans[1]))).to.eql(0.005);
+            }, trans[1]))).to.eql(0.5);
         });
 
         it('correctly identifies most at risk', () => {
             const input: IInput = Object.assign({study}, trans[2]);
             const risk = risk_from_study(risk_json, input);
-            expect(risk).to.eql(0.056);
+            expect(risk).to.eql(5.6);
             const risks = risks_from_study(risk_json, input);
             expect(math.divide(risks.lastIndexOf(risk) + 1, risks.length)).to.eql(1);
         });
@@ -81,7 +81,7 @@ describe('test calc', () => {
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
-            expect(no_fam_risk).to.eql(0.012);
+            expect(no_fam_risk).to.eql(1.2);
             expect(fam_risk).to.be.gt(no_fam_risk);
         });
     });
@@ -92,17 +92,17 @@ describe('test calc', () => {
         it('calculates risk_from_study', () => {
             expect(risk_from_study(risk_json, Object.assign({
                 study
-            }, trans[0]))).to.eql(11.326078497068);
+            }, trans[0]))).to.eql(1.13260785);
 
             expect(risk_from_study(risk_json, Object.assign({
                 study
-            }, trans[1]))).to.eql(1.89549249600724);
+            }, trans[1]))).to.eql(0.1895492496);
         });
 
         it('correctly identifies most at risk', () => {
             const input: IInput = Object.assign({study}, trans[2]);
             const risk = risk_from_study(risk_json, input);
-            expect(risk).to.eql(73.8103215395919);
+            expect(risk).to.eql(7.381032154);
             const risks = risks_from_study(risk_json, input);
             expect(math.divide(risks.lastIndexOf(risk) + 1, risks.length)).to.eql(1);
         });
@@ -113,7 +113,7 @@ describe('test calc', () => {
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
-            expect(no_fam_risk).to.eql(11.326078497068);
+            expect(no_fam_risk).to.eql(1.13260785);
             expect(fam_risk).to.be.gt(no_fam_risk);
         });
     });
