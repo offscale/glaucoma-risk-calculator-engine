@@ -43,6 +43,7 @@ export interface IRiskJson {
         framingham: IFramingham,
         barbados: IBarbados;
     };
+    html_of_all_refs: string;
 }
 
 export interface IMultiplicativeRisks {
@@ -66,12 +67,12 @@ interface IStudy {
 }
 
 export interface IOlmsted extends IStudy {
-    age: { [idx: string]: number };
+    age: {[idx: string]: number};
     agenda?: undefined;
 }
 
 export interface IFramingham extends IStudy {
-    age: { [idx: string]: number };
+    age: {[idx: string]: number};
     agenda: Array<{
         gender: Gender,
         age: string,
@@ -115,7 +116,7 @@ export interface IRelativeRisk {
     age: number;
     gender?: Gender;
     study: Study;
-    rr: Array<{ [study: /*Study*/ string]: number }>;
+    rr: Array<{[study: /*Study*/ string]: number}>;
     graphed_rr: ITreeMapData[];
     risk_per_study: {
         barbados: IRiskPerStudyStats,

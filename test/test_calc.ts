@@ -13,12 +13,12 @@ export interface IObjectCtor extends ObjectConstructor {
 declare const Object: IObjectCtor;
 
 const trans = Object.freeze([
-    Object.freeze({age: 55, gender: 'male'}),
-    Object.freeze({age: 23, gender: 'female'}),
-    Object.freeze({age: 100, gender: 'male'}),
-    Object.freeze({age: 50, gender: 'male'}),
-    Object.freeze({age: 50, gender: 'male', sibling: true}),
-    Object.freeze({age: 50, gender: 'male', offspring: true})
+    Object.freeze({ age: 55, gender: 'male' }),
+    Object.freeze({ age: 23, gender: 'female' }),
+    Object.freeze({ age: 100, gender: 'male' }),
+    Object.freeze({ age: 50, gender: 'male' }),
+    Object.freeze({ age: 50, gender: 'male', sibling: true }),
+    Object.freeze({ age: 50, gender: 'male', offspring: true })
 ]);
 
 describe('test calc', () => {
@@ -36,7 +36,7 @@ describe('test calc', () => {
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study}, trans[2]);
+            const input: IInput = Object.assign({ study }, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(24.8);
             const risks = risks_from_study(risk_json, input);
@@ -44,8 +44,8 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
-            const fam: IInput = Object.assign({study}, trans[4]);
+            const no_fam: IInput = { age: trans[3].age, gender: trans[4].gender, study } as any;
+            const fam: IInput = Object.assign({ study }, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
@@ -68,7 +68,7 @@ describe('test calc', () => {
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study}, trans[2]);
+            const input: IInput = Object.assign({ study }, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(5.6);
             const risks = risks_from_study(risk_json, input);
@@ -76,8 +76,8 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
-            const fam: IInput = Object.assign({study}, trans[4]);
+            const no_fam: IInput = { age: trans[3].age, gender: trans[4].gender, study } as any;
+            const fam: IInput = Object.assign({ study }, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
@@ -100,7 +100,7 @@ describe('test calc', () => {
         });
 
         it('correctly identifies most at risk', () => {
-            const input: IInput = Object.assign({study}, trans[2]);
+            const input: IInput = Object.assign({ study }, trans[2]);
             const risk = risk_from_study(risk_json, input);
             expect(risk).to.eql(7.381032154);
             const risks = risks_from_study(risk_json, input);
@@ -108,8 +108,8 @@ describe('test calc', () => {
         });
 
         it('calculates added risk of family history', () => {
-            const no_fam: IInput = {age: trans[3].age, gender: trans[4].gender, study} as any;
-            const fam: IInput = Object.assign({study}, trans[4]);
+            const no_fam: IInput = { age: trans[3].age, gender: trans[4].gender, study } as any;
+            const fam: IInput = Object.assign({ study }, trans[4]);
             const no_fam_risk = risk_from_study(risk_json, no_fam);
             const fam_risk_from_study = risk_from_study(risk_json, fam);
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);

@@ -1,6 +1,6 @@
 {
   "name": "glaucoma-risk-calculator-engine",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "@types/mathjs": "0.0.34",
     "@types/mocha": "^2.2.41",
     "chai": "^4.1.0",
+    "citation-js": "^0.3.0-9",
     "mocha": "^3.4.2",
     "ts-node": "^3.2.0",
     "typescript": "^2.4.1"

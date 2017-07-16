@@ -16,7 +16,7 @@ import MathType = mathjs.MathType;
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;
 
-    values<T>(o: { [s: string]: T }): T[];
+    values<T>(o: {[s: string]: T}): T[];
 }
 
 declare const Object: IObjectCtor;
@@ -107,7 +107,7 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
             if (sr[0][0] !== '<') {
                 const lt = `<${parseInt(sr[0], 10)}`;
                 risk_json.studies[study_name].age = Object.assign(
-                    {[lt]: risk_json.studies[study_name].age[sr[0]]},
+                    { [lt]: risk_json.studies[study_name].age[sr[0]] },
                     risk_json.studies[study_name].age
                 );
             }
@@ -146,7 +146,7 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
                         Object.assign({},
                             risk_json.studies[study_name].agenda.filter(
                                 agenda => agenda.age === lowest_bar && agenda.gender === gender)[0],
-                            {age: `<${lt}`}
+                            { age: `<${lt}` }
                         )
                     );
 
@@ -158,7 +158,7 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
                         risk_json.studies[study_name].agenda.push(
                             risk_json.studies[study_name].agenda.filter(
                                 agenda => agenda.age === top_bar[1] && agenda.gender === gender
-                            ).map(o => Object.assign({}, o, {age: `${top_bar[0]}+`}))[0]
+                            ).map(o => Object.assign({}, o, { age: `${top_bar[0]}+` }))[0]
                         );
                 }
             });
@@ -247,7 +247,7 @@ export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] 
     const out = isArray(study_vals) ?
         study_vals.filter(o => input.gender ? o.gender === input.gender : true).map(o => o[study.expr[0].extract])
         : ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(
-        k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
+            k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
 
     if (!out) throw TypeError('Expected out to match something');
     return uniq(out);
@@ -274,14 +274,14 @@ export const pos_in_range = (ranges: string[], num: number): number => {
 export const list_ethnicities = (risk_json: IRiskJson): IDictOfStringArray => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
     return Object.keys(risk_json.studies).map(k => {
-        return {[k]: risk_json.studies[k].ethnicities};
+        return { [k]: risk_json.studies[k].ethnicities };
     }) as IDictOfStringArray | any;
 };
 
 export const ethnicity2study = (risk_json: IRiskJson): {} => {
     const o = {};
     Object.keys(risk_json.studies).map(study_name =>
-        risk_json.studies[study_name].ethnicities.map(ethnicity => ({[ethnicity]: study_name}))
+        risk_json.studies[study_name].ethnicities.map(ethnicity => ({ [ethnicity]: study_name }))
     ).reduce((a, b) => a.concat(b), []).forEach(obj => Object.assign(o, obj));
     return o;
 };
@@ -302,27 +302,26 @@ export const calc_relative_risk = (risk_json: IRiskJson,
                                    input: IInput): IRelativeRisk => {
     const has_gender = input.gender != null;
     const risk_per_study = has_gender ? Object.keys(risk_json.studies).map(study_name => ({
-        [study_name]:
-            risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda.filter(stat =>
-                input.gender === stat.gender && in_range(stat.age, input.age)
-            )[0] : (age_range => ({
-                max_prevalence: risk_json.studies[study_name].age[age_range],
-                age: age_range[0]
-            }))(Object.keys(risk_json.studies[study_name].age).filter(
-                age_range => in_range(age_range, input.age)) as any)
+        [study_name]: risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda.filter(stat =>
+            input.gender === stat.gender && in_range(stat.age, input.age)
+        )[0] : (age_range => ({
+            max_prevalence: risk_json.studies[study_name].age[age_range],
+            age: age_range[0]
+        }))(Object.keys(risk_json.studies[study_name].age).filter(
+            age_range => in_range(age_range, input.age)) as any)
     })).reduce((obj, item) => {
         const k = Object.keys(item)[0];
         obj[k] = item[k];
         return obj;
     }, {}) : null;
-    const relative_risk: { [study: /*Study*/ string]: number }[] = Object.keys(risk_per_study).map(study_name => ({
+    const relative_risk: {[study: /*Study*/ string]: number}[] = Object.keys(risk_per_study).map(study_name => ({
         [study_name]: risk_per_study[study_name][
             Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
                 'max_prevalence' : 'meth3_prevalence']
     })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
     const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
         const study_name = Object.keys(atoi)[0];
-        return {name: risk_json.studies[study_name].ethnicities[0], size: atoi[study_name], value: atoi[study_name]};
+        return { name: risk_json.studies[study_name].ethnicities[0], size: atoi[study_name], value: atoi[study_name] };
     });
 
     return Object.assign({
@@ -331,18 +330,19 @@ export const calc_relative_risk = (risk_json: IRiskJson,
         relative_risk,
         risk_per_study,
         graphed_rr
-    }, has_gender ? {gender: input.gender} : {});
+    }, has_gender ? { gender: input.gender } : {});
 };
 
 export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
     // TODO
-    const risk_per_study = Object.keys(risk_json.studies).map(study_name => ({
-        [study_name]:
-            risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda : (age_range => ({
-                max_prevalence: risk_json.studies[study_name].age[age_range],
-                age: age_range[0]
-            }))(Object.keys(risk_json.studies[study_name].age) as any)
-    })).reduce((obj, item) => {
+    const risk_per_study = Object.keys(risk_json.studies).map(study_name => (
+        {
+            [study_name]: risk_json.studies[study_name].agenda != null ?
+                risk_json.studies[study_name].agenda : (age_range => ({
+                    max_prevalence: risk_json.studies[study_name].age[age_range],
+                    age: age_range[0]
+                }))(Object.keys(risk_json.studies[study_name].age) as any)
+        })).reduce((obj, item) => {
         const k = Object.keys(item)[0];
         obj[k] = item[k];
         return obj;
@@ -361,7 +361,7 @@ export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
 export const get_all_refs = (risk_json: IRiskJson): {}[] => {
     return uniq2(Object.keys(risk_json.studies).map(study => risk_json.studies[study].ref).reduce((a, b) =>
         a.concat(b)
-    ));
+    )).filter(o => !Array.isArray(o));
 };
 
 /*

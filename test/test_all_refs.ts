@@ -5,8 +5,4 @@ import { get_all_refs } from './..';
 /* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
 
-describe('test all refs', () => {
-    it('gets all refs', () => {
-        expect(get_all_refs(risk_json)).to.have.lengthOf(8);
-    });
-});
+describe('test all refs', () => it('gets all refs', () => expect(get_all_refs(risk_json)).to.have.lengthOf(8)));
