@@ -1,33 +1,29 @@
 {
+    "TODO": {
+        "st_lucia": {
+            "n": 1679
+        }
+    },
     "default_expr": {
-        "vals": [
-            "age"
-        ],
         "pipe": [
             "sum",
             "cross-entropy",
             "sigmoid"
+        ],
+        "vals": [
+            "age"
         ]
     },
     "default_family_history": {
         "from_study": "Rotterdam",
-        "sibling_pc": 10.4,
         "parents_pc": 1.1,
         "ref": [
             [
                 {
-                    "id": "http://zotero.org/users/843109/items/6NHEIVNU",
-                    "type": "article-journal",
-                    "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
-                    "container-title": "Archives of Ophthalmology",
-                    "page": "1640-1645",
-                    "volume": "116",
-                    "issue": "12",
-                    "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
-                    "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
                     "DOI": "10.1001/archopht.116.12.1640",
                     "ISSN": "0003-9950",
-                    "journalAbbreviation": "Archives of Ophthalmology",
+                    "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+                    "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
                     "author": [
                         {
                             "literal": "Wolfs RW"
@@ -48,6 +44,9 @@
                             "literal": "de Jong PM"
                         }
                     ],
+                    "container-title": "Archives of Ophthalmology",
+                    "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+                    "issue": "12",
                     "issued": {
                         "date-parts": [
                             [
@@ -56,37 +55,36 @@
                                 1
                             ]
                         ]
-                    }
+                    },
+                    "journalAbbreviation": "Archives of Ophthalmology",
+                    "page": "1640-1645",
+                    "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+                    "type": "article-journal",
+                    "volume": "116"
                 }
             ]
-        ]
+        ],
+        "sibling_pc": 10.4
     },
     "default_multiplicative_risks": {
-        "myopia": {
-            "existent": 4
-        },
-        "family_history": {
-            "existent": 3
+        "age": {
+            "50-80": 3,
+            "80+": 12,
+            "<50": 1
         },
         "diabetes": {
             "existent": 3
         },
-        "age": {
-            "<50": 1,
-            "50-80": 3,
-            "80+": 12
+        "family_history": {
+            "existent": 3
+        },
+        "myopia": {
+            "existent": 4
         },
         "ref": [
             {
-                "id": "http://zotero.org/users/843109/items/6NK5N3CX",
-                "type": "article-journal",
-                "title": "[Update on Current Care Guideline: Glaucoma]",
-                "container-title": "Duodecim; laaketieteellinen aikakauskirja",
-                "page": "356—358",
-                "volume": "131",
-                "issue": "4",
-                "URL": "http://europepmc.org/abstract/MED/26241991",
                 "ISSN": "0012-7183",
+                "URL": "http://europepmc.org/abstract/MED/26241991",
                 "author": [
                     {
                         "family": "Tuulonen",
@@ -133,29 +131,32 @@
                         "given": "Jorma"
                     }
                 ],
+                "container-title": "Duodecim; laaketieteellinen aikakauskirja",
+                "id": "http://zotero.org/users/843109/items/6NK5N3CX",
+                "issue": "4",
                 "issued": {
                     "date-parts": [
                         [
                             "2015"
                         ]
                     ]
-                }
+                },
+                "page": "356—358",
+                "title": "[Update on Current Care Guideline: Glaucoma]",
+                "type": "article-journal",
+                "volume": "131"
             },
             {
-                "id": "http://zotero.org/users/843109/items/2BAWXSAQ",
-                "type": "report",
-                "title": "Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma",
-                "publisher-place": "Australia",
-                "genre": "Guideline",
-                "event-place": "Australia",
                 "URL": "https://www.nhmrc.gov.au/guidelines-publications/cp113-cp113b",
-                "language": "English",
                 "author": [
                     {
                         "family": "(National Health and Medical Research Council)",
                         "given": "NHMRC"
                     }
                 ],
+                "event-place": "Australia",
+                "genre": "Guideline",
+                "id": "http://zotero.org/users/843109/items/2BAWXSAQ",
                 "issued": {
                     "date-parts": [
                         [
@@ -163,207 +164,342 @@
                             11
                         ]
                     ]
-                }
+                },
+                "language": "English",
+                "publisher-place": "Australia",
+                "title": "Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma",
+                "type": "report"
             }
         ]
     },
     "general_stats": [
         {
-            "Racial origin": "Africa",
+            "Age": "30+",
             "Location": "Gambia, West Africa",
-            "Age": "30+",
-            "POAG (%)": 1.2
+            "POAG (%)": 1.2,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "Africa",
-            "Location": "Barbados, West Indies",
             "Age": "40–84",
-            "POAG (%)": 7.1
+            "Location": "Barbados, West Indies",
+            "POAG (%)": 7.1,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "Africa",
+            "Age": "30+",
             "Location": "St Lucia, Caribbean",
-            "Age": "30+",
-            "POAG (%)": 8.8
+            "POAG (%)": 8.8,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "European",
-            "Location": "Baltimore, USA",
             "Age": "40+",
-            "POAG (%)": 4.74
+            "Location": "Baltimore, USA",
+            "POAG (%)": 4.74,
+            "Racial origin": "European"
         },
         {
-            "Racial origin": "Africa",
+            "Age": "30+",
             "Location": "Akwapim-South district,",
-            "Age": "30+",
-            "POAG (%)": 7.7
+            "POAG (%)": 7.7,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "Africa",
+            "Age": "40+",
             "Location": "Ghana, West Africa",
-            "Age": "40+",
-            "POAG (%)": 8.5
+            "POAG (%)": 8.5,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "European",
-            "Location": "Rotterdam, Netherlands",
             "Age": "55+",
-            "POAG (%)": 1.1
+            "Location": "Rotterdam, Netherlands",
+            "POAG (%)": 1.1,
+            "Racial origin": "European"
         },
         {
-            "Racial origin": "Africa",
-            "Location": "Barbados, West Indies",
             "Age": "40–84",
-            "POAG (%)": 0.8
+            "Location": "Barbados, West Indies",
+            "POAG (%)": 0.8,
+            "Racial origin": "Africa"
         },
         {
-            "Racial origin": "European",
+            "Age": "40+",
             "Location": "Baltimore, USA",
-            "Age": "40+",
-            "POAG (%)": 1.29
+            "POAG (%)": 1.29,
+            "Racial origin": "European"
         },
         {
-            "Racial origin": "Australia",
-            "Location": "Sydney, Australia",
             "Age": "49+",
-            "POAG (%)": 3
+            "Location": "Sydney, Australia",
+            "POAG (%)": 3,
+            "Racial origin": "Australia"
         },
         {
-            "Racial origin": "Australia",
-            "Location": "Victoria, Australia",
             "Age": "40+",
-            "POAG (%)": 1.8
+            "Location": "Victoria, Australia",
+            "POAG (%)": 1.8,
+            "Racial origin": "Australia"
         },
         {
-            "Racial origin": "Mixed race",
-            "Location": "Barbados, West Indies",
             "Age": "40–84",
-            "POAG (%)": 3.3
+            "Location": "Barbados, West Indies",
+            "POAG (%)": 3.3,
+            "Racial origin": "Mixed race"
         }
     ],
+    "html_of_all_refs": "\"<div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WC34ZE84\\\" class=\\\"csl-entry\\\">Barbados Statistical Service, 2010. <i>2010 population and housing census</i>, Barbados: Barbados Statistical Service. Available at: www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf [Accessed March 17, 2017].</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/X9TI96I9\\\" class=\\\"csl-entry\\\">Govindaraju, D.R. et al., 2008. Genetics of the Framingham Heart Study Population. <i>Advances in genetics</i>, 62, pp.33–65.</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/KHCNRZE3\\\" class=\\\"csl-entry\\\">Kahn, H.A. &#38; Milton, R.C., 1980. Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy. <i>American journal of epidemiology</i>, 111(6), pp.769–776.</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GB5I6PVS\\\" class=\\\"csl-entry\\\">Krueger, D.E., Milton, R.C. &#38; Maunder, L.R., The Framingham eye study: Introduction to the monograph. <i>Survey of Ophthalmology</i>, 24(6), pp.614–620. Available at: http://dx.doi.org/10.1016/0039-6257(80)90122-8 [Accessed March 14, 2017].</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GP2J8UM3\\\" class=\\\"csl-entry\\\">M, L. et al., 1994. The barbados eye study: Prevalence of open angle glaucoma. <i>Archives of Ophthalmology</i>, 112(6), pp.821–829. Available at: + http://dx.doi.org/10.1001/archopht.1994.01090180121046.</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/UK2A2K8C\\\" class=\\\"csl-entry\\\">Ntim-Amponsah, C.T. et al., 2004. Prevalence of glaucoma in an African population. <i>Eye</i>, 18(5), pp.491–497. Available at: http://www.nature.com/doifinder/10.1038/sj.eye.6700674 [Accessed May 18, 2017].</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WZEDUEDB\\\" class=\\\"csl-entry\\\">Schoff, E.O. et al., 2001. Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota. <i>Ophthalmology</i>, 108(5), pp.882–886. Available at: http://www.sciencedirect.com/science/article/pii/S0161642001005504.</div>\\n<br />  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/JC8J5XII\\\" class=\\\"csl-entry\\\">United States Census Bureau, 2000. <i>Census 2000</i>, United States of America. Available at: https://www.census.gov/main/www/cen2000.html [Accessed March 16, 2017].</div>\\n</div>\"",
     "studies": {
-        "olmsted": {
-            "n": 60666,
-            "ethnicities": [
-                "White [Olmsted]",
-                "German [Olmsted]",
-                "Norwegian [Olmsted]",
-                "Irish [Olmsted]",
-                "English [Olmsted]"
+        "barbados": {
+            "agenda": [
+                {
+                    "_denominator": 100,
+                    "age": "<40",
+                    "ci": "0.9-3.3",
+                    "gender": "male",
+                    "max_prevalence": 1.9
+                },
+                {
+                    "_denominator": 100,
+                    "age": "<40",
+                    "ci": "0.4-2.0",
+                    "gender": "female",
+                    "max_prevalence": 1
+                },
+                {
+                    "_denominator": 100,
+                    "age": "<40",
+                    "ci": "0.8-2.2",
+                    "gender": "all",
+                    "max_prevalence": 1.4
+                },
+                {
+                    "_denominator": 100,
+                    "age": "40-49",
+                    "ci": "0.9-3.3",
+                    "gender": "male",
+                    "max_prevalence": 1.9
+                },
+                {
+                    "_denominator": 100,
+                    "age": "40-49",
+                    "ci": "0.4-2.0",
+                    "gender": "female",
+                    "max_prevalence": 1
+                },
+                {
+                    "_denominator": 100,
+                    "age": "40-49",
+                    "ci": "0.8-2.2",
+                    "gender": "all",
+                    "max_prevalence": 1.4
+                },
+                {
+                    "_denominator": 100,
+                    "age": "50-59",
+                    "ci": "2.9-7.0",
+                    "gender": "male",
+                    "max_prevalence": 4.6
+                },
+                {
+                    "_denominator": 100,
+                    "age": "50-59",
+                    "ci": "2.4-5.4",
+                    "gender": "female",
+                    "max_prevalence": 3.7
+                },
+                {
+                    "_denominator": 100,
+                    "age": "50-59",
+                    "ci": "3.0-5.4",
+                    "gender": "all",
+                    "max_prevalence": 4.1
+                },
+                {
+                    "_denominator": 100,
+                    "age": "60-69",
+                    "ci": "6.8-12.6",
+                    "gender": "male",
+                    "max_prevalence": 9.4
+                },
+                {
+                    "_denominator": 100,
+                    "age": "60-69",
+                    "ci": "3.4-6.9",
+                    "gender": "female",
+                    "max_prevalence": 4.9
+                },
+                {
+                    "_denominator": 100,
+                    "age": "60-69",
+                    "ci": "5.3-8.4",
+                    "gender": "all",
+                    "max_prevalence": 6.7
+                },
+                {
+                    "_denominator": 100,
+                    "age": "70-79",
+                    "ci": "13.8-21.8",
+                    "gender": "male",
+                    "max_prevalence": 17.5
+                },
+                {
+                    "_denominator": 100,
+                    "age": "70-79",
+                    "ci": "9.8-16.1",
+                    "gender": "female",
+                    "max_prevalence": 12.7
+                },
+                {
+                    "_denominator": 100,
+                    "age": "70-79",
+                    "ci": "12.5-17.4",
+                    "gender": "all",
+                    "max_prevalence": 14.8
+                },
+                {
+                    "_denominator": 100,
+                    "age": "80-86",
+                    "ci": "16.7-34.3",
+                    "gender": "male",
+                    "max_prevalence": 24.8
+                },
+                {
+                    "_denominator": 100,
+                    "age": "80-86",
+                    "ci": "15.0-30.3",
+                    "gender": "female",
+                    "max_prevalence": 22
+                },
+                {
+                    "_denominator": 100,
+                    "age": "80-86",
+                    "ci": "17.9-29.3",
+                    "gender": "all",
+                    "max_prevalence": 23.2
+                },
+                {
+                    "_denominator": 100,
+                    "age": "all",
+                    "ci": "9.7-11.5",
+                    "gender": "all",
+                    "max_prevalence": 10.6
+                },
+                {
+                    "_denominator": 100,
+                    "age": "86+",
+                    "ci": "16.7-34.3",
+                    "gender": "male",
+                    "max_prevalence": 24.8
+                },
+                {
+                    "_denominator": 100,
+                    "age": "86+",
+                    "ci": "15.0-30.3",
+                    "gender": "female",
+                    "max_prevalence": 22
+                },
+                {
+                    "_denominator": 100,
+                    "age": "86+",
+                    "ci": "17.9-29.3",
+                    "gender": "all",
+                    "max_prevalence": 23.2
+                }
             ],
-            "age": {
-                "<30": 0.1895492496,
-                "30-39": 0.1895492496,
-                "40-49": 0.2737165686,
-                "50-59": 1.13260785,
-                "60-69": 3,
-                "70-79": 9.455706986,
-                "80+": 7.381032154,
-                "_denominator": 100
-            },
+            "ethnicities": [
+                "Black [Barbados]",
+                "African [Barbados, Lesser Antilles, Caribbean]",
+                "Afro-Barbadian",
+                "Mixed [Barbados]"
+            ],
             "expr": [
                 {
-                    "key": "age",
-                    "type": "map",
+                    "extract": "max_prevalence",
+                    "filter": [
+                        "age",
+                        "gender"
+                    ],
+                    "key": "agenda",
                     "take": 1
                 }
             ],
+            "n": 4498,
+            "normal_tension": true,
+            "parents_pc": 1.1,
             "ref": [
                 {
-                    "id": "http://zotero.org/users/843109/items/WZEDUEDB",
-                    "type": "article-journal",
-                    "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
-                    "container-title": "Ophthalmology",
-                    "page": "882 - 886",
-                    "volume": "108",
-                    "issue": "5",
-                    "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
-                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
-                    "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
-                    "ISSN": "0161-6420",
+                    "DOI": "10.1001/archopht.1994.01090180121046",
+                    "URL": "+ http://dx.doi.org/10.1001/archopht.1994.01090180121046",
                     "author": [
                         {
-                            "family": "Schoff",
-                            "given": "Erik O."
+                            "family": "M",
+                            "given": "Leske"
                         },
                         {
-                            "family": "Hattenhauer",
-                            "given": "Matthew G."
+                            "family": "AS",
+                            "given": "Connell"
                         },
                         {
-                            "family": "Ing",
-                            "given": "Helen H."
+                            "family": "AP",
+                            "given": "Schachat"
                         },
                         {
-                            "family": "Hodge",
-                            "given": "David O."
-                        },
-                        {
-                            "family": "Kennedy",
-                            "given": "Robert H."
-                        },
-                        {
-                            "family": "Herman",
-                            "given": "David C."
-                        },
-                        {
-                            "family": "Johnson",
-                            "given": "Douglas H."
+                            "family": "L",
+                            "given": "Hyman"
                         }
                     ],
+                    "container-title": "Archives of Ophthalmology",
+                    "id": "http://zotero.org/users/843109/items/GP2J8UM3",
+                    "issue": "6",
                     "issued": {
                         "date-parts": [
                             [
-                                "2001"
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "id": "http://zotero.org/users/843109/items/JC8J5XII",
-                    "type": "report",
-                    "title": "Census 2000",
-                    "publisher-place": "United States of America",
-                    "genre": "Census",
-                    "event-place": "United States of America",
-                    "URL": "https://www.census.gov/main/www/cen2000.html",
-                    "author": [
-                        {
-                            "family": "United States Census Bureau",
-                            "given": ""
-                        }
-                    ],
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2000"
+                                "1994"
                             ]
                         ]
                     },
+                    "page": "821-829",
+                    "title": "The barbados eye study: Prevalence of open angle glaucoma",
+                    "type": "article-journal",
+                    "volume": "112"
+                },
+                {
+                    "URL": "www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf",
                     "accessed": {
                         "date-parts": [
                             [
                                 "2017",
                                 3,
-                                16
+                                17
                             ]
                         ]
-                    }
+                    },
+                    "author": [
+                        {
+                            "family": "Barbados Statistical Service",
+                            "given": ""
+                        }
+                    ],
+                    "event-place": "Barbados",
+                    "genre": "Census",
+                    "id": "http://zotero.org/users/843109/items/WC34ZE84",
+                    "issued": {
+                        "date-parts": [
+                            [
+                                "2010"
+                            ]
+                        ]
+                    },
+                    "publisher": "Barbados Statistical Service",
+                    "publisher-place": "Barbados",
+                    "title": "2010 population and housing census",
+                    "type": "report"
                 },
                 [
                     {
-                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
-                        "type": "article-journal",
-                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
-                        "container-title": "Archives of Ophthalmology",
-                        "page": "1640-1645",
-                        "volume": "116",
-                        "issue": "12",
-                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
-                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
                         "DOI": "10.1001/archopht.116.12.1640",
                         "ISSN": "0003-9950",
-                        "journalAbbreviation": "Archives of Ophthalmology",
+                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
                         "author": [
                             {
                                 "literal": "Wolfs RW"
@@ -384,6 +520,9 @@
                                 "literal": "de Jong PM"
                             }
                         ],
+                        "container-title": "Archives of Ophthalmology",
+                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+                        "issue": "12",
                         "issued": {
                             "date-parts": [
                                 [
@@ -392,15 +531,171 @@
                                     1
                                 ]
                             ]
-                        }
+                        },
+                        "journalAbbreviation": "Archives of Ophthalmology",
+                        "page": "1640-1645",
+                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+                        "type": "article-journal",
+                        "volume": "116"
                     }
                 ]
             ],
-            "sibling_pc": 10.4,
-            "parents_pc": 1.1
+            "sibling_pc": 10.4
         },
         "framingham": {
-            "n": 2631,
+            "age": {
+                "65-74": 1.8757327080890973,
+                "75+": 1.2626262626262625,
+                "<65": 0.9406657018813314,
+                "_denominator": 100,
+                "all": 1.2922843025465602
+            },
+            "agenda": [
+                {
+                    "age": "<52",
+                    "gender": "male",
+                    "meth2_prevalence": 1,
+                    "meth3_prevalence": 1.2,
+                    "n": 601,
+                    "oags": 6
+                },
+                {
+                    "age": "<52",
+                    "gender": "female",
+                    "meth2_prevalence": 0.4,
+                    "meth3_prevalence": 0.5,
+                    "n": 781,
+                    "oags": 3
+                },
+                {
+                    "age": "<52",
+                    "gender": "both",
+                    "meth2_prevalence": 0.7,
+                    "meth3_prevalence": 0.8,
+                    "n": 1382,
+                    "oags": 9
+                },
+                {
+                    "age": "all",
+                    "gender": "male",
+                    "meth2_prevalence": 1.9,
+                    "meth3_prevalence": 2.2,
+                    "n": 1107,
+                    "oags": 21
+                },
+                {
+                    "age": "52-64",
+                    "gender": "male",
+                    "meth2_prevalence": 1,
+                    "meth3_prevalence": 1.2,
+                    "n": 601,
+                    "oags": 6
+                },
+                {
+                    "age": "65-74",
+                    "gender": "male",
+                    "meth2_prevalence": 2.6,
+                    "meth3_prevalence": 2.9,
+                    "n": 346,
+                    "oags": 9
+                },
+                {
+                    "age": "75-85",
+                    "gender": "male",
+                    "meth2_prevalence": 3.8,
+                    "meth3_prevalence": 5.6,
+                    "n": 160,
+                    "oags": 6
+                },
+                {
+                    "age": "all",
+                    "gender": "female",
+                    "meth2_prevalence": 0.7,
+                    "meth3_prevalence": 1.1,
+                    "n": 1524,
+                    "oags": 10
+                },
+                {
+                    "age": "52-64",
+                    "gender": "female",
+                    "meth2_prevalence": 0.4,
+                    "meth3_prevalence": 0.5,
+                    "n": 781,
+                    "oags": 3
+                },
+                {
+                    "age": "65-74",
+                    "gender": "female",
+                    "meth2_prevalence": 0.4,
+                    "meth3_prevalence": 0.8,
+                    "n": 507,
+                    "oags": 2
+                },
+                {
+                    "age": "75-85",
+                    "gender": "female",
+                    "meth2_prevalence": 2.1,
+                    "meth3_prevalence": 3.9,
+                    "n": 236,
+                    "oags": 5
+                },
+                {
+                    "age": "all",
+                    "gender": "both",
+                    "meth2_prevalence": 1.2,
+                    "meth3_prevalence": 1.6,
+                    "n": 2631,
+                    "oags": 31
+                },
+                {
+                    "age": "52-64",
+                    "gender": "both",
+                    "meth2_prevalence": 0.7,
+                    "meth3_prevalence": 0.8,
+                    "n": 1382,
+                    "oags": 9
+                },
+                {
+                    "age": "65-74",
+                    "gender": "both",
+                    "meth2_prevalence": 1.3,
+                    "meth3_prevalence": 1.7,
+                    "n": 853,
+                    "oags": 11
+                },
+                {
+                    "age": "75-85",
+                    "gender": "both",
+                    "meth2_prevalence": 2.8,
+                    "meth3_prevalence": 4.7,
+                    "n": 396,
+                    "oags": 11
+                },
+                {
+                    "age": "85+",
+                    "gender": "male",
+                    "meth2_prevalence": 3.8,
+                    "meth3_prevalence": 5.6,
+                    "n": 160,
+                    "oags": 6
+                },
+                {
+                    "age": "85+",
+                    "gender": "female",
+                    "meth2_prevalence": 2.1,
+                    "meth3_prevalence": 3.9,
+                    "n": 236,
+                    "oags": 5
+                },
+                {
+                    "age": "85+",
+                    "gender": "both",
+                    "meth2_prevalence": 2.8,
+                    "meth3_prevalence": 4.7,
+                    "n": 396,
+                    "oags": 11
+                }
+            ],
             "ethnicities": [
                 "White [Framingham]",
                 "English [Framingham]",
@@ -411,183 +706,34 @@
                 "Canadian [Framingham]",
                 "European [Framingham]"
             ],
-            "age": {
-                "all": 1.2922843025465602,
-                "<65": 0.9406657018813314,
-                "65-74": 1.8757327080890973,
-                "75+": 1.2626262626262625,
-                "_denominator": 100
-            },
-            "agenda": [
-                {
-                    "gender": "both",
-                    "age": "<52",
-                    "n": 1382,
-                    "oags": 9,
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8
-                },
-                {
-                    "gender": "female",
-                    "age": "<52",
-                    "n": 781,
-                    "oags": 3,
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.5
-                },
-                {
-                    "gender": "male",
-                    "age": "<52",
-                    "n": 601,
-                    "oags": 6,
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2
-                },
-                {
-                    "gender": "male",
-                    "age": "all",
-                    "n": 1107,
-                    "oags": 21,
-                    "meth2_prevalence": 1.9,
-                    "meth3_prevalence": 2.2
-                },
-                {
-                    "gender": "male",
-                    "age": "52-64",
-                    "n": 601,
-                    "oags": 6,
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2
-                },
-                {
-                    "gender": "male",
-                    "age": "65-74",
-                    "n": 346,
-                    "oags": 9,
-                    "meth2_prevalence": 2.6,
-                    "meth3_prevalence": 2.9
-                },
-                {
-                    "gender": "male",
-                    "age": "75-85",
-                    "n": 160,
-                    "oags": 6,
-                    "meth2_prevalence": 3.8,
-                    "meth3_prevalence": 5.6
-                },
-                {
-                    "gender": "female",
-                    "age": "all",
-                    "n": 1524,
-                    "oags": 10,
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 1.1
-                },
-                {
-                    "gender": "female",
-                    "age": "52-64",
-                    "n": 781,
-                    "oags": 3,
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.5
-                },
-                {
-                    "gender": "female",
-                    "age": "65-74",
-                    "n": 507,
-                    "oags": 2,
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.8
-                },
-                {
-                    "gender": "female",
-                    "age": "75-85",
-                    "n": 236,
-                    "oags": 5,
-                    "meth2_prevalence": 2.1,
-                    "meth3_prevalence": 3.9
-                },
-                {
-                    "gender": "both",
-                    "age": "all",
-                    "n": 2631,
-                    "oags": 31,
-                    "meth2_prevalence": 1.2,
-                    "meth3_prevalence": 1.6
-                },
-                {
-                    "gender": "both",
-                    "age": "52-64",
-                    "n": 1382,
-                    "oags": 9,
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8
-                },
-                {
-                    "gender": "both",
-                    "age": "65-74",
-                    "n": 853,
-                    "oags": 11,
-                    "meth2_prevalence": 1.3,
-                    "meth3_prevalence": 1.7
-                },
-                {
-                    "gender": "both",
-                    "age": "75-85",
-                    "n": 396,
-                    "oags": 11,
-                    "meth2_prevalence": 2.8,
-                    "meth3_prevalence": 4.7
-                },
-                {
-                    "gender": "male",
-                    "age": "85+",
-                    "n": 160,
-                    "oags": 6,
-                    "meth2_prevalence": 3.8,
-                    "meth3_prevalence": 5.6
-                },
-                {
-                    "gender": "female",
-                    "age": "85+",
-                    "n": 236,
-                    "oags": 5,
-                    "meth2_prevalence": 2.1,
-                    "meth3_prevalence": 3.9
-                },
-                {
-                    "gender": "both",
-                    "age": "85+",
-                    "n": 396,
-                    "oags": 11,
-                    "meth2_prevalence": 2.8,
-                    "meth3_prevalence": 4.7
-                }
-            ],
             "expr": [
                 {
-                    "key": "agenda",
+                    "extract": "meth3_prevalence",
                     "filter": [
                         "age",
                         "gender"
                     ],
-                    "take": 1,
-                    "extract": "meth3_prevalence"
+                    "key": "agenda",
+                    "take": 1
                 }
             ],
+            "n": 2631,
+            "parents_pc": 1.1,
             "ref": [
                 {
-                    "id": "http://zotero.org/users/843109/items/GB5I6PVS",
-                    "type": "article-journal",
-                    "title": "The Framingham eye study: Introduction to the monograph",
-                    "container-title": "Survey of Ophthalmology",
-                    "page": "614-620",
-                    "volume": "24",
-                    "issue": "6",
-                    "abstract": "This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.",
-                    "URL": "http://dx.doi.org/10.1016/0039-6257(80)90122-8",
                     "DOI": "10.1016/0039-6257(80)90122-8",
                     "ISSN": "0039-6257",
+                    "URL": "http://dx.doi.org/10.1016/0039-6257(80)90122-8",
+                    "abstract": "This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.",
+                    "accessed": {
+                        "date-parts": [
+                            [
+                                "2017",
+                                3,
+                                14
+                            ]
+                        ]
+                    },
                     "author": [
                         {
                             "family": "Krueger",
@@ -602,28 +748,17 @@
                             "given": "Lucinda R"
                         }
                     ],
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                3,
-                                14
-                            ]
-                        ]
-                    }
+                    "container-title": "Survey of Ophthalmology",
+                    "id": "http://zotero.org/users/843109/items/GB5I6PVS",
+                    "issue": "6",
+                    "page": "614-620",
+                    "title": "The Framingham eye study: Introduction to the monograph",
+                    "type": "article-journal",
+                    "volume": "24"
                 },
                 {
-                    "id": "http://zotero.org/users/843109/items/KHCNRZE3",
-                    "type": "article-journal",
-                    "title": "Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.",
-                    "container-title": "American journal of epidemiology",
-                    "page": "769-776",
-                    "volume": "111",
-                    "issue": "6",
                     "ISSN": "0002-9262 0002-9262",
-                    "note": "PMID: 7386451",
-                    "journalAbbreviation": "Am J Epidemiol",
-                    "language": "eng",
+                    "PMID": "7386451",
                     "author": [
                         {
                             "family": "Kahn",
@@ -634,6 +769,9 @@
                             "given": "R. C."
                         }
                     ],
+                    "container-title": "American journal of epidemiology",
+                    "id": "http://zotero.org/users/843109/items/KHCNRZE3",
+                    "issue": "6",
                     "issued": {
                         "date-parts": [
                             [
@@ -642,21 +780,19 @@
                             ]
                         ]
                     },
-                    "PMID": "7386451"
+                    "journalAbbreviation": "Am J Epidemiol",
+                    "language": "eng",
+                    "note": "PMID: 7386451",
+                    "page": "769-776",
+                    "title": "Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.",
+                    "type": "article-journal",
+                    "volume": "111"
                 },
                 {
-                    "id": "http://zotero.org/users/843109/items/X9TI96I9",
-                    "type": "article-journal",
-                    "title": "Genetics of the Framingham Heart Study Population",
-                    "container-title": "Advances in genetics",
-                    "page": "33-65",
-                    "volume": "62",
-                    "abstract": "This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.",
                     "DOI": "10.1016/S0065-2660(08)00602-0",
                     "ISSN": "0065-2660",
-                    "note": "PMID: 19010253",
-                    "journalAbbreviation": "Adv Genet",
-                    "language": "eng",
+                    "PMID": "19010253",
+                    "abstract": "This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.",
                     "author": [
                         {
                             "family": "Govindaraju",
@@ -715,6 +851,8 @@
                             "given": "Emelia J."
                         }
                     ],
+                    "container-title": "Advances in genetics",
+                    "id": "http://zotero.org/users/843109/items/X9TI96I9",
                     "issued": {
                         "date-parts": [
                             [
@@ -722,316 +860,20 @@
                             ]
                         ]
                     },
-                    "PMID": "19010253"
-                },
-                [
-                    {
-                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
-                        "type": "article-journal",
-                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
-                        "container-title": "Archives of Ophthalmology",
-                        "page": "1640-1645",
-                        "volume": "116",
-                        "issue": "12",
-                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
-                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
-                        "DOI": "10.1001/archopht.116.12.1640",
-                        "ISSN": "0003-9950",
-                        "journalAbbreviation": "Archives of Ophthalmology",
-                        "author": [
-                            {
-                                "literal": "Wolfs RW"
-                            },
-                            {
-                                "literal": "Klaver CW"
-                            },
-                            {
-                                "literal": "Ramrattan RS"
-                            },
-                            {
-                                "literal": "van Duijn CM"
-                            },
-                            {
-                                "literal": "Hofman A"
-                            },
-                            {
-                                "literal": "de Jong PM"
-                            }
-                        ],
-                        "issued": {
-                            "date-parts": [
-                                [
-                                    "1998",
-                                    12,
-                                    1
-                                ]
-                            ]
-                        }
-                    }
-                ]
-            ],
-            "sibling_pc": 10.4,
-            "parents_pc": 1.1
-        },
-        "barbados": {
-            "n": 4498,
-            "normal_tension": true,
-            "ethnicities": [
-                "Black [Barbados]",
-                "African [Barbados, Lesser Antilles, Caribbean]",
-                "Afro-Barbadian",
-                "Mixed [Barbados]"
-            ],
-            "agenda": [
-                {
-                    "gender": "all",
-                    "age": "<40",
-                    "max_prevalence": 1.4,
-                    "ci": "0.8-2.2",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "<40",
-                    "max_prevalence": 1,
-                    "ci": "0.4-2.0",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "<40",
-                    "max_prevalence": 1.9,
-                    "ci": "0.9-3.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "40-49",
-                    "max_prevalence": 1.9,
-                    "ci": "0.9-3.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "40-49",
-                    "max_prevalence": 1,
-                    "ci": "0.4-2.0",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "40-49",
-                    "max_prevalence": 1.4,
-                    "ci": "0.8-2.2",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "50-59",
-                    "max_prevalence": 4.6,
-                    "ci": "2.9-7.0",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "50-59",
-                    "max_prevalence": 3.7,
-                    "ci": "2.4-5.4",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "50-59",
-                    "max_prevalence": 4.1,
-                    "ci": "3.0-5.4",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "60-69",
-                    "max_prevalence": 9.4,
-                    "ci": "6.8-12.6",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "60-69",
-                    "max_prevalence": 4.9,
-                    "ci": "3.4-6.9",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "60-69",
-                    "max_prevalence": 6.7,
-                    "ci": "5.3-8.4",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "70-79",
-                    "max_prevalence": 17.5,
-                    "ci": "13.8-21.8",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "70-79",
-                    "max_prevalence": 12.7,
-                    "ci": "9.8-16.1",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "70-79",
-                    "max_prevalence": 14.8,
-                    "ci": "12.5-17.4",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "80-86",
-                    "max_prevalence": 24.8,
-                    "ci": "16.7-34.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "80-86",
-                    "max_prevalence": 22,
-                    "ci": "15.0-30.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "80-86",
-                    "max_prevalence": 23.2,
-                    "ci": "17.9-29.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "all",
-                    "max_prevalence": 10.6,
-                    "ci": "9.7-11.5",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "male",
-                    "age": "86+",
-                    "max_prevalence": 24.8,
-                    "ci": "16.7-34.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "female",
-                    "age": "86+",
-                    "max_prevalence": 22,
-                    "ci": "15.0-30.3",
-                    "_denominator": 100
-                },
-                {
-                    "gender": "all",
-                    "age": "86+",
-                    "max_prevalence": 23.2,
-                    "ci": "17.9-29.3",
-                    "_denominator": 100
-                }
-            ],
-            "expr": [
-                {
-                    "key": "agenda",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "take": 1,
-                    "extract": "max_prevalence"
-                }
-            ],
-            "ref": [
-                {
-                    "id": "http://zotero.org/users/843109/items/GP2J8UM3",
+                    "journalAbbreviation": "Adv Genet",
+                    "language": "eng",
+                    "note": "PMID: 19010253",
+                    "page": "33-65",
+                    "title": "Genetics of the Framingham Heart Study Population",
                     "type": "article-journal",
-                    "title": "The barbados eye study: Prevalence of open angle glaucoma",
-                    "container-title": "Archives of Ophthalmology",
-                    "page": "821-829",
-                    "volume": "112",
-                    "issue": "6",
-                    "URL": "+ http://dx.doi.org/10.1001/archopht.1994.01090180121046",
-                    "DOI": "10.1001/archopht.1994.01090180121046",
-                    "author": [
-                        {
-                            "family": "M",
-                            "given": "Leske"
-                        },
-                        {
-                            "family": "AS",
-                            "given": "Connell"
-                        },
-                        {
-                            "family": "AP",
-                            "given": "Schachat"
-                        },
-                        {
-                            "family": "L",
-                            "given": "Hyman"
-                        }
-                    ],
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "1994"
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "id": "http://zotero.org/users/843109/items/WC34ZE84",
-                    "type": "report",
-                    "title": "2010 population and housing census",
-                    "publisher": "Barbados Statistical Service",
-                    "publisher-place": "Barbados",
-                    "genre": "Census",
-                    "event-place": "Barbados",
-                    "URL": "www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf",
-                    "author": [
-                        {
-                            "family": "Barbados Statistical Service",
-                            "given": ""
-                        }
-                    ],
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2010"
-                            ]
-                        ]
-                    },
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                3,
-                                17
-                            ]
-                        ]
-                    }
+                    "volume": "62"
                 },
                 [
                     {
-                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
-                        "type": "article-journal",
-                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
-                        "container-title": "Archives of Ophthalmology",
-                        "page": "1640-1645",
-                        "volume": "116",
-                        "issue": "12",
-                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
-                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
                         "DOI": "10.1001/archopht.116.12.1640",
                         "ISSN": "0003-9950",
-                        "journalAbbreviation": "Archives of Ophthalmology",
+                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
                         "author": [
                             {
                                 "literal": "Wolfs RW"
@@ -1052,6 +894,9 @@
                                 "literal": "de Jong PM"
                             }
                         ],
+                        "container-title": "Archives of Ophthalmology",
+                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+                        "issue": "12",
                         "issued": {
                             "date-parts": [
                                 [
@@ -1060,26 +905,20 @@
                                     1
                                 ]
                             ]
-                        }
+                        },
+                        "journalAbbreviation": "Archives of Ophthalmology",
+                        "page": "1640-1645",
+                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+                        "type": "article-journal",
+                        "volume": "116"
                     }
                 ]
             ],
-            "sibling_pc": 10.4,
-            "parents_pc": 1.1
+            "sibling_pc": 10.4
         },
         "ghana": {
-            "n": 1785,
-            "ethnicities": [
-                "Black [Ghana]",
-                "African [Ghana]",
-                "Ghanaian",
-                "Akwapim",
-                "Ewe",
-                "Ga",
-                "Adangbe"
-            ],
             "age": {
-                "<30": 6,
+                "100+": 16.7,
                 "30-34": 6,
                 "35-39": 6.7,
                 "40-44": 6.2,
@@ -1093,32 +932,43 @@
                 "80-84": 26.5,
                 "85-89": 0,
                 "90-94": 33.3,
+                "94,90-94+": 33.3,
                 "95-100": 16.7,
-                "100+": 16.7,
-                "all": 8.4,
+                "<30": 6,
                 "_denominator": 100,
-                "94,90-94+": 33.3
+                "all": 8.4
             },
+            "ethnicities": [
+                "Black [Ghana]",
+                "African [Ghana]",
+                "Ghanaian",
+                "Akwapim",
+                "Ewe",
+                "Ga",
+                "Adangbe"
+            ],
             "expr": [
                 {
                     "key": "age",
-                    "type": "map",
-                    "take": 1
+                    "take": 1,
+                    "type": "map"
                 }
             ],
+            "n": 1785,
             "ref": [
                 {
-                    "id": "http://zotero.org/users/843109/items/UK2A2K8C",
-                    "type": "article-journal",
-                    "title": "Prevalence of glaucoma in an African population",
-                    "container-title": "Eye",
-                    "page": "491-497",
-                    "volume": "18",
-                    "issue": "5",
-                    "source": "CrossRef",
-                    "URL": "http://www.nature.com/doifinder/10.1038/sj.eye.6700674",
                     "DOI": "10.1038/sj.eye.6700674",
                     "ISSN": "0950-222X, 1476-5454",
+                    "URL": "http://www.nature.com/doifinder/10.1038/sj.eye.6700674",
+                    "accessed": {
+                        "date-parts": [
+                            [
+                                "2017",
+                                5,
+                                18
+                            ]
+                        ]
+                    },
                     "author": [
                         {
                             "family": "Ntim-Amponsah",
@@ -1149,6 +999,9 @@
                             "given": "M"
                         }
                     ],
+                    "container-title": "Eye",
+                    "id": "http://zotero.org/users/843109/items/UK2A2K8C",
+                    "issue": "5",
                     "issued": {
                         "date-parts": [
                             [
@@ -1157,55 +1010,44 @@
                             ]
                         ]
                     },
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                5,
-                                18
-                            ]
-                        ]
-                    }
+                    "page": "491-497",
+                    "source": "CrossRef",
+                    "title": "Prevalence of glaucoma in an African population",
+                    "type": "article-journal",
+                    "volume": "18"
                 }
             ]
         },
         "japanese": {
-            "n": 2874,
-            "ethnicities": [
-                "Tajima [Japanese]",
-                "Japanese"
-            ],
             "age": {
-                "<30": 1.89549249600724,
                 "30-39": 1.89549249600724,
                 "40-49": 2.73716568581642,
                 "50-59": 11.326078497068,
                 "60-69": 30,
                 "70-79": 94.5570698594758,
                 "80+": 73.8103215395919,
-                "_denominator": 100000,
-                "_TODO": true
+                "<30": 1.89549249600724,
+                "_TODO": true,
+                "_denominator": 100000
             },
+            "ethnicities": [
+                "Tajima [Japanese]",
+                "Japanese"
+            ],
             "expr": [
                 {
                     "key": "age",
-                    "type": "map",
-                    "take": 1
+                    "take": 1,
+                    "type": "map"
                 }
             ],
+            "n": 2874,
             "ref": [
                 {
-                    "id": "http://zotero.org/users/843109/items/WZEDUEDB",
-                    "type": "article-journal",
-                    "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
-                    "container-title": "Ophthalmology",
-                    "page": "882 - 886",
-                    "volume": "108",
-                    "issue": "5",
-                    "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
-                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
                     "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
                     "ISSN": "0161-6420",
+                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
+                    "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
                     "author": [
                         {
                             "family": "Schoff",
@@ -1236,35 +1078,23 @@
                             "given": "Douglas H."
                         }
                     ],
+                    "container-title": "Ophthalmology",
+                    "id": "http://zotero.org/users/843109/items/WZEDUEDB",
+                    "issue": "5",
                     "issued": {
                         "date-parts": [
                             [
                                 "2001"
                             ]
                         ]
-                    }
+                    },
+                    "page": "882 - 886",
+                    "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
+                    "type": "article-journal",
+                    "volume": "108"
                 },
                 {
-                    "id": "http://zotero.org/users/843109/items/JC8J5XII",
-                    "type": "report",
-                    "title": "Census 2000",
-                    "publisher-place": "United States of America",
-                    "genre": "Census",
-                    "event-place": "United States of America",
                     "URL": "https://www.census.gov/main/www/cen2000.html",
-                    "author": [
-                        {
-                            "family": "United States Census Bureau",
-                            "given": ""
-                        }
-                    ],
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2000"
-                            ]
-                        ]
-                    },
                     "accessed": {
                         "date-parts": [
                             [
@@ -1273,15 +1103,185 @@
                                 16
                             ]
                         ]
-                    }
+                    },
+                    "author": [
+                        {
+                            "family": "United States Census Bureau",
+                            "given": ""
+                        }
+                    ],
+                    "event-place": "United States of America",
+                    "genre": "Census",
+                    "id": "http://zotero.org/users/843109/items/JC8J5XII",
+                    "issued": {
+                        "date-parts": [
+                            [
+                                "2000"
+                            ]
+                        ]
+                    },
+                    "publisher-place": "United States of America",
+                    "title": "Census 2000",
+                    "type": "report"
                 }
             ]
+        },
+        "olmsted": {
+            "age": {
+                "30-39": 0.1895492496,
+                "40-49": 0.2737165686,
+                "50-59": 1.13260785,
+                "60-69": 3,
+                "70-79": 9.455706986,
+                "80+": 7.381032154,
+                "<30": 0.1895492496,
+                "_denominator": 100
+            },
+            "ethnicities": [
+                "White [Olmsted]",
+                "German [Olmsted]",
+                "Norwegian [Olmsted]",
+                "Irish [Olmsted]",
+                "English [Olmsted]"
+            ],
+            "expr": [
+                {
+                    "key": "age",
+                    "take": 1,
+                    "type": "map"
+                }
+            ],
+            "n": 60666,
+            "parents_pc": 1.1,
+            "ref": [
+                {
+                    "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
+                    "ISSN": "0161-6420",
+                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
+                    "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
+                    "author": [
+                        {
+                            "family": "Schoff",
+                            "given": "Erik O."
+                        },
+                        {
+                            "family": "Hattenhauer",
+                            "given": "Matthew G."
+                        },
+                        {
+                            "family": "Ing",
+                            "given": "Helen H."
+                        },
+                        {
+                            "family": "Hodge",
+                            "given": "David O."
+                        },
+                        {
+                            "family": "Kennedy",
+                            "given": "Robert H."
+                        },
+                        {
+                            "family": "Herman",
+                            "given": "David C."
+                        },
+                        {
+                            "family": "Johnson",
+                            "given": "Douglas H."
+                        }
+                    ],
+                    "container-title": "Ophthalmology",
+                    "id": "http://zotero.org/users/843109/items/WZEDUEDB",
+                    "issue": "5",
+                    "issued": {
+                        "date-parts": [
+                            [
+                                "2001"
+                            ]
+                        ]
+                    },
+                    "page": "882 - 886",
+                    "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
+                    "type": "article-journal",
+                    "volume": "108"
+                },
+                {
+                    "URL": "https://www.census.gov/main/www/cen2000.html",
+                    "accessed": {
+                        "date-parts": [
+                            [
+                                "2017",
+                                3,
+                                16
+                            ]
+                        ]
+                    },
+                    "author": [
+                        {
+                            "family": "United States Census Bureau",
+                            "given": ""
+                        }
+                    ],
+                    "event-place": "United States of America",
+                    "genre": "Census",
+                    "id": "http://zotero.org/users/843109/items/JC8J5XII",
+                    "issued": {
+                        "date-parts": [
+                            [
+                                "2000"
+                            ]
+                        ]
+                    },
+                    "publisher-place": "United States of America",
+                    "title": "Census 2000",
+                    "type": "report"
+                },
+                [
+                    {
+                        "DOI": "10.1001/archopht.116.12.1640",
+                        "ISSN": "0003-9950",
+                        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+                        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
+                        "author": [
+                            {
+                                "literal": "Wolfs RW"
+                            },
+                            {
+                                "literal": "Klaver CW"
+                            },
+                            {
+                                "literal": "Ramrattan RS"
+                            },
+                            {
+                                "literal": "van Duijn CM"
+                            },
+                            {
+                                "literal": "Hofman A"
+                            },
+                            {
+                                "literal": "de Jong PM"
+                            }
+                        ],
+                        "container-title": "Archives of Ophthalmology",
+                        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+                        "issue": "12",
+                        "issued": {
+                            "date-parts": [
+                                [
+                                    "1998",
+                                    12,
+                                    1
+                                ]
+                            ]
+                        },
+                        "journalAbbreviation": "Archives of Ophthalmology",
+                        "page": "1640-1645",
+                        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+                        "type": "article-journal",
+                        "volume": "116"
+                    }
+                ]
+            ],
+            "sibling_pc": 10.4
         }
-    },
-    "TODO": {
-        "st_lucia": {
-            "n": 1679
-        }
-    },
-    "html_of_all_refs": "\"<div class=\\\"csl-bib-body\\\">[<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/WZEDUEDB\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota\\\",</li><li>\\\"container-title\\\": \\\"Ophthalmology\\\",</li><li>\\\"page\\\": \\\"882 - 886\\\",</li><li>\\\"volume\\\": \\\"108\\\",</li><li>\\\"issue\\\": \\\"5\\\",</li><li>\\\"abstract\\\": \\\"Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.\\\",</li><li>\\\"URL\\\": \\\"http://www.sciencedirect.com/science/article/pii/S0161642001005504\\\",</li><li>\\\"DOI\\\": \\\"http://dx.doi.org/10.1016/S0161-6420(01)00550-4\\\",</li><li>\\\"ISSN\\\": \\\"0161-6420\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Schoff\\\",</li><li>\\\"given\\\": \\\"Erik O.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Hattenhauer\\\",</li><li>\\\"given\\\": \\\"Matthew G.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Ing\\\",</li><li>\\\"given\\\": \\\"Helen H.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Hodge\\\",</li><li>\\\"given\\\": \\\"David O.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Kennedy\\\",</li><li>\\\"given\\\": \\\"Robert H.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Herman\\\",</li><li>\\\"given\\\": \\\"David C.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Johnson\\\",</li><li>\\\"given\\\": \\\"Douglas H.\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2001\\\"</li></ul>]</li></ul>]</li></ul>}</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/JC8J5XII\\\",</li><li>\\\"type\\\": \\\"report\\\",</li><li>\\\"title\\\": \\\"Census 2000\\\",</li><li>\\\"publisher-place\\\": \\\"United States of America\\\",</li><li>\\\"genre\\\": \\\"Census\\\",</li><li>\\\"event-place\\\": \\\"United States of America\\\",</li><li>\\\"URL\\\": \\\"https://www.census.gov/main/www/cen2000.html\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"United States Census Bureau\\\",</li><li>\\\"given\\\": \\\"\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2000\\\"</li></ul>]</li></ul>]</li></ul>},</li><li>\\\"accessed\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2017\\\",</li><li>3,</li><li>16</li></ul>]</li></ul>]</li></ul>}</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/GB5I6PVS\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"The Framingham eye study: Introduction to the monograph\\\",</li><li>\\\"container-title\\\": \\\"Survey of Ophthalmology\\\",</li><li>\\\"page\\\": \\\"614-620\\\",</li><li>\\\"volume\\\": \\\"24\\\",</li><li>\\\"issue\\\": \\\"6\\\",</li><li>\\\"abstract\\\": \\\"This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.\\\",</li><li>\\\"URL\\\": \\\"http://dx.doi.org/10.1016/0039-6257(80)90122-8\\\",</li><li>\\\"DOI\\\": \\\"10.1016/0039-6257(80)90122-8\\\",</li><li>\\\"ISSN\\\": \\\"0039-6257\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Krueger\\\",</li><li>\\\"given\\\": \\\"Dean E\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Milton\\\",</li><li>\\\"given\\\": \\\"Roy C\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Maunder\\\",</li><li>\\\"given\\\": \\\"Lucinda R\\\"</li></ul>}</li></ul>],</li><li>\\\"accessed\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2017\\\",</li><li>3,</li><li>14</li></ul>]</li></ul>]</li></ul>}</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/KHCNRZE3\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.\\\",</li><li>\\\"container-title\\\": \\\"American journal of epidemiology\\\",</li><li>\\\"page\\\": \\\"769-776\\\",</li><li>\\\"volume\\\": \\\"111\\\",</li><li>\\\"issue\\\": \\\"6\\\",</li><li>\\\"ISSN\\\": \\\"0002-9262 0002-9262\\\",</li><li>\\\"note\\\": \\\"PMID: 7386451\\\",</li><li>\\\"journalAbbreviation\\\": \\\"Am J Epidemiol\\\",</li><li>\\\"language\\\": \\\"eng\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Kahn\\\",</li><li>\\\"given\\\": \\\"H. A.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Milton\\\",</li><li>\\\"given\\\": \\\"R. C.\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"1980\\\",</li><li>6</li></ul>]</li></ul>]</li></ul>},</li><li>\\\"PMID\\\": \\\"7386451\\\"</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/X9TI96I9\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"Genetics of the Framingham Heart Study Population\\\",</li><li>\\\"container-title\\\": \\\"Advances in genetics\\\",</li><li>\\\"page\\\": \\\"33-65\\\",</li><li>\\\"volume\\\": \\\"62\\\",</li><li>\\\"abstract\\\": \\\"This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.\\\",</li><li>\\\"DOI\\\": \\\"10.1016/S0065-2660(08)00602-0\\\",</li><li>\\\"ISSN\\\": \\\"0065-2660\\\",</li><li>\\\"note\\\": \\\"PMID: 19010253\\\",</li><li>\\\"journalAbbreviation\\\": \\\"Adv Genet\\\",</li><li>\\\"language\\\": \\\"eng\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Govindaraju\\\",</li><li>\\\"given\\\": \\\"Diddahally R.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Cupples\\\",</li><li>\\\"given\\\": \\\"L. Adrienne\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Kannel\\\",</li><li>\\\"given\\\": \\\"William B.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"O’Donnell\\\",</li><li>\\\"given\\\": \\\"Christopher J.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Atwood\\\",</li><li>\\\"given\\\": \\\"Larry D.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"D’Agostino\\\",</li><li>\\\"given\\\": \\\"Ralph B.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Fox\\\",</li><li>\\\"given\\\": \\\"Caroline S.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Larson\\\",</li><li>\\\"given\\\": \\\"Marty\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Levy\\\",</li><li>\\\"given\\\": \\\"Daniel\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Morabito\\\",</li><li>\\\"given\\\": \\\"Joanne\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Vasan\\\",</li><li>\\\"given\\\": \\\"Ramachandran S.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Splansky\\\",</li><li>\\\"given\\\": \\\"Greta Lee\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Wolf\\\",</li><li>\\\"given\\\": \\\"Philip A.\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Benjamin\\\",</li><li>\\\"given\\\": \\\"Emelia J.\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2008\\\"</li></ul>]</li></ul>]</li></ul>},</li><li>\\\"PMID\\\": \\\"19010253\\\"</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/GP2J8UM3\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"The barbados eye study: Prevalence of open angle glaucoma\\\",</li><li>\\\"container-title\\\": \\\"Archives of Ophthalmology\\\",</li><li>\\\"page\\\": \\\"821-829\\\",</li><li>\\\"volume\\\": \\\"112\\\",</li><li>\\\"issue\\\": \\\"6\\\",</li><li>\\\"URL\\\": \\\"+ http://dx.doi.org/10.1001/archopht.1994.01090180121046\\\",</li><li>\\\"DOI\\\": \\\"10.1001/archopht.1994.01090180121046\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"M\\\",</li><li>\\\"given\\\": \\\"Leske\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"AS\\\",</li><li>\\\"given\\\": \\\"Connell\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"AP\\\",</li><li>\\\"given\\\": \\\"Schachat\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"L\\\",</li><li>\\\"given\\\": \\\"Hyman\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"1994\\\"</li></ul>]</li></ul>]</li></ul>}</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/WC34ZE84\\\",</li><li>\\\"type\\\": \\\"report\\\",</li><li>\\\"title\\\": \\\"2010 population and housing census\\\",</li><li>\\\"publisher\\\": \\\"Barbados Statistical Service\\\",</li><li>\\\"publisher-place\\\": \\\"Barbados\\\",</li><li>\\\"genre\\\": \\\"Census\\\",</li><li>\\\"event-place\\\": \\\"Barbados\\\",</li><li>\\\"URL\\\": \\\"www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Barbados Statistical Service\\\",</li><li>\\\"given\\\": \\\"\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2010\\\"</li></ul>]</li></ul>]</li></ul>},</li><li>\\\"accessed\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2017\\\",</li><li>3,</li><li>17</li></ul>]</li></ul>]</li></ul>}</li></ul>},</div>,<div class=\\\"csl-entry\\\">{<ul style=\\\"list-style-type:none\\\"><li>\\\"id\\\": \\\"http://zotero.org/users/843109/items/UK2A2K8C\\\",</li><li>\\\"type\\\": \\\"article-journal\\\",</li><li>\\\"title\\\": \\\"Prevalence of glaucoma in an African population\\\",</li><li>\\\"container-title\\\": \\\"Eye\\\",</li><li>\\\"page\\\": \\\"491-497\\\",</li><li>\\\"volume\\\": \\\"18\\\",</li><li>\\\"issue\\\": \\\"5\\\",</li><li>\\\"source\\\": \\\"CrossRef\\\",</li><li>\\\"URL\\\": \\\"http://www.nature.com/doifinder/10.1038/sj.eye.6700674\\\",</li><li>\\\"DOI\\\": \\\"10.1038/sj.eye.6700674\\\",</li><li>\\\"ISSN\\\": \\\"0950-222X, 1476-5454\\\",</li><li>\\\"author\\\": [<ul style=\\\"list-style-type:none\\\"><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Ntim-Amponsah\\\",</li><li>\\\"given\\\": \\\"C T\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Amoaku\\\",</li><li>\\\"given\\\": \\\"W M K\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Ofosu-Amaah\\\",</li><li>\\\"given\\\": \\\"S\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Ewusi\\\",</li><li>\\\"given\\\": \\\"R K\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Idirisuriya-Khair\\\",</li><li>\\\"given\\\": \\\"R\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Nyatepe-Coo\\\",</li><li>\\\"given\\\": \\\"E\\\"</li></ul>},</li><li>{<ul style=\\\"list-style-type:none\\\"><li>\\\"family\\\": \\\"Adu-Darko\\\",</li><li>\\\"given\\\": \\\"M\\\"</li></ul>}</li></ul>],</li><li>\\\"issued\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2004\\\",</li><li>5</li></ul>]</li></ul>]</li></ul>},</li><li>\\\"accessed\\\": {<ul style=\\\"list-style-type:none\\\"><li>\\\"date-parts\\\": [<ul style=\\\"list-style-type:none\\\"><li>[<ul style=\\\"list-style-type:none\\\"><li>\\\"2017\\\",</li><li>5,</li><li>18</li></ul>]</li></ul>]</li></ul>}</li></ul>}</div>]</div>\""
+    }
 }

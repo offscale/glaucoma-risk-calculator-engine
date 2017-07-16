@@ -10,9 +10,12 @@ describe('test ref to HTML', () => {
     it('turns refs to HTML', (done) => {
         // Dependency is huge so generate output here, exploiting devDependencies FTW
         const Cite = require('citation-js');
-        const res_html = (new Cite(get_all_refs(risk_json))).get({ format: 'string', type: 'html' });
+        const jsonStableStringify = require('json-stable-stringify');
+        const res_html = (new Cite(get_all_refs(risk_json))).get({
+            format: 'string', type: 'html', style: 'citation-harvard1', lang: 'en-US'
+        });
         risk_json.html_of_all_refs = JSON.stringify(res_html);
-        writeFile('risk.json', JSON.stringify(risk_json, null, 4), 'utf8', err => {
+        writeFile('risk.json', jsonStableStringify(risk_json, { space: 4 }), 'utf8', err => {
             if (err) return done(err);
             let er: Chai.AssertionError = void 0;
             try {
