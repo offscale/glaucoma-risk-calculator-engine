@@ -35,7 +35,7 @@ describe('test calc_relative_risk', () => {
                     { framingham: 1.2 },
                     { barbados: 4.6 },
                     { ghana: 6.5 },
-                    { japanese: 11.326078497068 }
+                    { japanese: 7.7 }
                 ],
                 risk_per_study: {
                     olmsted: { max_prevalence: 1.13260785, age: '50-59' },
@@ -55,18 +55,18 @@ describe('test calc_relative_risk', () => {
                         _denominator: 100
                     },
                     ghana: { max_prevalence: 6.5, age: '55-59' },
-                    japanese: { max_prevalence: 11.326078497068, age: '50-59' }
+                    japanese: {
+                        age: '50-59',
+                        gender: 'male',
+                        max_prevalence: 7.7
+                    }
                 },
                 graphed_rr: [
                     { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
                     { name: 'White [Framingham]', size: 1.2, value: 1.2 },
                     { name: 'Black [Barbados]', size: 4.6, value: 4.6 },
                     { name: 'Black [Ghana]', size: 6.5, value: 6.5 },
-                    {
-                        name: 'Tajima [Japanese]',
-                        size: 11.326078497068,
-                        value: 11.326078497068
-                    }
+                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 }
                 ],
                 gender: 'male'
             });

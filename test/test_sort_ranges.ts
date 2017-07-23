@@ -21,6 +21,10 @@ describe('range sorting', () => {
         expect(sort_ranges(['>=70', '40-49', '50-59', '60-69', 'all'])).to.be.eql([
             '40-49', '50-59', '60-69', '>=70', 'all'
         ]);
+
+        expect(sort_ranges(['65-74', '75+', '<65', '_denominator', 'all'])).to.be.eql([
+            '<65', '65-74', '75+', '_denominator', 'all'
+        ]);
     });
 
     it('sorts with `<num`, `>=` and random shuffling', () => {
