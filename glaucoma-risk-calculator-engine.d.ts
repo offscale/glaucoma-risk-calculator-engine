@@ -36,6 +36,7 @@ export interface IRiskJson {
             existent: number
         },
         age: {},
+        age_map: Map<string, number>,
         ref: Array<{}>
     };
     studies: {

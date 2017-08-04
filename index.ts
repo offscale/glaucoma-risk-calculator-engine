@@ -44,12 +44,12 @@ export const in_range = (range: string, num: number): boolean => {
     if (!isNaN(parseInt(last[0], 10))) last = last[1];
 
     if (isNaN(parseInt(last, 10))) {
-        const rest = parseInt(range, 10);
+        const _rest = parseInt(range, 10);
         const operators = Object.freeze({
-            '>': num > rest,
-            '+': num >= rest,
-            '>=': num >= rest,
-            '=>': num >= rest
+            '>': num > _rest,
+            '+': num >= _rest,
+            '>=': num >= _rest,
+            '=>': num >= _rest
         });
         if (Object.keys(operators).indexOf(last) === -1)
             throw TypeError(`Invalid operation of \`${last}\``);
@@ -101,25 +101,42 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
      */
     Object.keys(risk_json.studies).forEach(study_name => {
         if (risk_json.studies[study_name].hasOwnProperty('age')) {
+            if (!risk_json.studies[study_name].hasOwnProperty('age_map') || !risk_json.studies[study_name].age_map.size)
+                risk_json.studies[study_name].age_map = new Map<string, number>();
             const sr: string[] = sort_ranges(Object.keys(risk_json.studies[study_name].age));
+
+            // console.info('sr[0]', sr[0]);
 
             // Lower bound
             if (sr[0][0] !== '<') {
+                // console.info('LOWER BOUND');
                 const lt = `<${parseInt(sr[0], 10)}`;
                 risk_json.studies[study_name].age = Object.assign(
                     { [lt]: risk_json.studies[study_name].age[sr[0]] },
                     risk_json.studies[study_name].age
                 );
+                risk_json.studies[study_name].age_map.set(lt, risk_json.studies[study_name].age[sr[0]]);
+                // console.info(`key=${lt}, val=${risk_json.studies[study_name].age[sr[0]]}`);
             }
-
             // Upper bound
             if (['>', '+'].indexOf(sr[sr.length - 1][0].slice(-1)) === -1) {
+                // console.info('UPPER BOUND');
                 const top_bars = sr.map(r => [parseInt(r.indexOf('-') === -1 ? r : r.split('-')[1], 10), r]).filter(
                     (n: [number, string]) => !isNaN(n[0])).sort();
                 const top_bar: [number, string] = top_bars[top_bars.length - 1] as [number, string];
-                if (['>', '+'].indexOf(top_bar[1].slice(-1)) === -1)
+                // console.info('top_bars =', top_bars, 'top_bar =', top_bar, ';');
+                if (['>', '+'].indexOf(top_bar[1].slice(-1)) === -1) {
                     risk_json.studies[study_name].age[`${top_bar}+`] = risk_json.studies[study_name].age[top_bar[1]];
+                    /*console.info(`risk_json.studies[${study_name}].age_map.set('${top_bar}+',
+                    ${risk_json.studies[study_name].age[top_bar[1]]})`);
+                    risk_json.studies[study_name].age_map.set(
+                        `${top_bar}+`, risk_json.studies[study_name].age[top_bar[1]]
+                    );*/
+                }
             }
+            risk_json.studies[study_name].age_map.set(sr[0], risk_json.studies[study_name].age[sr[0]]);
+            // console.info('map =', risk_json.studies[study_name].age_map, ';');
+
         }
 
         if (risk_json.studies[study_name].hasOwnProperty('agenda')) {
@@ -194,10 +211,10 @@ export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => 
     const study_vals = study[study.expr[0].key];
 
     const out = isArray(study_vals) ? study_vals.filter(o =>
-        study.expr[0].filter.every(k =>
-            k === 'age' ? in_range(o.age, input.age) : input.hasOwnProperty(k) ? o[k] === input[k] : true
-        )
-    )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
+            study.expr[0].filter.every(k =>
+                k === 'age' ? in_range(o.age, input.age) : input.hasOwnProperty(k) ? o[k] === input[k] : true
+            )
+        )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
         : study_vals[ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(k =>
             in_range(k, input[study.expr[0].key])
         )[study.expr[0].take - 1]];
@@ -247,7 +264,7 @@ export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] 
     const out = isArray(study_vals) ?
         study_vals.filter(o => input.gender ? o.gender === input.gender : true).map(o => o[study.expr[0].extract])
         : ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(
-            k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
+        k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
 
     if (!out) throw TypeError('Expected out to match something');
     return uniq(out);
