@@ -11,9 +11,14 @@ describe('test ref to HTML', () => {
         // Dependency is huge so generate output here, exploiting devDependencies FTW
         const Cite = require('citation-js');
         const jsonStableStringify = require('json-stable-stringify');
-        const res_html = (new Cite(get_all_refs(risk_json))).get({
-            format: 'string', type: 'html', style: 'citation-harvard1', lang: 'en-US'
-        });
+
+        const res_html = Object
+            .keys(risk_json.studies)
+            .map(study =>
+                `<h3>${study[0].toUpperCase()}${study.slice(1)}</h3> ${(new Cite(risk_json.studies[study].ref)).get({
+                    format: 'string', type: 'html', style: 'citation-harvard1', lang: 'en-US'
+                })}`)
+            .reduce((a, b) => a.concat(b));
         risk_json.html_of_all_refs = JSON.stringify(res_html);
         writeFile('risk.json', jsonStableStringify(risk_json, { space: 4 }), 'utf8', err => {
             if (err) return done(err);

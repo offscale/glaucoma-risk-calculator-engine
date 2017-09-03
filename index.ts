@@ -376,9 +376,10 @@ export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
 };
 
 export const get_all_refs = (risk_json: IRiskJson): {}[] => {
-    return uniq2(Object.keys(risk_json.studies).map(study => risk_json.studies[study].ref).reduce((a, b) =>
-        a.concat(b)
-    )).filter(o => !Array.isArray(o));
+    return /*uniq2*/(Object.keys(risk_json.studies).map(study => risk_json.studies[study].ref))
+    /*.reduce((a, b) =>
+            a.concat(b)
+        ))*/ // .filter(o => !Array.isArray(o));
 };
 
 /*
