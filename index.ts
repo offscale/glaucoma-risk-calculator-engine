@@ -28,9 +28,7 @@ interface Array<T> extends ArrayConstructor {
 }
 
 export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
-    ethnicities.map(study =>
-        (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0])
-    );
+    ethnicities.map(study => (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0]));
 
 export const s_col_to_s = (s: string): string => s.slice(0, s.indexOf(':'));
 
@@ -332,20 +330,30 @@ export const calc_relative_risk = (risk_json: IRiskJson,
         obj[k] = item[k];
         return obj;
     }, {}) : null;
+
     const relative_risk: {[study: /*Study*/ string]: number}[] = Object.keys(risk_per_study).map(study_name => ({
-        [study_name]: risk_per_study[study_name][
-            Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
-                'max_prevalence' : 'meth3_prevalence']
+        [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract]
     })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
+
     const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
         const study_name = Object.keys(atoi)[0];
-        return { name: risk_json.studies[study_name].ethnicities[0], size: atoi[study_name], value: atoi[study_name] };
+
+        const risk_val = typeof atoi[study_name] === 'undefined' ?
+            risk_per_study[study_name][
+                Object
+                    .keys(risk_per_study[study_name])
+                    .filter(k => typeof risk_per_study[study_name][k] === 'number')[0]
+                ]
+            : atoi[study_name];
+        return {
+            name: risk_json.studies[study_name].ethnicities[0],
+            size: risk_val, value: risk_val
+        };
     });
 
     return Object.assign({
         age: input.age,
         study: input.study,
-        relative_risk,
         risk_per_study,
         graphed_rr
     }, has_gender ? { gender: input.gender } : {});

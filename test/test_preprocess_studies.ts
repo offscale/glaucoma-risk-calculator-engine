@@ -1,7 +1,7 @@
 import { expect } from 'chai';
+import { IRiskJson } from 'glaucoma-risk-calculator-engine';
 
 import { preprocess_studies, uniq } from './..';
-import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 
 /* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');

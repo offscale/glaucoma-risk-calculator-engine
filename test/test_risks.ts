@@ -1,6 +1,6 @@
 import { expect } from 'chai';
+import { IRiskJson } from 'glaucoma-risk-calculator-engine';
 
-import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { place_in_array, risks_from_study } from './..';
 
 /* tslint:disable:no-var-requires */
@@ -29,5 +29,10 @@ describe('tests risks', () => {
         expect(place_in_array(0.1895492496, risk_distribution)).to.eql(0);
         expect(place_in_array(1.13260785, risk_distribution)).to.eql(risk_distribution.indexOf(1.13260785));
         expect(place_in_array(7.381032154, risk_distribution)).to.eql(risk_distribution.lastIndexOf(7.381032154));
+    });
+
+    it('singapore', () => {
+        const risk_distribution = [ 0.3, 0.6, 0.4, 1.5, 2.6, 0.7, 2, 3.2, 3, 2.7 ];
+        expect(risks_from_study(risk_json, { study: 'singapore', age: null })).to.have.members(risk_distribution);
     });
 });

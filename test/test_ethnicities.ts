@@ -1,6 +1,6 @@
 import { expect } from 'chai';
+import { IDictOfStringArray, IRiskJson } from 'glaucoma-risk-calculator-engine';
 
-import { IDictOfStringArray, IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { ethnicity2study, list_ethnicities } from './..';
 
 /* tslint:disable:no-var-requires */
@@ -54,6 +54,6 @@ describe('ethnicities', () => {
         const ethnicity2study_res = ethnicity2study(risk_json);
         expect(ethnicity2study_res).to.include.keys('White [Olmsted]');
         expect(ethnicity2study_res['White [Olmsted]']).to.be.eql('olmsted');
-        expect(Object.keys(ethnicity2study_res)).to.have.length(26);
+        expect(Object.keys(ethnicity2study_res)).to.have.length(27);
     });
 });

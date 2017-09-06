@@ -1,16 +1,10 @@
 import { expect } from 'chai';
+import { IRiskJson } from 'glaucoma-risk-calculator-engine';
 
-import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { calc_relative_risk } from './..';
 
 /* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
-
-export interface IObjectCtor extends ObjectConstructor {
-    assign(target: any, ...sources: any[]): any;
-}
-
-declare const Object: IObjectCtor;
 
 const trans = Object.freeze([
     Object.freeze({ age: 55, gender: 'male' }),
@@ -26,48 +20,43 @@ describe('test calc_relative_risk', () => {
         const study: string = 'barbados';
 
         it('calculates relative risk', () => {
-            expect(calc_relative_risk(risk_json, Object.assign({
-                study
-            }, trans[0]))).to.eql({
+            expect(calc_relative_risk(risk_json, Object.assign({ study }, trans[0]) as any)).to.eql({
                 age: 55,
                 study: 'barbados',
-                relative_risk: [
-                    { olmsted: 1.13260785 },
-                    { framingham: 1.2 },
-                    { barbados: 4.6 },
-                    { ghana: 6.5 },
-                    { japanese: 7.7 }
-                ],
-                risk_per_study: {
-                    olmsted: { max_prevalence: 1.13260785, age: '50-59' },
-                    framingham: {
-                        gender: 'male',
-                        age: '52-64',
-                        n: 601,
-                        oags: 6,
-                        meth2_prevalence: 1,
-                        meth3_prevalence: 1.2
+                risk_per_study:
+                    {
+                        barbados: {
+                            _denominator: 100,
+                            age: '50-59',
+                            ci: '2.9-7.0',
+                            gender: 'male',
+                            max_prevalence: 4.6
+                        },
+                        framingham: {
+                            age: '52-64',
+                            gender: 'male',
+                            meth2_prevalence: 1,
+                            meth3_prevalence: 1.2,
+                            n: 601,
+                            oags: 6
+                        },
+                        ghana: { max_prevalence: 6.5, age: '55-59' },
+                        japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
+                        olmsted: { max_prevalence: 1.13260785, age: '50-59' },
+                        singapore: {
+                            _denominator: 100,
+                            age: '50-59',
+                            gender: 'male',
+                            prevalence: 2.6
+                        }
                     },
-                    barbados: {
-                        gender: 'male',
-                        age: '50-59',
-                        max_prevalence: 4.6,
-                        ci: '2.9-7.0',
-                        _denominator: 100
-                    },
-                    ghana: { max_prevalence: 6.5, age: '55-59' },
-                    japanese: {
-                        age: '50-59',
-                        gender: 'male',
-                        max_prevalence: 7.7
-                    }
-                },
                 graphed_rr: [
-                    { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
                     { name: 'White [Framingham]', size: 1.2, value: 1.2 },
                     { name: 'Black [Barbados]', size: 4.6, value: 4.6 },
                     { name: 'Black [Ghana]', size: 6.5, value: 6.5 },
-                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 }
+                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 },
+                    { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
+                    { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 }
                 ],
                 gender: 'male'
             });
