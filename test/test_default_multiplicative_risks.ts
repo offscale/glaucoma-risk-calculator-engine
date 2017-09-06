@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { IMultiplicativeRisks, IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { calc_default_multiplicative_risks } from './..';
 

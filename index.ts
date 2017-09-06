@@ -2,6 +2,7 @@ import { isArray, isNullOrUndefined, isNumber } from 'util';
 import { exists, readFile, writeFile } from 'fs';
 import * as assert from 'assert';
 import * as math from 'mathjs';
+
 import {
     IBarbados,
     IDictOfStringArray,
@@ -373,13 +374,6 @@ export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
         })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any),
         risk_per_study
     };
-};
-
-export const get_all_refs = (risk_json: IRiskJson): {}[] => {
-    return /*uniq2*/(Object.keys(risk_json.studies).map(study => risk_json.studies[study].ref))
-    /*.reduce((a, b) =>
-            a.concat(b)
-        ))*/ // .filter(o => !Array.isArray(o));
 };
 
 /*

@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { IDictOfStringArray, IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { ethnicity2study, list_ethnicities } from './..';
 

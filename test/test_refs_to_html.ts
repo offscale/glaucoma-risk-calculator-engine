@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import { IRiskJson } from '../glaucoma-risk-calculator-engine';
-import { get_all_refs } from './..';
 import { writeFile } from 'fs';
+
+import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 
 /* tslint:disable:no-var-requires */
 const risk_json: IRiskJson = require('../risk');
@@ -15,7 +15,7 @@ describe('test ref to HTML', () => {
         const res_html = Object
             .keys(risk_json.studies)
             .map(study =>
-                `<h3>${study[0].toUpperCase()}${study.slice(1)}</h3> ${(new Cite(risk_json.studies[study].ref)).get({
+                `<h5>${study[0].toUpperCase()}${study.slice(1)}</h5> ${(new Cite(risk_json.studies[study].ref)).get({
                     format: 'string', type: 'html', style: 'citation-harvard1', lang: 'en-US'
                 })}`)
             .reduce((a, b) => a.concat(b));

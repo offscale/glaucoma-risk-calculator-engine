@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { in_range, pos_in_range } from '../';
 
 describe('tests in range', () => {

@@ -160,4 +160,3 @@ export declare const ethnicity2study: (risk_json: IRiskJson) => {};
 export declare const calc_default_multiplicative_risks: (risk_json: IRiskJson,
                                                          user: IMultiplicativeRisks) => IMultiplicativeRisks;
 export declare const calc_relative_risk: (risk_json: IRiskJson, input: IInput) => IRelativeRisk;
-export declare const get_all_refs: (risk_json: IRiskJson) => Array<{}>;

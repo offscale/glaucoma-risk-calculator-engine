@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 import { calc_relative_risk } from './..';
 

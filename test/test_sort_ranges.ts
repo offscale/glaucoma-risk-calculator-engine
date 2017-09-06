@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { sort_ranges } from './..';
 
 const shuffleArray = (array: any[]): any[] => {

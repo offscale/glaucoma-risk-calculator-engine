@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+
 import { preprocess_studies, uniq } from './..';
 import { IRiskJson } from '../glaucoma-risk-calculator-engine';
 
