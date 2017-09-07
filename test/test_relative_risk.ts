@@ -24,40 +24,47 @@ describe('test calc_relative_risk', () => {
             expect(calc_relative_risk(risk_json, Object.assign({ study }, trans[0]))).to.eql({
                 age: 55,
                 study: 'barbados',
-                risk_per_study:
-                    {
-                        barbados: {
-                            _denominator: 100,
-                            age: '50-59',
-                            ci: '2.9-7.0',
-                            gender: 'male',
-                            max_prevalence: 4.6
-                        },
-                        framingham: {
-                            age: '52-64',
-                            gender: 'male',
-                            meth2_prevalence: 1,
-                            meth3_prevalence: 1.2,
-                            n: 601,
-                            oags: 6
-                        },
-                        ghana: { max_prevalence: 6.5, age: '55-59' },
-                        japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
-                        olmsted: { max_prevalence: 1.13260785, age: '50-59' },
-                        singapore: {
-                            _denominator: 100,
-                            age: '50-59',
-                            gender: 'male',
-                            prevalence: 2.6
-                        }
+                rr: [
+                    { olmsted: 1.13260785 },
+                    { framingham: 1.2 },
+                    { singapore: 2.6 },
+                    { barbados: 4.6 },
+                    { ghana: 6.5 },
+                    { japanese: 7.7 }
+                ],
+                risk_per_study: {
+                    barbados: {
+                        _denominator: 100,
+                        age: '50-59',
+                        ci: '2.9-7.0',
+                        gender: 'male',
+                        max_prevalence: 4.6
                     },
+                    framingham: {
+                        age: '52-64',
+                        gender: 'male',
+                        meth2_prevalence: 1,
+                        meth3_prevalence: 1.2,
+                        n: 601,
+                        oags: 6
+                    },
+                    ghana: { max_prevalence: 6.5, age: '55-59' },
+                    japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
+                    olmsted: { max_prevalence: 1.13260785, age: '50-59' },
+                    singapore: {
+                        _denominator: 100,
+                        age: '50-59',
+                        gender: 'male',
+                        prevalence: 2.6
+                    }
+                },
                 graphed_rr: [
+                    { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
                     { name: 'White [Framingham]', size: 1.2, value: 1.2 },
+                    { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 },
                     { name: 'Black [Barbados]', size: 4.6, value: 4.6 },
                     { name: 'Black [Ghana]', size: 6.5, value: 6.5 },
-                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 },
-                    { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
-                    { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 }
+                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 }
                 ],
                 gender: 'male'
             });

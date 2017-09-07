@@ -338,24 +338,24 @@ export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelati
                 obj[k] = item[k];
                 return obj;
             }, {}) : null;
-
+    
     const relative_risk: {[study: /*Study*/ string]: number}[] = Object
         .keys(risk_per_study)
         .map(study_name => ({
-            [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract]
+            [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract
+                ] || risk_per_study[study_name][
+                Object
+                    .keys(risk_per_study[study_name])
+                    .filter(k => typeof risk_per_study[study_name][k] === 'number')
+                    [0]
+                ]
         }))
         .sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
 
     const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
         const study_name = Object.keys(atoi)[0];
+        const risk_val = atoi[study_name];
 
-        const risk_val = typeof atoi[study_name] === 'undefined' ?
-            risk_per_study[study_name][
-                Object
-                    .keys(risk_per_study[study_name])
-                    .filter(k => typeof risk_per_study[study_name][k] === 'number')[0]
-                ]
-            : atoi[study_name];
         return {
             name: risk_json.studies[study_name].ethnicities[0],
             size: risk_val, value: risk_val

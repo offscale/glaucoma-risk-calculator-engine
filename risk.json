@@ -253,9 +253,9 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "ci": "0.8-2.2",
-                    "gender": "all",
-                    "max_prevalence": 1.4
+                    "ci": "0.9-3.3",
+                    "gender": "male",
+                    "max_prevalence": 1.9
                 },
                 {
                     "_denominator": 100,
@@ -267,9 +267,9 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "ci": "0.9-3.3",
-                    "gender": "male",
-                    "max_prevalence": 1.9
+                    "ci": "0.8-2.2",
+                    "gender": "all",
+                    "max_prevalence": 1.4
                 },
                 {
                     "_denominator": 100,
@@ -559,11 +559,11 @@
             "agenda": [
                 {
                     "age": "<52",
-                    "gender": "both",
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8,
-                    "n": 1382,
-                    "oags": 9
+                    "gender": "male",
+                    "meth2_prevalence": 1,
+                    "meth3_prevalence": 1.2,
+                    "n": 601,
+                    "oags": 6
                 },
                 {
                     "age": "<52",
@@ -575,11 +575,11 @@
                 },
                 {
                     "age": "<52",
-                    "gender": "male",
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2,
-                    "n": 601,
-                    "oags": 6
+                    "gender": "both",
+                    "meth2_prevalence": 0.7,
+                    "meth3_prevalence": 0.8,
+                    "n": 1382,
+                    "oags": 9
                 },
                 {
                     "age": "all",
@@ -1051,7 +1051,7 @@
             "agenda": [
                 {
                     "age": "<40",
-                    "gender": "male",
+                    "gender": "all",
                     "max_prevalence": 7.5
                 },
                 {
@@ -1061,7 +1061,7 @@
                 },
                 {
                     "age": "<40",
-                    "gender": "all",
+                    "gender": "male",
                     "max_prevalence": 7.5
                 },
                 {
@@ -1400,8 +1400,8 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "gender": "female",
-                    "prevalence": 0.3
+                    "gender": "all",
+                    "prevalence": 0.4
                 },
                 {
                     "_denominator": 100,
@@ -1412,8 +1412,8 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "gender": "all",
-                    "prevalence": 0.4
+                    "gender": "female",
+                    "prevalence": 0.3
                 },
                 {
                     "_denominator": 100,
