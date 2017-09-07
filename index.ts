@@ -14,19 +14,6 @@ import {
 } from './glaucoma-risk-calculator-engine';
 import MathType = mathjs.MathType;
 
-export interface IObjectCtor extends ObjectConstructor {
-    assign(target: any, ...sources: any[]): any;
-
-    values<T>(o: {[s: string]: T}): T[];
-}
-
-declare const Object: IObjectCtor;
-
-/* tslint:disable:interface-name */
-interface Array<T> extends ArrayConstructor {
-    find(predicate: (search: T) => boolean): T;
-}
-
 export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
     ethnicities.map(study => (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0]));
 
@@ -147,7 +134,7 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
             all_genders_seen.forEach(gender => {
                 const sr: string[] = sort_ranges(risk_json.studies[study_name].agenda.filter(agenda =>
                     agenda.gender === gender
-                ).map(agenda => agenda.age)) as any;
+                ).map(agenda => agenda.age));
 
                 if (sr.length) {
                     // Lower bound
@@ -172,9 +159,10 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
                     const top_bar = top_bars[top_bars.length - 1];
                     if (top_bar)
                         risk_json.studies[study_name].agenda.push(
-                            risk_json.studies[study_name].agenda.filter(
-                                agenda => agenda.age === top_bar[1] && agenda.gender === gender
-                            ).map(o => Object.assign({}, o, { age: `${top_bar[0]}+` }))[0]
+                            risk_json.studies[study_name].agenda
+                                .filter(agenda => agenda.age === top_bar[1] && agenda.gender === gender)
+                                .map(o => Object.assign({}, o, { age: `${top_bar[0]}+` }))
+                                [0]
                         );
                 }
             });
@@ -219,14 +207,11 @@ export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => 
         )[study.expr[0].take - 1]];
 
     if (!out) throw TypeError('Expected out to match something');
-    /* const risk: number = */
     return isNumber(out) ? out : out[study.expr[0].extract];
-    // console.info(study.hasOwnProperty('sibling'))
-    // return risk;
 };
 
 export const familial_risks_from_study = (risk_json: IRiskJson, input: IInput, warn: boolean = true): number[] => {
-    /* tslint:disable:no-unused-expression */
+    /* tslint:disable:no-unused-expression no-console */
     const study = risk_json.studies[input.study];
     const res = [];
 
@@ -248,9 +233,12 @@ export const familial_risks_from_study = (risk_json: IRiskJson, input: IInput, w
 };
 
 export const combined_risk = (familial_risks_from_study_l: number[], risk_from_studies: number): MathType =>
-    math.add(familial_risks_from_study_l.map(
-        r => math.multiply(math.divide(r, 100), risk_from_studies)
-    ).reduce(math.add as (p: number, c: number) => number), risk_from_studies);
+    math.add(
+        familial_risks_from_study_l
+            .map(r => math.multiply(math.divide(r, 100), risk_from_studies))
+            .reduce(math.add as (p: number, c: number) => number),
+        risk_from_studies
+    );
 
 export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
@@ -261,9 +249,14 @@ export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] 
     const study_vals = study[study.expr[0].key];
 
     const out = isArray(study_vals) ?
-        study_vals.filter(o => input.gender ? o.gender === input.gender : true).map(o => o[study.expr[0].extract])
-        : ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(
-        k => ['a', '_'].indexOf(k[0]) === -1).map(k => study_vals[k]);
+        study_vals
+            .filter(o => input.gender ? o.gender === input.gender : true)
+            .map(o => o[study.expr[0].extract])
+        : ensure_map(study.expr[0].type)
+        && Object
+            .keys(study_vals)
+            .filter(k => ['a', '_'].indexOf(k[0]) === -1)
+            .map(k => study_vals[k]);
 
     if (!out) throw TypeError('Expected out to match something');
     return uniq(out);
@@ -289,16 +282,22 @@ export const pos_in_range = (ranges: string[], num: number): number => {
 
 export const list_ethnicities = (risk_json: IRiskJson): IDictOfStringArray => {
     if (isNullOrUndefined(risk_json)) throw TypeError('`risk_json` must be defined');
-    return Object.keys(risk_json.studies).map(k => {
-        return { [k]: risk_json.studies[k].ethnicities };
-    }) as IDictOfStringArray | any;
+    return Object
+        .keys(risk_json.studies)
+        .map(k => {
+            return { [k]: risk_json.studies[k].ethnicities };
+        }) as IDictOfStringArray | any;
 };
 
 export const ethnicity2study = (risk_json: IRiskJson): {} => {
     const o = {};
-    Object.keys(risk_json.studies).map(study_name =>
-        risk_json.studies[study_name].ethnicities.map(ethnicity => ({ [ethnicity]: study_name }))
-    ).reduce((a, b) => a.concat(b), []).forEach(obj => Object.assign(o, obj));
+    Object
+        .keys(risk_json.studies)
+        .map(study_name =>
+            risk_json.studies[study_name].ethnicities.map(ethnicity => ({ [ethnicity]: study_name }))
+        )
+        .reduce((a, b) => a.concat(b), [])
+        .forEach(obj => Object.assign(o, obj));
     return o;
 };
 
@@ -306,34 +305,46 @@ export const calc_default_multiplicative_risks = (risk_json: IRiskJson,
                                                   user: IMultiplicativeRisks): IMultiplicativeRisks => {
     return {
         age: risk_json.default_multiplicative_risks.age[
-            Object.keys(risk_json.default_multiplicative_risks.age).filter(range =>
-                in_range(range, user.age as number))[0]],
+            Object
+                .keys(risk_json.default_multiplicative_risks.age)
+                .filter(range => in_range(range, user.age as number))
+                [0]
+            ],
         myopia: user.myopia ? risk_json.default_multiplicative_risks.myopia.existent : 1,
         family_history: user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1,
         diabetes: user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1
     };
 };
 
-export const calc_relative_risk = (risk_json: IRiskJson,
-                                   input: IInput): IRelativeRisk => {
+export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelativeRisk => {
     const has_gender = input.gender != null;
-    const risk_per_study = has_gender ? Object.keys(risk_json.studies).map(study_name => ({
-        [study_name]: risk_json.studies[study_name].agenda != null ? risk_json.studies[study_name].agenda.filter(stat =>
-            input.gender === stat.gender && in_range(stat.age, input.age)
-        )[0] : (age_range => ({
-            max_prevalence: risk_json.studies[study_name].age[age_range],
-            age: age_range[0]
-        }))(Object.keys(risk_json.studies[study_name].age).filter(
-            age_range => in_range(age_range, input.age)) as any)
-    })).reduce((obj, item) => {
-        const k = Object.keys(item)[0];
-        obj[k] = item[k];
-        return obj;
-    }, {}) : null;
+    const risk_per_study = has_gender ?
+        Object
+            .keys(risk_json.studies)
+            .map(study_name => ({
+                [study_name]: risk_json.studies[study_name].agenda != null ?
+                    risk_json.studies[study_name].agenda
+                        .filter(stat => input.gender === stat.gender && in_range(stat.age, input.age))
+                        [0]
+                    : (age_range => ({
+                        max_prevalence: risk_json.studies[study_name].age[age_range as any],
+                        age: age_range[0]
+                    }))(Object
+                        .keys(risk_json.studies[study_name].age)
+                        .filter(age_range => in_range(age_range, input.age)))
+            }))
+            .reduce((obj, item) => {
+                const k = Object.keys(item)[0];
+                obj[k] = item[k];
+                return obj;
+            }, {}) : null;
 
-    const relative_risk: {[study: /*Study*/ string]: number}[] = Object.keys(risk_per_study).map(study_name => ({
-        [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract]
-    })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
+    const relative_risk: {[study: /*Study*/ string]: number}[] = Object
+        .keys(risk_per_study)
+        .map(study_name => ({
+            [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract]
+        }))
+        .sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);
 
     const graphed_rr: ITreeMapData[] = relative_risk.map(atoi => {
         const study_name = Object.keys(atoi)[0];
@@ -354,34 +365,10 @@ export const calc_relative_risk = (risk_json: IRiskJson,
     return Object.assign({
         age: input.age,
         study: input.study,
-        risk_per_study,
+        rr: relative_risk,
+        risk_per_study: risk_per_study as IRelativeRisk['risk_per_study'],
         graphed_rr
     }, has_gender ? { gender: input.gender } : {});
-};
-
-export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
-    // TODO
-    const risk_per_study = Object.keys(risk_json.studies).map(study_name => (
-        {
-            [study_name]: risk_json.studies[study_name].agenda != null ?
-                risk_json.studies[study_name].agenda : (age_range => ({
-                    max_prevalence: risk_json.studies[study_name].age[age_range],
-                    age: age_range[0]
-                }))(Object.keys(risk_json.studies[study_name].age) as any)
-        })).reduce((obj, item) => {
-        const k = Object.keys(item)[0];
-        obj[k] = item[k];
-        return obj;
-    }, {});
-
-    return {
-        relative_risk: Object.keys(risk_per_study).map(study_name => ({
-            [study_name]: risk_per_study[study_name][
-                Object.keys(risk_per_study[study_name]).indexOf('max_prevalence') > -1 ?
-                    'max_prevalence' : 'meth3_prevalence']
-        })).sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any),
-        risk_per_study
-    };
 };
 
 /*
@@ -392,6 +379,7 @@ export const all_studies_relative_risk = (risk_json: IRiskJson): {} => {
 
 if (require.main === module) {
     exists('./risk.json', fs_exists => {
+        /* tslint:disable:no-console */
         console.error(`fs_exists = ${fs_exists}`);
         writeFile('/tmp/a.txt', `fs_exists = ${fs_exists}`, err => {
             if (err) throw err;

@@ -12,7 +12,7 @@ describe('ethnicities', () => {
         expect(ethnicity_list).to.be.an.instanceof(Array);
 
         expect((ethnicity_list as string[] | any).filter(
-            o => Object.keys(o)[0] === 'olmsted' as any)[0]['olmsted']).to.be.eql([
+            o => Object.keys(o)[0] === 'olmsted')[0]['olmsted']).to.be.eql([
             'White [Olmsted]',
             'German [Olmsted]',
             'Norwegian [Olmsted]',
@@ -20,7 +20,7 @@ describe('ethnicities', () => {
             'English [Olmsted]'
         ]);
         expect((ethnicity_list as string[] | any).filter(
-            o => Object.keys(o)[0] === 'framingham' as any)[0]['framingham']).to.be.eql([
+            o => Object.keys(o)[0] === 'framingham')[0]['framingham']).to.be.eql([
             'White [Framingham]',
             'English [Framingham]',
             'Scottish [Framingham]',
@@ -32,14 +32,14 @@ describe('ethnicities', () => {
         ]);
 
         expect((ethnicity_list as string[] | any).filter(
-            o => Object.keys(o)[0] === 'barbados' as any)[0]['barbados']).to.be.eql([
+            o => Object.keys(o)[0] === 'barbados')[0]['barbados']).to.be.eql([
             'Black [Barbados]',
             'African [Barbados, Lesser Antilles, Caribbean]',
             'Afro-Barbadian',
             'Mixed [Barbados]'
         ]);
         expect((ethnicity_list as string[] | any).filter(
-            o => Object.keys(o)[0] === 'ghana' as any)[0]['ghana']).to.be.eql([
+            o => Object.keys(o)[0] === 'ghana')[0]['ghana']).to.be.eql([
             'Black [Ghana]',
             'African [Ghana]',
             'Ghanaian',

@@ -20,7 +20,7 @@ export interface IInput {
 export interface IRiskJson {
     default_expr: {};
     default_family_history: {
-        from_study: string;
+        from_study: Study;
         sibling_pc: number;
         parents_pc: number;
         ref: Array<{}>;
