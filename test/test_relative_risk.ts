@@ -28,6 +28,7 @@ describe('test calc_relative_risk', () => {
                     { olmsted: 1.13260785 },
                     { framingham: 1.2 },
                     { singapore: 2.6 },
+                    { indian: 3.6998972250770814 },
                     { barbados: 4.6 },
                     { ghana: 6.5 },
                     { japanese: 7.7 }
@@ -49,6 +50,13 @@ describe('test calc_relative_risk', () => {
                         oags: 6
                     },
                     ghana: { max_prevalence: 6.5, age: '55-59' },
+                    indian: {
+                        N: 973,
+                        age: '50-59',
+                        gender: 'male',
+                        positive: 36,
+                        prevalence: 3.6998972250770814
+                    },
                     japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
                     olmsted: { max_prevalence: 1.13260785, age: '50-59' },
                     singapore: {
@@ -62,6 +70,7 @@ describe('test calc_relative_risk', () => {
                     { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
                     { name: 'White [Framingham]', size: 1.2, value: 1.2 },
                     { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 },
+                    { name: 'Indian', size: 3.6998972250770814, value: 3.6998972250770814 },
                     { name: 'Black [Barbados]', size: 4.6, value: 4.6 },
                     { name: 'Black [Ghana]', size: 6.5, value: 6.5 },
                     { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 }
