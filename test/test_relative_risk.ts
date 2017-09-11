@@ -25,6 +25,7 @@ describe('test calc_relative_risk', () => {
                 age: 55,
                 study: 'barbados',
                 rr: [
+                    { aboriginal: 1.1 },
                     { olmsted: 1.13260785 },
                     { framingham: 1.2 },
                     { singapore: 2.6 },
@@ -34,6 +35,7 @@ describe('test calc_relative_risk', () => {
                     { japanese: 7.7 }
                 ],
                 risk_per_study: {
+                    aboriginal: { max_prevalence: 1.1, age: '50-59' },
                     barbados: {
                         _denominator: 100,
                         age: '50-59',
@@ -67,6 +69,7 @@ describe('test calc_relative_risk', () => {
                     }
                 },
                 graphed_rr: [
+                    { name: 'Australian Aboriginal', size: 1.1, value: 1.1 },
                     { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
                     { name: 'White [Framingham]', size: 1.2, value: 1.2 },
                     { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 },

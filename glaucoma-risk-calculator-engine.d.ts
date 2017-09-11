@@ -39,6 +39,7 @@ export interface IRiskJson {
         age_map: Map<string, number>,
         ref: Array<{}>
     };
+    global_notes: string[];
     studies: {
         olmsted: IOlmsted,
         framingham: IFramingham,
@@ -57,6 +58,7 @@ export interface IMultiplicativeRisks {
 interface IStudy {
     n: number;
     ethnicities: string[];
+    notes: string[];
     expr: Array<{
         key: string;
         take: number;
