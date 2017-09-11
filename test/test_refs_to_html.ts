@@ -14,10 +14,10 @@ describe('test ref to HTML', () => {
         const res_html = Object
             .keys(risk_json.studies)
             .map(study =>
-                `<h5>${study[0].toUpperCase()}${study.slice(1)} [n=${risk_json.studies[study].n}]
-                 </h5> ${(new Cite(risk_json.studies[study].ref)).get({
+                `<h5>${study[0].toUpperCase()}${study.slice(1)} [n=${risk_json.studies[study].n}]</h5>
+                 ${(new Cite(risk_json.studies[study].ref)).get({
                     format: 'string', type: 'html', style: 'citation-harvard1', lang: 'en-US'
-                })}`)
+                })}`.replace('\n', '').replace('                 ', ' '))
             .reduce((a, b) => a.concat(b));
         risk_json.html_of_all_refs = JSON.stringify(res_html);
         writeFile('risk.json', jsonStableStringify(risk_json, { space: 4 }), 'utf8', err => {
