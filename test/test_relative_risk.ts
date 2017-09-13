@@ -70,13 +70,13 @@ describe('test calc_relative_risk', () => {
                 },
                 graphed_rr: [
                     { name: 'Australian Aboriginal', size: 1.1, value: 1.1 },
-                    { name: 'White [Olmsted]', size: 1.13260785, value: 1.13260785 },
-                    { name: 'White [Framingham]', size: 1.2, value: 1.2 },
+                    { name: 'White (German; Norwegian; Irish; English)', size: 1.13260785, value: 1.13260785 },
+                    { name: 'White European (Canadian; Italian; Irish; Welsh; Scottish)', size: 1.2, value: 1.2 },
                     { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 },
                     { name: 'Indian', size: 3.6998972250770814, value: 3.6998972250770814 },
-                    { name: 'Black [Barbados]', size: 4.6, value: 4.6 },
-                    { name: 'Black [Ghana]', size: 6.5, value: 6.5 },
-                    { name: 'Tajima [Japanese]', size: 7.7, value: 7.7 }
+                    { name: 'Black African (Barbados, Lesser Antilles, Caribbean)', size: 4.6, value: 4.6 },
+                    { name: 'Black African (Ghana)', size: 6.5, value: 6.5 },
+                    { name: 'Japanese', size: 7.7, value: 7.7 }
                 ],
                 gender: 'male'
             });
