@@ -32,6 +32,6 @@ describe('ethnicities', () => {
         const ethnicity = 'White (German; Norwegian; Irish; English)';
         expect(ethnicity2study_res).to.include.keys(ethnicity);
         expect(ethnicity2study_res[ethnicity]).to.be.eql('olmsted');
-        expect(Object.keys(ethnicity2study_res)).to.have.length(9);
+        expect(Object.keys(ethnicity2study_res)).to.have.length(10);
     });
 });

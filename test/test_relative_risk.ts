@@ -25,6 +25,7 @@ describe('test calc_relative_risk', () => {
                 age: 55,
                 study: 'barbados',
                 rr: [
+                    { nepal: 0.79 },
                     { aboriginal: 1.1 },
                     { olmsted: 1.13260785 },
                     { framingham: 1.2 },
@@ -45,9 +46,9 @@ describe('test calc_relative_risk', () => {
                         max_prevalence: 4.6
                     },
                     bmes: {
-                        age: '<60',
-                        gender: 'male',
-                        positive: 0.3399192356321839,
+                        'age': '<60',
+                        'gender': 'male',
+                        'positive': 0.3399192356321839,
                         'positive (%)': 1.242064887
                     },
                     framingham: {
@@ -68,6 +69,13 @@ describe('test calc_relative_risk', () => {
                     },
                     japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
                     olmsted: { max_prevalence: 1.13260785, age: '50-59' },
+                    nepal: {
+                        'N': 506,
+                        'age': '50-59',
+                        'gender': 'male',
+                        'n (%)': '4 (0.79)',
+                        'prevalence': 0.79
+                    },
                     singapore: {
                         _denominator: 100,
                         age: '50-59',
@@ -76,6 +84,7 @@ describe('test calc_relative_risk', () => {
                     }
                 },
                 graphed_rr: [
+                    { name: 'Nepalese', size: 0.79, value: 0.79 },
                     { name: 'Australian Aboriginal', size: 1.1, value: 1.1 },
                     { name: 'White (German; Norwegian; Irish; English)', size: 1.13260785, value: 1.13260785 },
                     { name: 'White European (Canadian; Italian; Irish; Welsh; Scottish)', size: 1.2, value: 1.2 },
@@ -135,6 +144,15 @@ describe('test calc_relative_risk', () => {
             const fam_risk = combined_risk(familial_risks_from_study(risk_json, fam), fam_risk_from_study);
             expect(no_fam_risk).to.eql(1.2);
             expect(fam_risk).to.be.gt(no_fam_risk);
+        });
+    });
+
+    describe('nepal', () => {
+        const study: Study = 'nepal';
+
+        it('calculates risk_from_study', () => {
+            expect(risk_from_study(risk_json, Object.assign({ study }, trans[0]))).to.eql(0.79);
+            expect(risk_from_study(risk_json, Object.assign({ study }, trans[1]))).to.eql(0.12);
         });
     });
 

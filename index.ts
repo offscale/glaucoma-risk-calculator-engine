@@ -197,11 +197,15 @@ export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => 
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
 
-    const out = isArray(study_vals) ? study_vals.filter(o =>
-            study.expr[0].filter.every(k =>
-                k === 'age' ? in_range(o.age, input.age) : input.hasOwnProperty(k) ? o[k] === input[k] : true
-            )
-        )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
+    const out = isArray(study_vals) ? study_vals
+            .filter(o => study.expr[0].filter
+                .every(k =>
+                    k === 'age' ?
+                        in_range(o.age, input.age) :
+                        (input.hasOwnProperty(k) ?
+                            o[k] === input[k] : true)
+                )
+            )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
         : study_vals[ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(k =>
             in_range(k, input[study.expr[0].key])
         )[study.expr[0].take - 1]];
@@ -322,23 +326,23 @@ export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelati
         Object
             .keys(risk_json.studies)
             .map(study_name => ({
-                [study_name]: risk_json.studies[study_name].agenda != null ?
-                    risk_json.studies[study_name].agenda
-                        .filter(stat => input.gender === stat.gender && in_range(stat.age, input.age))
-                        [0]
-                    : (age_range => ({
+                [study_name]: risk_json.studies[study_name].agenda == null ?
+                    (age_range => ({
                         max_prevalence: risk_json.studies[study_name].age[age_range as any],
                         age: age_range[0]
                     }))(Object
                         .keys(risk_json.studies[study_name].age)
                         .filter(age_range => in_range(age_range, input.age)))
+                    : risk_json.studies[study_name].agenda
+                        .filter(stat => input.gender === stat.gender && in_range(stat.age, input.age))
+                        [0]
             }))
             .reduce((obj, item) => {
                 const k = Object.keys(item)[0];
                 obj[k] = item[k];
                 return obj;
             }, {}) : null;
-    
+
     const relative_risk: {[study: /*Study*/ string]: number}[] = Object
         .keys(risk_per_study)
         .map(study_name => ({

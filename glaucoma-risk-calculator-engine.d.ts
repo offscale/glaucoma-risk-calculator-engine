@@ -4,7 +4,16 @@ export interface IDictOfStringArray {
     [study: string]: string[];
 }
 
-export type Study = 'barbados' | 'framingham' | 'japanese' | 'olmsted' | 'singapore';
+export type Study =
+    'aboriginal'
+    | 'barbados'
+    | 'bmes'
+    | 'framingham'
+    | 'indian'
+    | 'japanese'
+    | 'nepal'
+    | 'olmsted'
+    | 'singapore';
 export type Gender = 'male' | 'female';
 
 export interface IInput {
