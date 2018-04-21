@@ -106,7 +106,7 @@ export interface IBarbados extends IStudy {
     }>;
 }
 
-import MathType = mathjs.MathType;
+import { MathType } from 'mathjs';
 
 export interface IObjectCtor extends ObjectConstructor {
     assign(target: any, ...sources: any[]): any;

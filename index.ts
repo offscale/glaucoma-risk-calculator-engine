@@ -12,7 +12,7 @@ import {
     IRiskJson,
     ITreeMapData
 } from './glaucoma-risk-calculator-engine';
-import MathType = mathjs.MathType;
+import { MathType } from 'mathjs';
 
 export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
     ethnicities.map(study => (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0]));

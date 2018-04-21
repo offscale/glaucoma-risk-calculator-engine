@@ -23,4 +23,4 @@ On a machine with GNU findutils and `cpio`:
 
 Alternatively a simple:
 
-    cp -r ../glaucoma-risk-calculator-engine/{test,*.js*,*.md} .
+    cp -r {test,*.js*,*.md} ../glaucoma-risk-calculator-engine-dist
