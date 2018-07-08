@@ -1,7 +1,8 @@
 import { isArray, isNullOrUndefined, isNumber } from 'util';
-import { exists, readFile, writeFile } from 'fs';
+
 import * as assert from 'assert';
 import * as math from 'mathjs';
+import { MathType } from 'mathjs';
 
 import {
     IBarbados,
@@ -12,7 +13,6 @@ import {
     IRiskJson,
     ITreeMapData
 } from './glaucoma-risk-calculator-engine';
-import { MathType } from 'mathjs';
 
 export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
     ethnicities.map(study => (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0]));
@@ -380,19 +380,21 @@ export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelati
  math.divide(risks.lastIndexOf(risk) + 1, risks.length), 100
  ));
  */
-
+/*
 if (require.main === module) {
+    import { exists, readFile, writeFile } from 'fs';
     exists('./risk.json', fs_exists => {
-        /* tslint:disable:no-console */
+        // tslint:disable:no-console
         console.error(`fs_exists = ${fs_exists}`);
         writeFile('/tmp/a.txt', `fs_exists = ${fs_exists}`, err => {
             if (err) throw err;
             readFile('./risk.json', 'utf8', (e, data) => {
                 if (e) throw e;
-                /* tslint:disable:no-console */
+                // tslint:disable:no-console
                 console.info(data);
             });
             // fs_exists && console.info(JSON.stringify(require('./risk'), null, '\t'))
         });
     });
 }
+*/
