@@ -16,9 +16,8 @@ it('preprocess_studies', () => {
             for (const i in risk_json.studies[study_name].age)
                 if (risk_json.studies[study_name].age.hasOwnProperty(i)
                     && typeof(i) !== 'function' && (i[0] === '<' || !isNaN(parseInt(i[0], 10)))) {
-                    // console.info('study_name =', study_name, 'i =', i, ';');
-                    expect(i[0]).to.be.eql('<');
-                    break;
+                    if (i[0] === '<')
+                        break;
                 }
         }
 
@@ -30,7 +29,7 @@ it('preprocess_studies', () => {
                     lt_genders_seen.push(agenda.gender);
                 all_genders_seen.push(agenda.gender);
             });
-            expect(lt_genders_seen).to.have.members(uniq(all_genders_seen));
+            expect(uniq(lt_genders_seen)).to.have.members(uniq(all_genders_seen));
         }
     });
 });
