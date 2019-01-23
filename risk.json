@@ -262,12 +262,8 @@
                 "80+": 16.7,
                 "<40": 1.5
             },
-            "age_map": [
-                [
-                    "<40",
-                    1.5
-                ]
-            ],
+            "age_map": {
+            },
             "ethnicities": [
                 "Australian Aboriginal"
             ],
@@ -354,9 +350,9 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "ci": "0.8-2.2",
-                    "gender": "all",
-                    "max_prevalence": 1.4
+                    "ci": "0.9-3.3",
+                    "gender": "male",
+                    "max_prevalence": 1.9
                 },
                 {
                     "_denominator": 100,
@@ -368,9 +364,9 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "ci": "0.9-3.3",
-                    "gender": "male",
-                    "max_prevalence": 1.9
+                    "ci": "0.8-2.2",
+                    "gender": "all",
+                    "max_prevalence": 1.4
                 },
                 {
                     "_denominator": 100,
@@ -599,15 +595,15 @@
             "agenda": [
                 {
                     "age": "<60",
-                    "gender": "female",
-                    "positive": 0.404346429939792,
-                    "positive (%)": 1.477481855
-                },
-                {
-                    "age": "<60",
                     "gender": "male",
                     "positive": 0.3399192356321839,
                     "positive (%)": 1.242064887
+                },
+                {
+                    "age": "<60",
+                    "gender": "female",
+                    "positive": 0.404346429939792,
+                    "positive (%)": 1.477481855
                 },
                 {
                     "age": "<60",
@@ -743,20 +739,16 @@
                 "_denominator": 100,
                 "all": 1.2922843025465602
             },
-            "age_map": [
-                [
-                    "<65",
-                    0.9406657018813314
-                ]
-            ],
+            "age_map": {
+            },
             "agenda": [
                 {
                     "age": "<52",
-                    "gender": "both",
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8,
-                    "n": 1382,
-                    "oags": 9
+                    "gender": "male",
+                    "meth2_prevalence": 1,
+                    "meth3_prevalence": 1.2,
+                    "n": 601,
+                    "oags": 6
                 },
                 {
                     "age": "<52",
@@ -768,11 +760,11 @@
                 },
                 {
                     "age": "<52",
-                    "gender": "male",
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2,
-                    "n": 601,
-                    "oags": 6
+                    "gender": "both",
+                    "meth2_prevalence": 0.7,
+                    "meth3_prevalence": 0.8,
+                    "n": 1382,
+                    "oags": 9
                 },
                 {
                     "age": "all",
@@ -1094,12 +1086,8 @@
                 "_denominator": 100,
                 "all": 8.4
             },
-            "age_map": [
-                [
-                    "<30",
-                    6
-                ]
-            ],
+            "age_map": {
+            },
             "ethnicities": [
                 "Black African (Ghana)"
             ],
@@ -1177,18 +1165,18 @@
         "indian": {
             "agenda": [
                 {
-                    "N": 1217,
-                    "age": "<40",
-                    "gender": "female",
-                    "positive": 34,
-                    "prevalence": 2.7937551355792936
-                },
-                {
                     "N": 1265,
                     "age": "<40",
                     "gender": "male",
                     "positive": 38,
                     "prevalence": 3.0039525691699605
+                },
+                {
+                    "N": 1217,
+                    "age": "<40",
+                    "gender": "female",
+                    "positive": 34,
+                    "prevalence": 2.7937551355792936
                 },
                 {
                     "N": 1265,
@@ -1337,16 +1325,12 @@
                 "_TODO": true,
                 "_denominator": 100000
             },
-            "age_map": [
-                [
-                    "<30",
-                    1.89549249600724
-                ]
-            ],
+            "age_map": {
+            },
             "agenda": [
                 {
                     "age": "<40",
-                    "gender": "male",
+                    "gender": "all",
                     "max_prevalence": 7.5
                 },
                 {
@@ -1356,7 +1340,7 @@
                 },
                 {
                     "age": "<40",
-                    "gender": "all",
+                    "gender": "male",
                     "max_prevalence": 7.5
                 },
                 {
@@ -1532,18 +1516,18 @@
             ],
             "agenda": [
                 {
-                    "N": 851,
-                    "age": "<40",
-                    "gender": "female",
-                    "n (%)": "1 (0.12)",
-                    "prevalence": 0.12
-                },
-                {
                     "N": 633,
                     "age": "<40",
                     "gender": "male",
                     "n (%)": "2 (0.32)",
                     "prevalence": 0.32
+                },
+                {
+                    "N": 851,
+                    "age": "<40",
+                    "gender": "female",
+                    "n (%)": "1 (0.12)",
+                    "prevalence": 0.12
                 },
                 {
                     "N": 633,
@@ -1719,12 +1703,8 @@
                 "<30": 0.1895492496,
                 "_denominator": 100
             },
-            "age_map": [
-                [
-                    "<30",
-                    0.1895492496
-                ]
-            ],
+            "age_map": {
+            },
             "ethnicities": [
                 "White (German; Norwegian; Irish; English)"
             ],
@@ -1835,8 +1815,8 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "gender": "female",
-                    "prevalence": 0.3
+                    "gender": "all",
+                    "prevalence": 0.4
                 },
                 {
                     "_denominator": 100,
@@ -1847,8 +1827,8 @@
                 {
                     "_denominator": 100,
                     "age": "<40",
-                    "gender": "all",
-                    "prevalence": 0.4
+                    "gender": "female",
+                    "prevalence": 0.3
                 },
                 {
                     "_denominator": 100,
