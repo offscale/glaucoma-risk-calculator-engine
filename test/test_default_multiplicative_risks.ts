@@ -25,8 +25,8 @@ describe('default_multiplicative_risks', () => {
             age: 81
         };
         const user_risk: IMultiplicativeRisks = {
-            myopia: 4,
-            diabetes: 3,
+            myopia: 1.88,
+            diabetes: 1.93,
             family_history: 3,
             age: 12
         };

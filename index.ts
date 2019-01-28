@@ -1,5 +1,3 @@
-import { isArray, isNullOrUndefined, isNumber } from 'util';
-
 import * as assert from 'assert';
 import * as math from 'mathjs';
 import { MathType } from 'mathjs';
@@ -13,6 +11,9 @@ import {
     IRiskJson,
     ITreeMapData
 } from './glaucoma-risk-calculator-engine';
+
+const isNullOrUndefined = o => o == null;
+const isNumber = n => !isNullOrUndefined(n) && typeof n === 'number';
 
 export const ethnicities_pretty = (ethnicities: IDictOfStringArray | any): IDictOfStringArray =>
     ethnicities.map(study => (study_name => `${study_name}: ${study[study_name].join(', ')}`)(Object.keys(study)[0]));
@@ -197,7 +198,7 @@ export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => 
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
 
-    const out = isArray(study_vals) ? study_vals
+    const out = Array.isArray(study_vals) ? study_vals
             .filter(o => study.expr[0].filter
                 .every(k =>
                     k === 'age' ?
@@ -252,7 +253,7 @@ export const risks_from_study = (risk_json: IRiskJson, input: IInput): number[] 
     const study: IBarbados = risk_json.studies[input.study] as IBarbados;
     const study_vals = study[study.expr[0].key];
 
-    const out = isArray(study_vals) ?
+    const out = Array.isArray(study_vals) ?
         study_vals
             .filter(o => input.gender ? o.gender === input.gender : true)
             .map(o => o[study.expr[0].extract])
