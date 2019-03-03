@@ -21,17 +21,19 @@ describe('test calc_relative_risk', () => {
         const study: Study = 'barbados';
 
         it('calculates relative risk', () => {
+            console.info('calc_relative_risk(risk_json, Object.assign({ study }, trans[0]))', calc_relative_risk(risk_json, Object.assign({ study }, trans[0])), ';');
             expect(calc_relative_risk(risk_json, Object.assign({ study }, trans[0]))).to.eql({
                 age: 55,
                 study: 'barbados',
                 rr: [
-                    { nepal: 0.79 },
+                    { indian: 3.6998972250770814 },
                     { aboriginal: 1.1 },
+                    { nepal: 0.79 },
                     { olmsted: 1.13260785 },
                     { framingham: 1.2 },
                     { bmes: 1.242064887 },
+                    { korean: 1.99 },
                     { singapore: 2.6 },
-                    { indian: 3.6998972250770814 },
                     { barbados: 4.6 },
                     { ghana: 6.5 },
                     { japanese: 7.7 }
@@ -46,9 +48,9 @@ describe('test calc_relative_risk', () => {
                         max_prevalence: 4.6
                     },
                     bmes: {
-                        'age': '<60',
-                        'gender': 'male',
-                        'positive': 0.3399192356321839,
+                        age: '<60',
+                        gender: 'male',
+                        positive: 0.3399192356321839,
                         'positive (%)': 1.242064887
                     },
                     framingham: {
@@ -68,14 +70,15 @@ describe('test calc_relative_risk', () => {
                         prevalence: 3.6998972250770814
                     },
                     japanese: { age: '50-59', gender: 'male', max_prevalence: 7.7 },
-                    olmsted: { max_prevalence: 1.13260785, age: '50-59' },
+                    korean: { max_prevalence: 1.99, age: '50-59' },
                     nepal: {
-                        'N': 506,
-                        'age': '50-59',
-                        'gender': 'male',
+                        N: 506,
+                        age: '50-59',
+                        gender: 'male',
                         'n (%)': '4 (0.79)',
-                        'prevalence': 0.79
+                        prevalence: 0.79
                     },
+                    olmsted: { max_prevalence: 1.13260785, age: '50-59' },
                     singapore: {
                         _denominator: 100,
                         age: '50-59',
@@ -84,17 +87,37 @@ describe('test calc_relative_risk', () => {
                     }
                 },
                 graphed_rr: [
-                    { name: 'Nepalese', size: 0.79, value: 0.79 },
+                    {
+                        name: 'Indian',
+                        size: 3.6998972250770814,
+                        value: 3.6998972250770814
+                    },
                     { name: 'Australian Aboriginal', size: 1.1, value: 1.1 },
-                    { name: 'White (German; Norwegian; Irish; English)', size: 1.13260785, value: 1.13260785 },
-                    { name: 'White European (Canadian; Italian; Irish; Welsh; Scottish)', size: 1.2, value: 1.2 },
-                    { name: 'White (Northern European: Australian)', size: 1.242064887, value: 1.242064887 },
+                    { name: 'Nepalese', size: 0.79, value: 0.79 },
+                    {
+                        name: 'White (German; Norwegian; Irish; English)',
+                        size: 1.13260785,
+                        value: 1.13260785
+                    },
+                    {
+                        name: 'White European (Canadian; Italian; Irish; Welsh; Scottish)',
+                        size: 1.2,
+                        value: 1.2
+                    },
+                    {
+                        name: 'White (Northern European: Australian)',
+                        size: 1.242064887,
+                        value: 1.242064887
+                    },
+                    { name: 'Korean', size: 1.99, value: 1.99 },
                     { name: 'Chinese [Singapore: urban]', size: 2.6, value: 2.6 },
-                    { name: 'Indian', size: 3.6998972250770814, value: 3.6998972250770814 },
-                    { name: 'Black African (Barbados, Lesser Antilles, Caribbean)', size: 4.6, value: 4.6 },
+                    {
+                        name: 'Black African (Barbados, Lesser Antilles, Caribbean)',
+                        size: 4.6,
+                        value: 4.6
+                    },
                     { name: 'Black African (Ghana)', size: 6.5, value: 6.5 },
-                    { name: 'Japanese', size: 7.7, value: 7.7 }
-                ],
+                    { name: 'Japanese', size: 7.7, value: 7.7 }],
                 gender: 'male'
             });
 

@@ -1,6 +1,6 @@
 {
   "name": "glaucoma-risk-calculator-engine",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "Glaucoma risk calculator compute engine",
   "main": "index.js",
   "scripts": {

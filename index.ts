@@ -163,7 +163,7 @@ export const preprocess_studies = (risk_json: IRiskJson): IRiskJson => {
                             risk_json.studies[study_name].agenda
                                 .filter(agenda => agenda.age === top_bar[1] && agenda.gender === gender)
                                 .map(o => Object.assign({}, o, { age: `${top_bar[0]}+` }))
-                                [0]
+                            [0]
                         );
                 }
             });
@@ -199,14 +199,14 @@ export const risk_from_study = (risk_json: IRiskJson, input: IInput): number => 
     const study_vals = study[study.expr[0].key];
 
     const out = Array.isArray(study_vals) ? study_vals
-            .filter(o => study.expr[0].filter
-                .every(k =>
-                    k === 'age' ?
-                        in_range(o.age, input.age) :
-                        (input.hasOwnProperty(k) ?
-                            o[k] === input[k] : true)
-                )
-            )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
+        .filter(o => study.expr[0].filter
+            .every(k =>
+                k === 'age' ?
+                    in_range(o.age, input.age) :
+                    (input.hasOwnProperty(k) ?
+                        o[k] === input[k] : true)
+            )
+        )[study.expr[0].take > 0 ? study.expr[0].take - 1 : 0]
         : study_vals[ensure_map(study.expr[0].type) && Object.keys(study_vals).filter(k =>
             in_range(k, input[study.expr[0].key])
         )[study.expr[0].take - 1]];
@@ -307,14 +307,14 @@ export const ethnicity2study = (risk_json: IRiskJson): {} => {
 };
 
 export const calc_default_multiplicative_risks = (risk_json: IRiskJson,
-                                                  user: IMultiplicativeRisks): IMultiplicativeRisks => {
+    user: IMultiplicativeRisks): IMultiplicativeRisks => {
     return {
         age: risk_json.default_multiplicative_risks.age[
             Object
                 .keys(risk_json.default_multiplicative_risks.age)
                 .filter(range => in_range(range, user.age as number))
-                [0]
-            ],
+            [0]
+        ],
         myopia: user.myopia ? risk_json.default_multiplicative_risks.myopia.existent : 1,
         family_history: user.family_history ? risk_json.default_multiplicative_risks.family_history.existent : 1,
         diabetes: user.diabetes ? risk_json.default_multiplicative_risks.diabetes.existent : 1
@@ -336,7 +336,7 @@ export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelati
                         .filter(age_range => in_range(age_range, input.age)))
                     : risk_json.studies[study_name].agenda
                         .filter(stat => input.gender === stat.gender && in_range(stat.age, input.age))
-                        [0]
+                    [0]
             }))
             .reduce((obj, item) => {
                 const k = Object.keys(item)[0];
@@ -344,15 +344,15 @@ export const calc_relative_risk = (risk_json: IRiskJson, input: IInput): IRelati
                 return obj;
             }, {}) : null;
 
-    const relative_risk: {[study: /*Study*/ string]: number}[] = Object
+    const relative_risk: { [study: /*Study*/ string]: number }[] = Object
         .keys(risk_per_study)
         .map(study_name => ({
             [study_name]: risk_per_study[study_name][risk_json.studies[study_name].expr[0].extract
-                ] || risk_per_study[study_name][
+            ] || risk_per_study[study_name][
                 Object
                     .keys(risk_per_study[study_name])
                     .filter(k => typeof risk_per_study[study_name][k] === 'number')
-                    [0]
+                [0]
                 ]
         }))
         .sort((a, b) => a[Object.keys(a)[0]] > b[Object.keys(b)[0]] as any);

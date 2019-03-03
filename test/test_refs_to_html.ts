@@ -34,7 +34,7 @@ describe('test ref to HTML', () => {
         );
 
         risk_json.html_of_all_refs = JSON.stringify(res_html);
-        writeFile('risk.json', jsonStableStringify(risk_json, { space: 4 }), 'utf8', err => {
+        writeFile('risk.json', jsonStableStringify(risk_json, { space: 2 }), 'utf8', err => {
             if (err) return done(err);
             let er: Chai.AssertionError = void 0;
             try {

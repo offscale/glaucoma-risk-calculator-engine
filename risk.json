@@ -1,2002 +1,2094 @@
 {
-    "TODO": {
-        "st_lucia": {
-            "n": 1679
-        }
-    },
-    "default_expr": {
-        "pipe": [
-            "sum",
-            "cross-entropy",
-            "sigmoid"
-        ],
-        "vals": [
-            "age"
-        ]
-    },
-    "default_family_history": {
-        "from_study": "Rotterdam",
-        "parents_pc": 1.1,
-        "ref": [
-            {
-                "DOI": "10.1001/archopht.116.12.1640",
-                "ISSN": "0003-9950",
-                "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
-                "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
-                "author": [
-                    {
-                        "literal": "Wolfs RW"
-                    },
-                    {
-                        "literal": "Klaver CW"
-                    },
-                    {
-                        "literal": "Ramrattan RS"
-                    },
-                    {
-                        "literal": "van Duijn CM"
-                    },
-                    {
-                        "literal": "Hofman A"
-                    },
-                    {
-                        "literal": "de Jong PM"
-                    }
-                ],
-                "container-title": "Archives of Ophthalmology",
-                "id": "http://zotero.org/users/843109/items/6NHEIVNU",
-                "issue": "12",
-                "issued": {
-                    "date-parts": [
-                        [
-                            "1998",
-                            12,
-                            1
-                        ]
-                    ]
-                },
-                "journalAbbreviation": "Archives of Ophthalmology",
-                "page": "1640-1645",
-                "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
-                "type": "article-journal",
-                "volume": "116"
-            }
-        ],
-        "sibling_pc": 10.4
-    },
-    "default_multiplicative_risks": {
-        "age": {
-            "50-80": 3,
-            "80+": 12,
-            "<50": 1
-        },
-        "diabetes": {
-            "existent": 1.93
-        },
-        "family_history": {
-            "existent": 3
-        },
-        "myopia": {
-            "existent": 1.88
-        },
-        "ref": [
-            {
-                "ISSN": "0012-7183",
-                "URL": "http://europepmc.org/abstract/MED/26241991",
-                "author": [
-                    {
-                        "family": "Tuulonen",
-                        "given": "Anja"
-                    },
-                    {
-                        "family": "Forsman",
-                        "given": "Eva"
-                    },
-                    {
-                        "family": "Hagman",
-                        "given": "Juha"
-                    },
-                    {
-                        "family": "Harju",
-                        "given": "Mika"
-                    },
-                    {
-                        "family": "Kari",
-                        "given": "Osmo"
-                    },
-                    {
-                        "family": "Lumme",
-                        "given": "Pirkko"
-                    },
-                    {
-                        "family": "Luodonpää",
-                        "given": "Marja"
-                    },
-                    {
-                        "family": "Määttä",
-                        "given": "Marko"
-                    },
-                    {
-                        "family": "Saarela",
-                        "given": "Ville"
-                    },
-                    {
-                        "family": "Vaajanen",
-                        "given": "Anu"
-                    },
-                    {
-                        "family": "Komulainen",
-                        "given": "Jorma"
-                    }
-                ],
-                "container-title": "Duodecim; laaketieteellinen aikakauskirja",
-                "id": "http://zotero.org/users/843109/items/6NK5N3CX",
-                "issue": "4",
-                "issued": {
-                    "date-parts": [
-                        [
-                            "2015"
-                        ]
-                    ]
-                },
-                "page": "356—358",
-                "title": "[Update on Current Care Guideline: Glaucoma]",
-                "type": "article-journal",
-                "volume": "131"
-            },
-            {
-                "URL": "https://nhmrc.gov.au/about-us/publications/guidelines-screening-prognosis-diagnosis-management-and-prevention-glaucoma",
-                "author": [
-                    {
-                        "family": "(National Health and Medical Research Council)",
-                        "given": "NHMRC"
-                    }
-                ],
-                "event-place": "Australia",
-                "genre": "Guideline",
-                "id": "http://zotero.org/users/843109/items/2BAWXSAQ",
-                "issued": {
-                    "date-parts": [
-                        [
-                            "2010",
-                            11
-                        ]
-                    ]
-                },
-                "language": "English",
-                "publisher-place": "Australia",
-                "title": "Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma",
-                "type": "report"
-            }
-        ]
-    },
-    "general_stats": [
-        {
-            "Age": "30+",
-            "Location": "Gambia, West Africa",
-            "POAG (%)": 1.2,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "40-84",
-            "Location": "Barbados, West Indies",
-            "POAG (%)": 7.1,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "30+",
-            "Location": "St Lucia, Caribbean",
-            "POAG (%)": 8.8,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "40+",
-            "Location": "Baltimore, USA",
-            "POAG (%)": 4.74,
-            "Racial origin": "European"
-        },
-        {
-            "Age": "30+",
-            "Location": "Akwapim-South district,",
-            "POAG (%)": 7.7,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "40+",
-            "Location": "Ghana, West Africa",
-            "POAG (%)": 8.5,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "55+",
-            "Location": "Rotterdam, Netherlands",
-            "POAG (%)": 1.1,
-            "Racial origin": "European"
-        },
-        {
-            "Age": "40-84",
-            "Location": "Barbados, West Indies",
-            "POAG (%)": 0.8,
-            "Racial origin": "Africa"
-        },
-        {
-            "Age": "40+",
-            "Location": "Baltimore, USA",
-            "POAG (%)": 1.29,
-            "Racial origin": "European"
-        },
-        {
-            "Age": "49+",
-            "Location": "Sydney, Australia",
-            "POAG (%)": 3,
-            "Racial origin": "Australia"
-        },
-        {
-            "Age": "40+",
-            "Location": "Victoria, Australia",
-            "POAG (%)": 1.8,
-            "Racial origin": "Australia"
-        },
-        {
-            "Age": "40-84",
-            "Location": "Barbados, West Indies",
-            "POAG (%)": 3.3,
-            "Racial origin": "Mixed race"
-        }
-    ],
-    "global_notes": [
-        "The largest population (n) study was chosen per ethnic group",
-        "Prevalence for people younger than population age range are assigned lowest risk",
-        "Check original paper(s) for CI and other study controls/notes",
-        "With the exception of Indian, all data extracted from studies show prevalence of Primary Open Angle Glaucoma (POAG)",
-        "Same multiplicative risks used for: myopia; hyperopia; diabetes; and family history, as per:<div class=\"csl-bib-body\">\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/2BAWXSAQ\" class=\"csl-entry\">(National Health and Medical Research Council), N., 2010. <i>Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma</i>, Australia. Available at: https://nhmrc.gov.au/about-us/publications/guidelines-screening-prognosis-diagnosis-management-and-prevention-glaucoma.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NK5N3CX\" class=\"csl-entry\">Tuulonen, A. et al., 2015. [Update on Current Care Guideline: Glaucoma]. <i>Duodecim; laaketieteellinen aikakauskirja</i>, 131(4), p.356—358. Available at: http://europepmc.org/abstract/MED/26241991.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NHEIVNU\" class=\"csl-entry\">Wolfs RW et al., 1998. Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study. <i>Archives of Ophthalmology</i>, 116(12), pp.1640–1645. Available at: http://dx.doi.org/10.1001/archopht.116.12.1640.</div>\n</div>"
-    ],
-    "html_of_all_refs": "\"<h5>Aboriginal [n=1189]: Australian Aboriginal</h5> <ul><li>\\\"Interestingly, there were no cases of low vision or blindness solely attributable to glaucoma.\\\"</li></ul>\\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/6MQ52GTR\\\" class=\\\"csl-entry\\\">Chua, B.E. et al., 2011. Glaucoma prevalence in Indigenous Australians. <i>British Journal of Ophthalmology</i>, 95(7), pp.926–930. Available at: http://bjo.bmj.com/cgi/doi/10.1136/bjo.2010.192716 [Accessed September 11, 2017].</div>\\n</div><h5>Barbados [n=4498]: Black African (Barbados, Lesser Antilles, Caribbean)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WC34ZE84\\\" class=\\\"csl-entry\\\">Barbados Statistical Service, 2010. <i>2010 population and housing census</i>, Barbados: Barbados Statistical Service. Available at: www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf [Accessed March 17, 2017].</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GP2J8UM3\\\" class=\\\"csl-entry\\\">M, L. et al., 1994. The barbados eye study: Prevalence of open angle glaucoma. <i>Archives of Ophthalmology</i>, 112(6), pp.821–829. Available at: + http://dx.doi.org/10.1001/archopht.1994.01090180121046.</div>\\n</div><h5>Bmes [n=3654]: White (Northern European: Australian)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/DTV644DX\\\" class=\\\"csl-entry\\\">Mitchell, P. et al., 1996. Prevalence of Open-angle Glaucoma in Australia. <i>Ophthalmology</i>, 103(10), pp.1661–1669. Available at: http://linkinghub.elsevier.com/retrieve/pii/S0161642096304491 [Accessed September 14, 2017].</div>\\n</div><h5>Framingham [n=2631]: White European (Canadian; Italian; Irish; Welsh; Scottish)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/X9TI96I9\\\" class=\\\"csl-entry\\\">Govindaraju, D.R. et al., 2008. Genetics of the Framingham Heart Study Population. <i>Advances in genetics</i>, 62, pp.33–65.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/KHCNRZE3\\\" class=\\\"csl-entry\\\">Kahn, H.A. &#38; Milton, R.C., 1980. Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy. <i>American journal of epidemiology</i>, 111(6), pp.769–776.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GB5I6PVS\\\" class=\\\"csl-entry\\\">Krueger, D.E., Milton, R.C. &#38; Maunder, L.R., The Framingham eye study: Introduction to the monograph. <i>Survey of Ophthalmology</i>, 24(6), pp.614–620. Available at: http://dx.doi.org/10.1016/0039-6257(80)90122-8 [Accessed March 14, 2017].</div>\\n</div><h5>Ghana [n=1785]: Black African (Ghana)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/UK2A2K8C\\\" class=\\\"csl-entry\\\">Ntim-Amponsah, C.T. et al., 2004. Prevalence of glaucoma in an African population. <i>Eye</i>, 18(5), pp.491–497. Available at: http://www.nature.com/doifinder/10.1038/sj.eye.6700674 [Accessed May 18, 2017].</div>\\n</div><h5>Indian [n=14092]: Indian</h5> <ul><li>Urban statistics are used</li></ul>\\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/2D8W5GGP\\\" class=\\\"csl-entry\\\">Paul, C. et al., 2016. Prevalence of glaucoma in Eastern India: The Hooghly River Glaucoma Study. <i>Indian Journal of Ophthalmology</i>, 64(8), p.578. Available at: http://www.ijo.in/text.asp?2016/64/8/578/191497 [Accessed September 11, 2017].</div>\\n</div><h5>Japanese [n=3021]: Japanese</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/J5GE53XW\\\" class=\\\"csl-entry\\\">Iwase, A. et al., 2004. The prevalence of primary open-angle glaucoma in Japanese. <i>Ophthalmology</i>, 111(9), pp.1641–1648. Available at: http://www.sciencedirect.com/science/article/pii/S0161642004006657.</div>\\n</div><h5>Nepal [n=4800]: Nepalese</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/66BP7WTI\\\" class=\\\"csl-entry\\\">Thapa, S.S. et al., 2012. A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal: The Bhaktapur Glaucoma Study. <i>Ophthalmology</i>, 119(4), pp.759–764. Available at: http://linkinghub.elsevier.com/retrieve/pii/S0161642011009869 [Accessed September 22, 2017].</div>\\n</div><h5>Olmsted [n=60666]: White (German; Norwegian; Irish; English)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WZEDUEDB\\\" class=\\\"csl-entry\\\">Schoff, E.O. et al., 2001. Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota. <i>Ophthalmology</i>, 108(5), pp.882–886. Available at: http://www.sciencedirect.com/science/article/pii/S0161642001005504.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/JC8J5XII\\\" class=\\\"csl-entry\\\">United States Census Bureau, 2000. <i>Census 2000</i>, United States of America. Available at: https://www.census.gov/main/www/cen2000.html [Accessed March 16, 2017].</div>\\n</div><h5>Singapore [n=3353]: Chinese [Singapore: urban]</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/XUFHH45J\\\" class=\\\"csl-entry\\\">Baskaran, M. et al., 2015. The Prevalence and Types of Glaucoma in an Urban Chinese Population: The Singapore Chinese Eye Study. <i>JAMA Ophthalmology</i>, 133(8), p.874. Available at: http://archopht.jamanetwork.com/article.aspx?doi=10.1001/jamaophthalmol.2015.1110 [Accessed September 6, 2017].</div>\\n</div>\"",
-    "studies": {
-        "aboriginal": {
-            "age": {
-                "40-49": 1.5,
-                "50-59": 1.1,
-                "60-69": 6.1,
-                "70-79": 10,
-                "80+": 16.7,
-                "<40": 1.5
-            },
-            "age_map": {
-            },
-            "ethnicities": [
-                "Australian Aboriginal"
-            ],
-            "expr": [
-                {
-                    "key": "age",
-                    "take": 1,
-                    "type": "map"
-                }
-            ],
-            "n": 1189,
-            "notes": [
-                "\"Interestingly, there were no cases of low vision or blindness solely attributable to glaucoma.\""
-            ],
-            "ref": [
-                {
-                    "DOI": "10.1136/bjo.2010.192716",
-                    "ISSN": "0007-1161",
-                    "URL": "http://bjo.bmj.com/cgi/doi/10.1136/bjo.2010.192716",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                9,
-                                11
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Chua",
-                            "given": "B. E."
-                        },
-                        {
-                            "family": "Xie",
-                            "given": "J."
-                        },
-                        {
-                            "family": "Arnold",
-                            "given": "A.-L."
-                        },
-                        {
-                            "family": "Koukouras",
-                            "given": "I."
-                        },
-                        {
-                            "family": "Keeffe",
-                            "given": "J. E."
-                        },
-                        {
-                            "family": "Taylor",
-                            "given": "H. R."
-                        }
-                    ],
-                    "container-title": "British Journal of Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/6MQ52GTR",
-                    "issue": "7",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2011",
-                                7,
-                                1
-                            ]
-                        ]
-                    },
-                    "language": "en",
-                    "page": "926-930",
-                    "source": "CrossRef",
-                    "title": "Glaucoma prevalence in Indigenous Australians",
-                    "type": "article-journal",
-                    "volume": "95"
-                }
-            ]
-        },
-        "barbados": {
-            "_ethnicities": [
-                "Black [Barbados]",
-                "African [Barbados, Lesser Antilles, Caribbean]",
-                "Afro-Barbadian",
-                "Mixed [Barbados]"
-            ],
-            "agenda": [
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "ci": "0.8-2.2",
-                    "gender": "all",
-                    "max_prevalence": 1.4
-                },
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "ci": "0.4-2.0",
-                    "gender": "female",
-                    "max_prevalence": 1
-                },
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "ci": "0.9-3.3",
-                    "gender": "male",
-                    "max_prevalence": 1.9
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "ci": "0.9-3.3",
-                    "gender": "male",
-                    "max_prevalence": 1.9
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "ci": "0.4-2.0",
-                    "gender": "female",
-                    "max_prevalence": 1
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "ci": "0.8-2.2",
-                    "gender": "all",
-                    "max_prevalence": 1.4
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "ci": "2.9-7.0",
-                    "gender": "male",
-                    "max_prevalence": 4.6
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "ci": "2.4-5.4",
-                    "gender": "female",
-                    "max_prevalence": 3.7
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "ci": "3.0-5.4",
-                    "gender": "all",
-                    "max_prevalence": 4.1
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "ci": "6.8-12.6",
-                    "gender": "male",
-                    "max_prevalence": 9.4
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "ci": "3.4-6.9",
-                    "gender": "female",
-                    "max_prevalence": 4.9
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "ci": "5.3-8.4",
-                    "gender": "all",
-                    "max_prevalence": 6.7
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70-79",
-                    "ci": "13.8-21.8",
-                    "gender": "male",
-                    "max_prevalence": 17.5
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70-79",
-                    "ci": "9.8-16.1",
-                    "gender": "female",
-                    "max_prevalence": 12.7
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70-79",
-                    "ci": "12.5-17.4",
-                    "gender": "all",
-                    "max_prevalence": 14.8
-                },
-                {
-                    "_denominator": 100,
-                    "age": "80-86",
-                    "ci": "16.7-34.3",
-                    "gender": "male",
-                    "max_prevalence": 24.8
-                },
-                {
-                    "_denominator": 100,
-                    "age": "80-86",
-                    "ci": "15.0-30.3",
-                    "gender": "female",
-                    "max_prevalence": 22
-                },
-                {
-                    "_denominator": 100,
-                    "age": "80-86",
-                    "ci": "17.9-29.3",
-                    "gender": "all",
-                    "max_prevalence": 23.2
-                },
-                {
-                    "_denominator": 100,
-                    "age": "all",
-                    "ci": "9.7-11.5",
-                    "gender": "all",
-                    "max_prevalence": 10.6
-                },
-                {
-                    "_denominator": 100,
-                    "age": "86+",
-                    "ci": "16.7-34.3",
-                    "gender": "male",
-                    "max_prevalence": 24.8
-                },
-                {
-                    "_denominator": 100,
-                    "age": "86+",
-                    "ci": "15.0-30.3",
-                    "gender": "female",
-                    "max_prevalence": 22
-                },
-                {
-                    "_denominator": 100,
-                    "age": "86+",
-                    "ci": "17.9-29.3",
-                    "gender": "all",
-                    "max_prevalence": 23.2
-                }
-            ],
-            "ethnicities": [
-                "Black African (Barbados, Lesser Antilles, Caribbean)"
-            ],
-            "expr": [
-                {
-                    "extract": "max_prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 4498,
-            "normal_tension": true,
-            "parents_pc": 1.1,
-            "ref": [
-                {
-                    "DOI": "10.1001/archopht.1994.01090180121046",
-                    "URL": "+ http://dx.doi.org/10.1001/archopht.1994.01090180121046",
-                    "author": [
-                        {
-                            "family": "M",
-                            "given": "Leske"
-                        },
-                        {
-                            "family": "AS",
-                            "given": "Connell"
-                        },
-                        {
-                            "family": "AP",
-                            "given": "Schachat"
-                        },
-                        {
-                            "family": "L",
-                            "given": "Hyman"
-                        }
-                    ],
-                    "container-title": "Archives of Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/GP2J8UM3",
-                    "issue": "6",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "1994"
-                            ]
-                        ]
-                    },
-                    "page": "821-829",
-                    "title": "The barbados eye study: Prevalence of open angle glaucoma",
-                    "type": "article-journal",
-                    "volume": "112"
-                },
-                {
-                    "URL": "www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                3,
-                                17
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Barbados Statistical Service",
-                            "given": ""
-                        }
-                    ],
-                    "event-place": "Barbados",
-                    "genre": "Census",
-                    "id": "http://zotero.org/users/843109/items/WC34ZE84",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2010"
-                            ]
-                        ]
-                    },
-                    "publisher": "Barbados Statistical Service",
-                    "publisher-place": "Barbados",
-                    "title": "2010 population and housing census",
-                    "type": "report"
-                }
-            ],
-            "sibling_pc": 10.4
-        },
-        "bmes": {
-            "agenda": [
-                {
-                    "age": "<60",
-                    "gender": "female",
-                    "positive": 0.404346429939792,
-                    "positive (%)": 1.477481855
-                },
-                {
-                    "age": "<60",
-                    "gender": "male",
-                    "positive": 0.3399192356321839,
-                    "positive (%)": 1.242064887
-                },
-                {
-                    "age": "<60",
-                    "gender": "female",
-                    "positive": 0.16081333305966064,
-                    "positive (%)": 0.587611919
-                },
-                {
-                    "age": "<60",
-                    "gender": "male",
-                    "positive": 0.06998711685823754,
-                    "positive (%)": 0.255732925
-                },
-                {
-                    "age": "60-69",
-                    "gender": "female",
-                    "positive": 0.404346429939792,
-                    "positive (%)": 1.477481855
-                },
-                {
-                    "age": "60-69",
-                    "gender": "male",
-                    "positive": 0.3399192356321839,
-                    "positive (%)": 1.242064887
-                },
-                {
-                    "age": "70-79",
-                    "gender": "female",
-                    "positive": 1.3872219022988506,
-                    "positive (%)": 5.068908831
-                },
-                {
-                    "age": "70-79",
-                    "gender": "male",
-                    "positive": 1.1512859515599343,
-                    "positive (%)": 4.206798867
-                },
-                {
-                    "age": "80+",
-                    "gender": "female",
-                    "positive": 3.8617694252873562,
-                    "positive (%)": 14.11090548
-                },
-                {
-                    "age": "80+",
-                    "gender": "male",
-                    "positive": 2.068248753968254,
-                    "positive (%)": 7.557380947
-                }
-            ],
-            "ethnicities": [
-                "White (Northern European: Australian)"
-            ],
-            "expr": [
-                {
-                    "extract": "positive (%)",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 3654,
-            "ref": [
-                {
-                    "DOI": "10.1016/S0161-6420(96)30449-1",
-                    "ISSN": "01616420",
-                    "URL": "http://linkinghub.elsevier.com/retrieve/pii/S0161642096304491",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                9,
-                                14
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Mitchell",
-                            "given": "Paul"
-                        },
-                        {
-                            "family": "Smith",
-                            "given": "Wayne"
-                        },
-                        {
-                            "family": "Attebo",
-                            "given": "Karin"
-                        },
-                        {
-                            "family": "Healey",
-                            "given": "Paul R."
-                        }
-                    ],
-                    "container-title": "Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/DTV644DX",
-                    "issue": "10",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "1996",
-                                10
-                            ]
-                        ]
-                    },
-                    "language": "en",
-                    "page": "1661-1669",
-                    "source": "CrossRef",
-                    "title": "Prevalence of Open-angle Glaucoma in Australia",
-                    "type": "article-journal",
-                    "volume": "103"
-                }
-            ]
-        },
-        "framingham": {
-            "_ethnicities": [
-                "White [Framingham]",
-                "English [Framingham]",
-                "Scottish [Framingham]",
-                "Wales [Framingham]",
-                "Irish [Framingham]",
-                "Italian [Framingham]",
-                "Canadian [Framingham]",
-                "European [Framingham]"
-            ],
-            "age": {
-                "65-74": 1.8757327080890973,
-                "75+": 1.2626262626262625,
-                "<65": 0.9406657018813314,
-                "_denominator": 100,
-                "all": 1.2922843025465602
-            },
-            "age_map": {
-            },
-            "agenda": [
-                {
-                    "age": "<52",
-                    "gender": "both",
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8,
-                    "n": 1382,
-                    "oags": 9
-                },
-                {
-                    "age": "<52",
-                    "gender": "female",
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.5,
-                    "n": 781,
-                    "oags": 3
-                },
-                {
-                    "age": "<52",
-                    "gender": "male",
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2,
-                    "n": 601,
-                    "oags": 6
-                },
-                {
-                    "age": "all",
-                    "gender": "male",
-                    "meth2_prevalence": 1.9,
-                    "meth3_prevalence": 2.2,
-                    "n": 1107,
-                    "oags": 21
-                },
-                {
-                    "age": "52-64",
-                    "gender": "male",
-                    "meth2_prevalence": 1,
-                    "meth3_prevalence": 1.2,
-                    "n": 601,
-                    "oags": 6
-                },
-                {
-                    "age": "65-74",
-                    "gender": "male",
-                    "meth2_prevalence": 2.6,
-                    "meth3_prevalence": 2.9,
-                    "n": 346,
-                    "oags": 9
-                },
-                {
-                    "age": "75-85",
-                    "gender": "male",
-                    "meth2_prevalence": 3.8,
-                    "meth3_prevalence": 5.6,
-                    "n": 160,
-                    "oags": 6
-                },
-                {
-                    "age": "all",
-                    "gender": "female",
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 1.1,
-                    "n": 1524,
-                    "oags": 10
-                },
-                {
-                    "age": "52-64",
-                    "gender": "female",
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.5,
-                    "n": 781,
-                    "oags": 3
-                },
-                {
-                    "age": "65-74",
-                    "gender": "female",
-                    "meth2_prevalence": 0.4,
-                    "meth3_prevalence": 0.8,
-                    "n": 507,
-                    "oags": 2
-                },
-                {
-                    "age": "75-85",
-                    "gender": "female",
-                    "meth2_prevalence": 2.1,
-                    "meth3_prevalence": 3.9,
-                    "n": 236,
-                    "oags": 5
-                },
-                {
-                    "age": "all",
-                    "gender": "both",
-                    "meth2_prevalence": 1.2,
-                    "meth3_prevalence": 1.6,
-                    "n": 2631,
-                    "oags": 31
-                },
-                {
-                    "age": "52-64",
-                    "gender": "both",
-                    "meth2_prevalence": 0.7,
-                    "meth3_prevalence": 0.8,
-                    "n": 1382,
-                    "oags": 9
-                },
-                {
-                    "age": "65-74",
-                    "gender": "both",
-                    "meth2_prevalence": 1.3,
-                    "meth3_prevalence": 1.7,
-                    "n": 853,
-                    "oags": 11
-                },
-                {
-                    "age": "75-85",
-                    "gender": "both",
-                    "meth2_prevalence": 2.8,
-                    "meth3_prevalence": 4.7,
-                    "n": 396,
-                    "oags": 11
-                },
-                {
-                    "age": "85+",
-                    "gender": "male",
-                    "meth2_prevalence": 3.8,
-                    "meth3_prevalence": 5.6,
-                    "n": 160,
-                    "oags": 6
-                },
-                {
-                    "age": "85+",
-                    "gender": "female",
-                    "meth2_prevalence": 2.1,
-                    "meth3_prevalence": 3.9,
-                    "n": 236,
-                    "oags": 5
-                },
-                {
-                    "age": "85+",
-                    "gender": "both",
-                    "meth2_prevalence": 2.8,
-                    "meth3_prevalence": 4.7,
-                    "n": 396,
-                    "oags": 11
-                }
-            ],
-            "ethnicities": [
-                "White European (Canadian; Italian; Irish; Welsh; Scottish)"
-            ],
-            "expr": [
-                {
-                    "extract": "meth3_prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 2631,
-            "parents_pc": 1.1,
-            "ref": [
-                {
-                    "DOI": "10.1016/0039-6257(80)90122-8",
-                    "ISSN": "0039-6257",
-                    "URL": "http://dx.doi.org/10.1016/0039-6257(80)90122-8",
-                    "abstract": "This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                3,
-                                14
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Krueger",
-                            "given": "Dean E"
-                        },
-                        {
-                            "family": "Milton",
-                            "given": "Roy C"
-                        },
-                        {
-                            "family": "Maunder",
-                            "given": "Lucinda R"
-                        }
-                    ],
-                    "container-title": "Survey of Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/GB5I6PVS",
-                    "issue": "6",
-                    "page": "614-620",
-                    "title": "The Framingham eye study: Introduction to the monograph",
-                    "type": "article-journal",
-                    "volume": "24"
-                },
-                {
-                    "ISSN": "0002-9262 0002-9262",
-                    "PMID": "7386451",
-                    "author": [
-                        {
-                            "family": "Kahn",
-                            "given": "H. A."
-                        },
-                        {
-                            "family": "Milton",
-                            "given": "R. C."
-                        }
-                    ],
-                    "container-title": "American journal of epidemiology",
-                    "id": "http://zotero.org/users/843109/items/KHCNRZE3",
-                    "issue": "6",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "1980",
-                                6
-                            ]
-                        ]
-                    },
-                    "journalAbbreviation": "Am J Epidemiol",
-                    "language": "eng",
-                    "note": "PMID: 7386451",
-                    "page": "769-776",
-                    "title": "Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.",
-                    "type": "article-journal",
-                    "volume": "111"
-                },
-                {
-                    "DOI": "10.1016/S0065-2660(08)00602-0",
-                    "ISSN": "0065-2660",
-                    "PMID": "19010253",
-                    "abstract": "This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.",
-                    "author": [
-                        {
-                            "family": "Govindaraju",
-                            "given": "Diddahally R."
-                        },
-                        {
-                            "family": "Cupples",
-                            "given": "L. Adrienne"
-                        },
-                        {
-                            "family": "Kannel",
-                            "given": "William B."
-                        },
-                        {
-                            "family": "O’Donnell",
-                            "given": "Christopher J."
-                        },
-                        {
-                            "family": "Atwood",
-                            "given": "Larry D."
-                        },
-                        {
-                            "family": "D’Agostino",
-                            "given": "Ralph B."
-                        },
-                        {
-                            "family": "Fox",
-                            "given": "Caroline S."
-                        },
-                        {
-                            "family": "Larson",
-                            "given": "Marty"
-                        },
-                        {
-                            "family": "Levy",
-                            "given": "Daniel"
-                        },
-                        {
-                            "family": "Morabito",
-                            "given": "Joanne"
-                        },
-                        {
-                            "family": "Vasan",
-                            "given": "Ramachandran S."
-                        },
-                        {
-                            "family": "Splansky",
-                            "given": "Greta Lee"
-                        },
-                        {
-                            "family": "Wolf",
-                            "given": "Philip A."
-                        },
-                        {
-                            "family": "Benjamin",
-                            "given": "Emelia J."
-                        }
-                    ],
-                    "container-title": "Advances in genetics",
-                    "id": "http://zotero.org/users/843109/items/X9TI96I9",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2008"
-                            ]
-                        ]
-                    },
-                    "journalAbbreviation": "Adv Genet",
-                    "language": "eng",
-                    "note": "PMID: 19010253",
-                    "page": "33-65",
-                    "title": "Genetics of the Framingham Heart Study Population",
-                    "type": "article-journal",
-                    "volume": "62"
-                }
-            ],
-            "sibling_pc": 10.4
-        },
-        "ghana": {
-            "_ethnicities": [
-                "Black [Ghana]",
-                "African [Ghana]",
-                "Ghanaian",
-                "Akwapim",
-                "Ewe",
-                "Ga",
-                "Adangbe"
-            ],
-            "age": {
-                "100+": 16.7,
-                "30-34": 6,
-                "35-39": 6.7,
-                "40-44": 6.2,
-                "45-49": 6.5,
-                "50-54": 7.3,
-                "55-59": 6.5,
-                "60-64": 7.9,
-                "65-69": 10,
-                "70-74": 13.3,
-                "75-79": 27.1,
-                "80-84": 26.5,
-                "85-89": 0,
-                "90-94": 33.3,
-                "94,90-94+": 33.3,
-                "95-100": 16.7,
-                "<30": 6,
-                "_denominator": 100,
-                "all": 8.4
-            },
-            "age_map": {
-            },
-            "ethnicities": [
-                "Black African (Ghana)"
-            ],
-            "expr": [
-                {
-                    "key": "age",
-                    "take": 1,
-                    "type": "map"
-                }
-            ],
-            "n": 1785,
-            "ref": [
-                {
-                    "DOI": "10.1038/sj.eye.6700674",
-                    "ISSN": "0950-222X, 1476-5454",
-                    "URL": "http://www.nature.com/doifinder/10.1038/sj.eye.6700674",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                5,
-                                18
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Ntim-Amponsah",
-                            "given": "C T"
-                        },
-                        {
-                            "family": "Amoaku",
-                            "given": "W M K"
-                        },
-                        {
-                            "family": "Ofosu-Amaah",
-                            "given": "S"
-                        },
-                        {
-                            "family": "Ewusi",
-                            "given": "R K"
-                        },
-                        {
-                            "family": "Idirisuriya-Khair",
-                            "given": "R"
-                        },
-                        {
-                            "family": "Nyatepe-Coo",
-                            "given": "E"
-                        },
-                        {
-                            "family": "Adu-Darko",
-                            "given": "M"
-                        }
-                    ],
-                    "container-title": "Eye",
-                    "id": "http://zotero.org/users/843109/items/UK2A2K8C",
-                    "issue": "5",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2004",
-                                5
-                            ]
-                        ]
-                    },
-                    "page": "491-497",
-                    "source": "CrossRef",
-                    "title": "Prevalence of glaucoma in an African population",
-                    "type": "article-journal",
-                    "volume": "18"
-                }
-            ]
-        },
-        "indian": {
-            "agenda": [
-                {
-                    "N": 1217,
-                    "age": "<40",
-                    "gender": "female",
-                    "positive": 34,
-                    "prevalence": 2.7937551355792936
-                },
-                {
-                    "N": 1265,
-                    "age": "<40",
-                    "gender": "male",
-                    "positive": 38,
-                    "prevalence": 3.0039525691699605
-                },
-                {
-                    "N": 1265,
-                    "age": "40-49",
-                    "gender": "male",
-                    "positive": 38,
-                    "prevalence": 3.0039525691699605
-                },
-                {
-                    "N": 973,
-                    "age": "50-59",
-                    "gender": "male",
-                    "positive": 36,
-                    "prevalence": 3.6998972250770814
-                },
-                {
-                    "N": 879,
-                    "age": "60-69",
-                    "gender": "male",
-                    "positive": 43,
-                    "prevalence": 4.891922639362913
-                },
-                {
-                    "N": 448,
-                    "age": "70+",
-                    "gender": "male",
-                    "positive": 29,
-                    "prevalence": 6.4732142857142865
-                },
-                {
-                    "N": 1217,
-                    "age": "40-49",
-                    "gender": "female",
-                    "positive": 34,
-                    "prevalence": 2.7937551355792936
-                },
-                {
-                    "N": 965,
-                    "age": "50-59",
-                    "gender": "female",
-                    "positive": 33,
-                    "prevalence": 3.419689119170984
-                },
-                {
-                    "N": 917,
-                    "age": "60-69",
-                    "gender": "female",
-                    "positive": 40,
-                    "prevalence": 4.362050163576881
-                },
-                {
-                    "N": 464,
-                    "age": "70+",
-                    "gender": "female",
-                    "positive": 18,
-                    "prevalence": 3.8793103448275863
-                }
-            ],
-            "ethnicities": [
-                "Indian"
-            ],
-            "expr": [
-                {
-                    "extract": "prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 14092,
-            "notes": [
-                "Urban statistics are used"
-            ],
-            "ref": [
-                {
-                    "DOI": "10.4103/0301-4738.191497",
-                    "ISSN": "0301-4738",
-                    "URL": "http://www.ijo.in/text.asp?2016/64/8/578/191497",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                9,
-                                11
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Paul",
-                            "given": "Chandrima"
-                        },
-                        {
-                            "family": "Sengupta",
-                            "given": "Subhrangshu"
-                        },
-                        {
-                            "family": "Choudhury",
-                            "given": "Sumit"
-                        },
-                        {
-                            "family": "Banerjee",
-                            "given": "Souvik"
-                        },
-                        {
-                            "family": "Sleath",
-                            "given": "BetsyL"
-                        }
-                    ],
-                    "container-title": "Indian Journal of Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/2D8W5GGP",
-                    "issue": "8",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2016"
-                            ]
-                        ]
-                    },
-                    "language": "en",
-                    "page": "578",
-                    "shortTitle": "Prevalence of glaucoma in Eastern India",
-                    "source": "CrossRef",
-                    "title": "Prevalence of glaucoma in Eastern India: The Hooghly River Glaucoma Study",
-                    "type": "article-journal",
-                    "volume": "64"
-                }
-            ]
-        },
-        "japanese": {
-            "_ethnicities": [
-                "Tajima [Japanese]",
-                "Japanese"
-            ],
-            "age": {
-                "30-39": 1.89549249600724,
-                "40-49": 2.73716568581642,
-                "50-59": 11.326078497068,
-                "60-69": 30,
-                "70-79": 94.5570698594758,
-                "80+": 73.8103215395919,
-                "<30": 1.89549249600724,
-                "_TODO": true,
-                "_denominator": 100000
-            },
-            "age_map": {
-            },
-            "agenda": [
-                {
-                    "age": "<40",
-                    "gender": "male",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "<40",
-                    "gender": "female",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "<40",
-                    "gender": "all",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "70-79",
-                    "gender": "all",
-                    "max_prevalence": 7.2
-                },
-                {
-                    "age": "60-69",
-                    "gender": "all",
-                    "max_prevalence": 7.3
-                },
-                {
-                    "age": "40-49",
-                    "gender": "all",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "50-59",
-                    "gender": "all",
-                    "max_prevalence": 7.7
-                },
-                {
-                    "age": "80+",
-                    "gender": "all",
-                    "max_prevalence": 8.1
-                },
-                {
-                    "age": "70-79",
-                    "gender": "female",
-                    "max_prevalence": 7.2
-                },
-                {
-                    "age": "60-69",
-                    "gender": "female",
-                    "max_prevalence": 7.3
-                },
-                {
-                    "age": "40-49",
-                    "gender": "female",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "50-59",
-                    "gender": "female",
-                    "max_prevalence": 7.7
-                },
-                {
-                    "age": "80+",
-                    "gender": "female",
-                    "max_prevalence": 8.1
-                },
-                {
-                    "age": "70-79",
-                    "gender": "male",
-                    "max_prevalence": 7.2
-                },
-                {
-                    "age": "60-69",
-                    "gender": "male",
-                    "max_prevalence": 7.3
-                },
-                {
-                    "age": "40-49",
-                    "gender": "male",
-                    "max_prevalence": 7.5
-                },
-                {
-                    "age": "50-59",
-                    "gender": "male",
-                    "max_prevalence": 7.7
-                },
-                {
-                    "age": "80+",
-                    "gender": "male",
-                    "max_prevalence": 8.1
-                }
-            ],
-            "ethnicities": [
-                "Japanese"
-            ],
-            "expr": [
-                {
-                    "extract": "max_prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 3021,
-            "normal_tension": true,
-            "ref": [
-                {
-                    "DOI": "10.1016/j.ophtha.2004.03.029",
-                    "ISSN": "0161-6420",
-                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642004006657",
-                    "author": [
-                        {
-                            "family": "Iwase",
-                            "given": "Aiko"
-                        },
-                        {
-                            "family": "Suzuki",
-                            "given": "Yasuyuki"
-                        },
-                        {
-                            "family": "Araie",
-                            "given": "Makoto"
-                        },
-                        {
-                            "family": "Yamamoto",
-                            "given": "Tetsuya"
-                        },
-                        {
-                            "family": "Abe",
-                            "given": "Haruki"
-                        },
-                        {
-                            "family": "Shirato",
-                            "given": "Shiroaki"
-                        },
-                        {
-                            "family": "Kuwayama",
-                            "given": "Yasuaki"
-                        },
-                        {
-                            "family": "Mishima",
-                            "given": "Hiromu K."
-                        },
-                        {
-                            "family": "Shimizu",
-                            "given": "Hiroyuki"
-                        },
-                        {
-                            "family": "Tomita",
-                            "given": "Goji"
-                        },
-                        {
-                            "family": "Inoue",
-                            "given": "Yoichi"
-                        },
-                        {
-                            "family": "Kitazawa",
-                            "given": "Yoshiaki"
-                        }
-                    ],
-                    "container-title": "Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/J5GE53XW",
-                    "issue": "9",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2004",
-                                9,
-                                1
-                            ]
-                        ]
-                    },
-                    "journalAbbreviation": "Ophthalmology",
-                    "page": "1641-1648",
-                    "title": "The prevalence of primary open-angle glaucoma in Japanese",
-                    "type": "article-journal",
-                    "volume": "111"
-                }
-            ]
-        },
-        "nepal": {
-            "_ethnicities": [
-                "Ethnicities within the Bhaktapur district of Kathmandu valley"
-            ],
-            "agenda": [
-                {
-                    "N": 851,
-                    "age": "<40",
-                    "gender": "female",
-                    "n (%)": "1 (0.12)",
-                    "prevalence": 0.12
-                },
-                {
-                    "N": 633,
-                    "age": "<40",
-                    "gender": "male",
-                    "n (%)": "2 (0.32)",
-                    "prevalence": 0.32
-                },
-                {
-                    "N": 633,
-                    "age": "40-49",
-                    "gender": "male",
-                    "n (%)": "2 (0.32)",
-                    "prevalence": 0.32
-                },
-                {
-                    "N": 506,
-                    "age": "50-59",
-                    "gender": "male",
-                    "n (%)": "4 (0.79)",
-                    "prevalence": 0.79
-                },
-                {
-                    "N": 419,
-                    "age": "60-69",
-                    "gender": "male",
-                    "n (%)": "7 (1.67)",
-                    "prevalence": 1.67
-                },
-                {
-                    "N": 218,
-                    "age": "70-79",
-                    "gender": "male",
-                    "n (%)": "11 (5.05)",
-                    "prevalence": 5.05
-                },
-                {
-                    "N": 43,
-                    "age": "80+",
-                    "gender": "male",
-                    "n (%)": "2 (4.65)",
-                    "prevalence": 4.65
-                },
-                {
-                    "N": 851,
-                    "age": "40-49",
-                    "gender": "female",
-                    "n (%)": "1 (0.12)",
-                    "prevalence": 0.12
-                },
-                {
-                    "N": 588,
-                    "age": "50-59",
-                    "gender": "female",
-                    "n (%)": "5 (0.85)",
-                    "prevalence": 0.85
-                },
-                {
-                    "N": 417,
-                    "age": "60-69",
-                    "gender": "female",
-                    "n (%)": "4 (0.96)",
-                    "prevalence": 0.96
-                },
-                {
-                    "N": 262,
-                    "age": "70-79",
-                    "gender": "female",
-                    "n (%)": "10 (3.82)",
-                    "prevalence": 3.82
-                },
-                {
-                    "N": 54,
-                    "age": "80+",
-                    "gender": "female",
-                    "n (%)": "5 (9.26)",
-                    "prevalence": 9.26
-                }
-            ],
-            "ethnicities": [
-                "Nepalese"
-            ],
-            "expr": [
-                {
-                    "extract": "prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 4800,
-            "ref": [
-                {
-                    "DOI": "10.1016/j.ophtha.2011.10.021",
-                    "ISSN": "01616420",
-                    "URL": "http://linkinghub.elsevier.com/retrieve/pii/S0161642011009869",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                9,
-                                22
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Thapa",
-                            "given": "Suman S."
-                        },
-                        {
-                            "family": "Paudyal",
-                            "given": "Indira"
-                        },
-                        {
-                            "family": "Khanal",
-                            "given": "Shankar"
-                        },
-                        {
-                            "family": "Twyana",
-                            "given": "Shankha N."
-                        },
-                        {
-                            "family": "Paudyal",
-                            "given": "Govinda"
-                        },
-                        {
-                            "family": "Gurung",
-                            "given": "Reeta"
-                        },
-                        {
-                            "family": "Ruit",
-                            "given": "Sanduk"
-                        },
-                        {
-                            "family": "Rens",
-                            "given": "Ger H.M.B.",
-                            "non-dropping-particle": "van"
-                        }
-                    ],
-                    "container-title": "Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/66BP7WTI",
-                    "issue": "4",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2012",
-                                4
-                            ]
-                        ]
-                    },
-                    "language": "en",
-                    "page": "759-764",
-                    "shortTitle": "A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal",
-                    "source": "CrossRef",
-                    "title": "A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal: The Bhaktapur Glaucoma Study",
-                    "type": "article-journal",
-                    "volume": "119"
-                }
-            ]
-        },
-        "olmsted": {
-            "_ethnicities": [
-                "White [Olmsted]",
-                "German [Olmsted]",
-                "Norwegian [Olmsted]",
-                "Irish [Olmsted]",
-                "English [Olmsted]"
-            ],
-            "age": {
-                "30-39": 0.1895492496,
-                "40-49": 0.2737165686,
-                "50-59": 1.13260785,
-                "60-69": 3,
-                "70-79": 9.455706986,
-                "80+": 7.381032154,
-                "<30": 0.1895492496,
-                "_denominator": 100
-            },
-            "age_map": {
-            },
-            "ethnicities": [
-                "White (German; Norwegian; Irish; English)"
-            ],
-            "expr": [
-                {
-                    "key": "age",
-                    "take": 1,
-                    "type": "map"
-                }
-            ],
-            "n": 60666,
-            "parents_pc": 1.1,
-            "ref": [
-                {
-                    "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
-                    "ISSN": "0161-6420",
-                    "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
-                    "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
-                    "author": [
-                        {
-                            "family": "Schoff",
-                            "given": "Erik O."
-                        },
-                        {
-                            "family": "Hattenhauer",
-                            "given": "Matthew G."
-                        },
-                        {
-                            "family": "Ing",
-                            "given": "Helen H."
-                        },
-                        {
-                            "family": "Hodge",
-                            "given": "David O."
-                        },
-                        {
-                            "family": "Kennedy",
-                            "given": "Robert H."
-                        },
-                        {
-                            "family": "Herman",
-                            "given": "David C."
-                        },
-                        {
-                            "family": "Johnson",
-                            "given": "Douglas H."
-                        }
-                    ],
-                    "container-title": "Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/WZEDUEDB",
-                    "issue": "5",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2001"
-                            ]
-                        ]
-                    },
-                    "page": "882 - 886",
-                    "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
-                    "type": "article-journal",
-                    "volume": "108"
-                },
-                {
-                    "URL": "https://www.census.gov/main/www/cen2000.html",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                3,
-                                16
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "United States Census Bureau",
-                            "given": ""
-                        }
-                    ],
-                    "event-place": "United States of America",
-                    "genre": "Census",
-                    "id": "http://zotero.org/users/843109/items/JC8J5XII",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2000"
-                            ]
-                        ]
-                    },
-                    "publisher-place": "United States of America",
-                    "title": "Census 2000",
-                    "type": "report"
-                }
-            ],
-            "sibling_pc": 10.4
-        },
-        "singapore": {
-            "_notes": [
-                {
-                    "all": "<.001",
-                    "men": 0.02,
-                    "note": "P for trend",
-                    "women": 0.004
-                }
-            ],
-            "agenda": [
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "gender": "female",
-                    "prevalence": 0.3
-                },
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "gender": "male",
-                    "prevalence": 0.6
-                },
-                {
-                    "_denominator": 100,
-                    "age": "<40",
-                    "gender": "all",
-                    "prevalence": 0.4
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "gender": "all",
-                    "prevalence": 0.4
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "gender": "male",
-                    "prevalence": 0.6
-                },
-                {
-                    "_denominator": 100,
-                    "age": "40-49",
-                    "gender": "female",
-                    "prevalence": 0.3
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "gender": "all",
-                    "prevalence": 1.5
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "gender": "male",
-                    "prevalence": 2.6
-                },
-                {
-                    "_denominator": 100,
-                    "age": "50-59",
-                    "gender": "female",
-                    "prevalence": 0.7
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "gender": "all",
-                    "prevalence": 2
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "gender": "male",
-                    "prevalence": 3.2
-                },
-                {
-                    "_denominator": 100,
-                    "age": "60-69",
-                    "gender": "female",
-                    "prevalence": 0.7
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70+",
-                    "gender": "all",
-                    "prevalence": 3
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70+",
-                    "gender": "male",
-                    "prevalence": 3.2
-                },
-                {
-                    "_denominator": 100,
-                    "age": "70+",
-                    "gender": "female",
-                    "prevalence": 2.7
-                }
-            ],
-            "ethnicities": [
-                "Chinese [Singapore: urban]"
-            ],
-            "expr": [
-                {
-                    "extract": "prevalence",
-                    "filter": [
-                        "age",
-                        "gender"
-                    ],
-                    "key": "agenda",
-                    "take": 1
-                }
-            ],
-            "n": 3353,
-            "parents_pc": 1.1,
-            "ref": [
-                {
-                    "DOI": "10.1001/jamaophthalmol.2015.1110",
-                    "ISSN": "2168-6165",
-                    "URL": "http://archopht.jamanetwork.com/article.aspx?doi=10.1001/jamaophthalmol.2015.1110",
-                    "accessed": {
-                        "date-parts": [
-                            [
-                                "2017",
-                                9,
-                                6
-                            ]
-                        ]
-                    },
-                    "author": [
-                        {
-                            "family": "Baskaran",
-                            "given": "Mani"
-                        },
-                        {
-                            "family": "Foo",
-                            "given": "Reuben C."
-                        },
-                        {
-                            "family": "Cheng",
-                            "given": "Ching-Yu"
-                        },
-                        {
-                            "family": "Narayanaswamy",
-                            "given": "Arun K."
-                        },
-                        {
-                            "family": "Zheng",
-                            "given": "Ying-Feng"
-                        },
-                        {
-                            "family": "Wu",
-                            "given": "Renyi"
-                        },
-                        {
-                            "family": "Saw",
-                            "given": "Seang-Mei"
-                        },
-                        {
-                            "family": "Foster",
-                            "given": "Paul J."
-                        },
-                        {
-                            "family": "Wong",
-                            "given": "Tien-Yin"
-                        },
-                        {
-                            "family": "Aung",
-                            "given": "Tin"
-                        }
-                    ],
-                    "container-title": "JAMA Ophthalmology",
-                    "id": "http://zotero.org/users/843109/items/XUFHH45J",
-                    "issue": "8",
-                    "issued": {
-                        "date-parts": [
-                            [
-                                "2015",
-                                8,
-                                1
-                            ]
-                        ]
-                    },
-                    "language": "en",
-                    "page": "874",
-                    "shortTitle": "The Prevalence and Types of Glaucoma in an Urban Chinese Population",
-                    "source": "CrossRef",
-                    "title": "The Prevalence and Types of Glaucoma in an Urban Chinese Population: The Singapore Chinese Eye Study",
-                    "type": "article-journal",
-                    "volume": "133"
-                }
-            ],
-            "sibling_pc": 10.4
-        }
+  "TODO": {
+    "st_lucia": {
+      "n": 1679
     }
+  },
+  "default_expr": {
+    "pipe": [
+      "sum",
+      "cross-entropy",
+      "sigmoid"
+    ],
+    "vals": [
+      "age"
+    ]
+  },
+  "default_family_history": {
+    "from_study": "Rotterdam",
+    "parents_pc": 1.1,
+    "ref": [
+      {
+        "DOI": "10.1001/archopht.116.12.1640",
+        "ISSN": "0003-9950",
+        "URL": "http://dx.doi.org/10.1001/archopht.116.12.1640",
+        "abstract": "Objectives \nTo study familial aggregation of primary open-angle glaucoma in a general population and to determine the absolute and relative risks for first-degree relatives.Methods\nFirst-degree relatives of patients with glaucoma (n=48) and control subjects (n=155) from the population-based Rotterdam Study underwent a standardized examination, including perimetry.Main Outcome Measures\nIntraocular pressure; vertical cup-disc ratio; and the presence of glaucoma, defined as a visual field defect with a cup-disc ratio of 0.7 or higher or asymmetry of 0.3 or higher between both eyes.Results\nThe prevalence of glaucoma was 10.4% in siblings of patients, 1.1% in offspring of patients, 0.7% in siblings of controls, and 0% in offspring of controls. Lifetime risk of elevated intraocular pressure in relatives of patients vs relatives of controls was 42.5% vs 6.7%, of enlarged cup-disc ratio was 62.2% vs 16.6%, and of glaucoma was 22.0% vs 2.3%, yielding a risk ratio for glaucoma of 9.2 (95% confidence interval=1.2-73.9). The population-attributable risk of glaucoma was 16.4%.Conclusions\nIn a general population, relatives of patients with glaucoma have a strongly increased risk of glaucoma. Enlarged cup-disc ratio, not intraocular pressure, was the earliest and most prominent feature of familial aggregation. Further studies are needed to disentangle the genetic components of the increased familial risk.",
+        "author": [
+          {
+            "literal": "Wolfs RW"
+          },
+          {
+            "literal": "Klaver CW"
+          },
+          {
+            "literal": "Ramrattan RS"
+          },
+          {
+            "literal": "van Duijn CM"
+          },
+          {
+            "literal": "Hofman A"
+          },
+          {
+            "literal": "de Jong PM"
+          }
+        ],
+        "container-title": "Archives of Ophthalmology",
+        "id": "http://zotero.org/users/843109/items/6NHEIVNU",
+        "issue": "12",
+        "issued": {
+          "date-parts": [
+            [
+              "1998",
+              12,
+              1
+            ]
+          ]
+        },
+        "journalAbbreviation": "Archives of Ophthalmology",
+        "page": "1640-1645",
+        "title": "Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study",
+        "type": "article-journal",
+        "volume": "116"
+      }
+    ],
+    "sibling_pc": 10.4
+  },
+  "default_multiplicative_risks": {
+    "age": {
+      "50-80": 3,
+      "80+": 12,
+      "<50": 1
+    },
+    "diabetes": {
+      "existent": 1.93
+    },
+    "family_history": {
+      "existent": 3
+    },
+    "myopia": {
+      "existent": 1.88
+    },
+    "ref": [
+      {
+        "ISSN": "0012-7183",
+        "URL": "http://europepmc.org/abstract/MED/26241991",
+        "author": [
+          {
+            "family": "Tuulonen",
+            "given": "Anja"
+          },
+          {
+            "family": "Forsman",
+            "given": "Eva"
+          },
+          {
+            "family": "Hagman",
+            "given": "Juha"
+          },
+          {
+            "family": "Harju",
+            "given": "Mika"
+          },
+          {
+            "family": "Kari",
+            "given": "Osmo"
+          },
+          {
+            "family": "Lumme",
+            "given": "Pirkko"
+          },
+          {
+            "family": "Luodonpää",
+            "given": "Marja"
+          },
+          {
+            "family": "Määttä",
+            "given": "Marko"
+          },
+          {
+            "family": "Saarela",
+            "given": "Ville"
+          },
+          {
+            "family": "Vaajanen",
+            "given": "Anu"
+          },
+          {
+            "family": "Komulainen",
+            "given": "Jorma"
+          }
+        ],
+        "container-title": "Duodecim; laaketieteellinen aikakauskirja",
+        "id": "http://zotero.org/users/843109/items/6NK5N3CX",
+        "issue": "4",
+        "issued": {
+          "date-parts": [
+            [
+              "2015"
+            ]
+          ]
+        },
+        "page": "356—358",
+        "title": "[Update on Current Care Guideline: Glaucoma]",
+        "type": "article-journal",
+        "volume": "131"
+      },
+      {
+        "URL": "https://nhmrc.gov.au/about-us/publications/guidelines-screening-prognosis-diagnosis-management-and-prevention-glaucoma",
+        "author": [
+          {
+            "family": "(National Health and Medical Research Council)",
+            "given": "NHMRC"
+          }
+        ],
+        "event-place": "Australia",
+        "genre": "Guideline",
+        "id": "http://zotero.org/users/843109/items/2BAWXSAQ",
+        "issued": {
+          "date-parts": [
+            [
+              "2010",
+              11
+            ]
+          ]
+        },
+        "language": "English",
+        "publisher-place": "Australia",
+        "title": "Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma",
+        "type": "report"
+      }
+    ]
+  },
+  "general_stats": [
+    {
+      "Age": "30+",
+      "Location": "Gambia, West Africa",
+      "POAG (%)": 1.2,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "40-84",
+      "Location": "Barbados, West Indies",
+      "POAG (%)": 7.1,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "30+",
+      "Location": "St Lucia, Caribbean",
+      "POAG (%)": 8.8,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "40+",
+      "Location": "Baltimore, USA",
+      "POAG (%)": 4.74,
+      "Racial origin": "European"
+    },
+    {
+      "Age": "30+",
+      "Location": "Akwapim-South district,",
+      "POAG (%)": 7.7,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "40+",
+      "Location": "Ghana, West Africa",
+      "POAG (%)": 8.5,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "55+",
+      "Location": "Rotterdam, Netherlands",
+      "POAG (%)": 1.1,
+      "Racial origin": "European"
+    },
+    {
+      "Age": "40-84",
+      "Location": "Barbados, West Indies",
+      "POAG (%)": 0.8,
+      "Racial origin": "Africa"
+    },
+    {
+      "Age": "40+",
+      "Location": "Baltimore, USA",
+      "POAG (%)": 1.29,
+      "Racial origin": "European"
+    },
+    {
+      "Age": "49+",
+      "Location": "Sydney, Australia",
+      "POAG (%)": 3,
+      "Racial origin": "Australia"
+    },
+    {
+      "Age": "40+",
+      "Location": "Victoria, Australia",
+      "POAG (%)": 1.8,
+      "Racial origin": "Australia"
+    },
+    {
+      "Age": "40-84",
+      "Location": "Barbados, West Indies",
+      "POAG (%)": 3.3,
+      "Racial origin": "Mixed race"
+    }
+  ],
+  "global_notes": [
+    "The largest population (n) study was chosen per ethnic group",
+    "Prevalence for people younger than population age range are assigned lowest risk",
+    "Males have a higher risk, in all included studies, except BMES [White (Northern European: Australian)]",
+    "Check original paper(s) for CI and other study controls/notes",
+    "With the exception of Indian, all data extracted from studies show prevalence of Primary Open Angle Glaucoma (POAG)",
+    "With the exception of the Korean study, the same multiplicative risks are used for: myopia; hyperopia; diabetes; and family history, as per:<div class=\"csl-bib-body\">\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/2BAWXSAQ\" class=\"csl-entry\">(National Health and Medical Research Council), N., 2010. <i>Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma</i>, Australia. Available at: https://nhmrc.gov.au/about-us/publications/guidelines-screening-prognosis-diagnosis-management-and-prevention-glaucoma.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NK5N3CX\" class=\"csl-entry\">Tuulonen, A. et al., 2015. [Update on Current Care Guideline: Glaucoma]. <i>Duodecim; laaketieteellinen aikakauskirja</i>, 131(4), p.356—358. Available at: http://europepmc.org/abstract/MED/26241991.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NHEIVNU\" class=\"csl-entry\">Wolfs RW et al., 1998. Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study. <i>Archives of Ophthalmology</i>, 116(12), pp.1640–1645. Available at: http://dx.doi.org/10.1001/archopht.116.12.1640.</div>\n</div>",
+    "Same multiplicative risks used for: myopia; hyperopia; diabetes; and family history, as per:<div class=\"csl-bib-body\">\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/2BAWXSAQ\" class=\"csl-entry\">(National Health and Medical Research Council), N., 2010. <i>Guidelines for the Screening, Prognosis, Diagnosis, Management and Prevention of Glaucoma</i>, Australia. Available at: https://nhmrc.gov.au/about-us/publications/guidelines-screening-prognosis-diagnosis-management-and-prevention-glaucoma.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NK5N3CX\" class=\"csl-entry\">Tuulonen, A. et al., 2015. [Update on Current Care Guideline: Glaucoma]. <i>Duodecim; laaketieteellinen aikakauskirja</i>, 131(4), p.356—358. Available at: http://europepmc.org/abstract/MED/26241991.</div>\n  <div data-csl-entry-id=\"http://zotero.org/users/843109/items/6NHEIVNU\" class=\"csl-entry\">Wolfs RW et al., 1998. Genetic risk of primary open-angle glaucoma: Population-based familial aggregation study. <i>Archives of Ophthalmology</i>, 116(12), pp.1640–1645. Available at: http://dx.doi.org/10.1001/archopht.116.12.1640.</div>\n</div>"
+  ],
+  "html_of_all_refs": "\"<h5>Aboriginal [n=1189]: Australian Aboriginal</h5> <ul><li>\\\"Interestingly, there were no cases of low vision or blindness solely attributable to glaucoma.\\\"</li></ul>\\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/6MQ52GTR\\\" class=\\\"csl-entry\\\">Chua, B.E. et al., 2011. Glaucoma prevalence in Indigenous Australians. <i>British Journal of Ophthalmology</i>, 95(7), pp.926–930. Available at: http://bjo.bmj.com/cgi/doi/10.1136/bjo.2010.192716 [Accessed September 11, 2017].</div>\\n</div><h5>Barbados [n=4498]: Black African (Barbados, Lesser Antilles, Caribbean)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WC34ZE84\\\" class=\\\"csl-entry\\\">Barbados Statistical Service, 2010. <i>2010 population and housing census</i>, Barbados: Barbados Statistical Service. Available at: www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf [Accessed March 17, 2017].</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GP2J8UM3\\\" class=\\\"csl-entry\\\">M, L. et al., 1994. The barbados eye study: Prevalence of open angle glaucoma. <i>Archives of Ophthalmology</i>, 112(6), pp.821–829. Available at: + http://dx.doi.org/10.1001/archopht.1994.01090180121046.</div>\\n</div><h5>Bmes [n=3654]: White (Northern European: Australian)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/DTV644DX\\\" class=\\\"csl-entry\\\">Mitchell, P. et al., 1996. Prevalence of Open-angle Glaucoma in Australia. <i>Ophthalmology</i>, 103(10), pp.1661–1669. Available at: http://linkinghub.elsevier.com/retrieve/pii/S0161642096304491 [Accessed September 14, 2017].</div>\\n</div><h5>Framingham [n=2631]: White European (Canadian; Italian; Irish; Welsh; Scottish)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/X9TI96I9\\\" class=\\\"csl-entry\\\">Govindaraju, D.R. et al., 2008. Genetics of the Framingham Heart Study Population. <i>Advances in genetics</i>, 62, pp.33–65.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/KHCNRZE3\\\" class=\\\"csl-entry\\\">Kahn, H.A. &#38; Milton, R.C., 1980. Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy. <i>American journal of epidemiology</i>, 111(6), pp.769–776.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/GB5I6PVS\\\" class=\\\"csl-entry\\\">Krueger, D.E., Milton, R.C. &#38; Maunder, L.R., The Framingham eye study: Introduction to the monograph. <i>Survey of Ophthalmology</i>, 24(6), pp.614–620. Available at: http://dx.doi.org/10.1016/0039-6257(80)90122-8 [Accessed March 14, 2017].</div>\\n</div><h5>Ghana [n=1785]: Black African (Ghana)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/UK2A2K8C\\\" class=\\\"csl-entry\\\">Ntim-Amponsah, C.T. et al., 2004. Prevalence of glaucoma in an African population. <i>Eye</i>, 18(5), pp.491–497. Available at: http://www.nature.com/doifinder/10.1038/sj.eye.6700674 [Accessed May 18, 2017].</div>\\n</div><h5>Indian [n=14092]: Indian</h5> <ul><li>Urban statistics are used</li></ul>\\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/2D8W5GGP\\\" class=\\\"csl-entry\\\">Paul, C. et al., 2016. Prevalence of glaucoma in Eastern India: The Hooghly River Glaucoma Study. <i>Indian Journal of Ophthalmology</i>, 64(8), p.578. Available at: http://www.ijo.in/text.asp?2016/64/8/578/191497 [Accessed September 11, 2017].</div>\\n</div><h5>Japanese [n=3021]: Japanese</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/J5GE53XW\\\" class=\\\"csl-entry\\\">Iwase, A. et al., 2004. The prevalence of primary open-angle glaucoma in Japanese. <i>Ophthalmology</i>, 111(9), pp.1641–1648. Available at: http://www.sciencedirect.com/science/article/pii/S0161642004006657.</div>\\n</div><h5>Korean [n=13831]: Korean</h5> <ul></ul>\\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/BQPKEZUT\\\" class=\\\"csl-entry\\\">Kim, K.E. et al., 2016. Prevalence, Awareness, and Risk Factors of Primary Open-Angle Glaucoma: Korea National Health and Nutrition Examination Survey 2008–2011. <i>Ophthalmology</i>, 123(3), pp.532–541. Available at: http://www.sciencedirect.com/science/article/pii/S0161642015013251.</div>\\n</div><h5>Nepal [n=4800]: Nepalese</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/66BP7WTI\\\" class=\\\"csl-entry\\\">Thapa, S.S. et al., 2012. A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal: The Bhaktapur Glaucoma Study. <i>Ophthalmology</i>, 119(4), pp.759–764. Available at: http://linkinghub.elsevier.com/retrieve/pii/S0161642011009869 [Accessed September 22, 2017].</div>\\n</div><h5>Olmsted [n=60666]: White (German; Norwegian; Irish; English)</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/WZEDUEDB\\\" class=\\\"csl-entry\\\">Schoff, E.O. et al., 2001. Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota. <i>Ophthalmology</i>, 108(5), pp.882–886. Available at: http://www.sciencedirect.com/science/article/pii/S0161642001005504.</div>\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/JC8J5XII\\\" class=\\\"csl-entry\\\">United States Census Bureau, 2000. <i>Census 2000</i>, United States of America. Available at: https://www.census.gov/main/www/cen2000.html [Accessed March 16, 2017].</div>\\n</div><h5>Singapore [n=3353]: Chinese [Singapore: urban]</h5> \\n                 <div class=\\\"csl-bib-body\\\">\\n  <div data-csl-entry-id=\\\"http://zotero.org/users/843109/items/XUFHH45J\\\" class=\\\"csl-entry\\\">Baskaran, M. et al., 2015. The Prevalence and Types of Glaucoma in an Urban Chinese Population: The Singapore Chinese Eye Study. <i>JAMA Ophthalmology</i>, 133(8), p.874. Available at: http://archopht.jamanetwork.com/article.aspx?doi=10.1001/jamaophthalmol.2015.1110 [Accessed September 6, 2017].</div>\\n</div>\"",
+  "studies": {
+    "aboriginal": {
+      "age": {
+        "40-49": 1.5,
+        "50-59": 1.1,
+        "60-69": 6.1,
+        "70-79": 10,
+        "80+": 16.7,
+        "<40": 1.5
+      },
+      "age_map": {
+      },
+      "ethnicities": [
+        "Australian Aboriginal"
+      ],
+      "expr": [
+        {
+          "key": "age",
+          "take": 1,
+          "type": "map"
+        }
+      ],
+      "n": 1189,
+      "notes": [
+        "\"Interestingly, there were no cases of low vision or blindness solely attributable to glaucoma.\""
+      ],
+      "ref": [
+        {
+          "DOI": "10.1136/bjo.2010.192716",
+          "ISSN": "0007-1161",
+          "URL": "http://bjo.bmj.com/cgi/doi/10.1136/bjo.2010.192716",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                9,
+                11
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Chua",
+              "given": "B. E."
+            },
+            {
+              "family": "Xie",
+              "given": "J."
+            },
+            {
+              "family": "Arnold",
+              "given": "A.-L."
+            },
+            {
+              "family": "Koukouras",
+              "given": "I."
+            },
+            {
+              "family": "Keeffe",
+              "given": "J. E."
+            },
+            {
+              "family": "Taylor",
+              "given": "H. R."
+            }
+          ],
+          "container-title": "British Journal of Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/6MQ52GTR",
+          "issue": "7",
+          "issued": {
+            "date-parts": [
+              [
+                "2011",
+                7,
+                1
+              ]
+            ]
+          },
+          "language": "en",
+          "page": "926-930",
+          "source": "CrossRef",
+          "title": "Glaucoma prevalence in Indigenous Australians",
+          "type": "article-journal",
+          "volume": "95"
+        }
+      ]
+    },
+    "barbados": {
+      "_ethnicities": [
+        "Black [Barbados]",
+        "African [Barbados, Lesser Antilles, Caribbean]",
+        "Afro-Barbadian",
+        "Mixed [Barbados]"
+      ],
+      "agenda": [
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "ci": "0.9-3.3",
+          "gender": "male",
+          "max_prevalence": 1.9
+        },
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "ci": "0.4-2.0",
+          "gender": "female",
+          "max_prevalence": 1
+        },
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "ci": "0.8-2.2",
+          "gender": "all",
+          "max_prevalence": 1.4
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "ci": "0.9-3.3",
+          "gender": "male",
+          "max_prevalence": 1.9
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "ci": "0.4-2.0",
+          "gender": "female",
+          "max_prevalence": 1
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "ci": "0.8-2.2",
+          "gender": "all",
+          "max_prevalence": 1.4
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "ci": "2.9-7.0",
+          "gender": "male",
+          "max_prevalence": 4.6
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "ci": "2.4-5.4",
+          "gender": "female",
+          "max_prevalence": 3.7
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "ci": "3.0-5.4",
+          "gender": "all",
+          "max_prevalence": 4.1
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "ci": "6.8-12.6",
+          "gender": "male",
+          "max_prevalence": 9.4
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "ci": "3.4-6.9",
+          "gender": "female",
+          "max_prevalence": 4.9
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "ci": "5.3-8.4",
+          "gender": "all",
+          "max_prevalence": 6.7
+        },
+        {
+          "_denominator": 100,
+          "age": "70-79",
+          "ci": "13.8-21.8",
+          "gender": "male",
+          "max_prevalence": 17.5
+        },
+        {
+          "_denominator": 100,
+          "age": "70-79",
+          "ci": "9.8-16.1",
+          "gender": "female",
+          "max_prevalence": 12.7
+        },
+        {
+          "_denominator": 100,
+          "age": "70-79",
+          "ci": "12.5-17.4",
+          "gender": "all",
+          "max_prevalence": 14.8
+        },
+        {
+          "_denominator": 100,
+          "age": "80-86",
+          "ci": "16.7-34.3",
+          "gender": "male",
+          "max_prevalence": 24.8
+        },
+        {
+          "_denominator": 100,
+          "age": "80-86",
+          "ci": "15.0-30.3",
+          "gender": "female",
+          "max_prevalence": 22
+        },
+        {
+          "_denominator": 100,
+          "age": "80-86",
+          "ci": "17.9-29.3",
+          "gender": "all",
+          "max_prevalence": 23.2
+        },
+        {
+          "_denominator": 100,
+          "age": "all",
+          "ci": "9.7-11.5",
+          "gender": "all",
+          "max_prevalence": 10.6
+        },
+        {
+          "_denominator": 100,
+          "age": "86+",
+          "ci": "16.7-34.3",
+          "gender": "male",
+          "max_prevalence": 24.8
+        },
+        {
+          "_denominator": 100,
+          "age": "86+",
+          "ci": "15.0-30.3",
+          "gender": "female",
+          "max_prevalence": 22
+        },
+        {
+          "_denominator": 100,
+          "age": "86+",
+          "ci": "17.9-29.3",
+          "gender": "all",
+          "max_prevalence": 23.2
+        }
+      ],
+      "ethnicities": [
+        "Black African (Barbados, Lesser Antilles, Caribbean)"
+      ],
+      "expr": [
+        {
+          "extract": "max_prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 4498,
+      "normal_tension": true,
+      "parents_pc": 1.1,
+      "ref": [
+        {
+          "DOI": "10.1001/archopht.1994.01090180121046",
+          "URL": "+ http://dx.doi.org/10.1001/archopht.1994.01090180121046",
+          "author": [
+            {
+              "family": "M",
+              "given": "Leske"
+            },
+            {
+              "family": "AS",
+              "given": "Connell"
+            },
+            {
+              "family": "AP",
+              "given": "Schachat"
+            },
+            {
+              "family": "L",
+              "given": "Hyman"
+            }
+          ],
+          "container-title": "Archives of Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/GP2J8UM3",
+          "issue": "6",
+          "issued": {
+            "date-parts": [
+              [
+                "1994"
+              ]
+            ]
+          },
+          "page": "821-829",
+          "title": "The barbados eye study: Prevalence of open angle glaucoma",
+          "type": "article-journal",
+          "volume": "112"
+        },
+        {
+          "URL": "www.barstats.gov.bb/files/documents/PHC_2010_Census_Volume_1.pdf",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                17
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Barbados Statistical Service",
+              "given": ""
+            }
+          ],
+          "event-place": "Barbados",
+          "genre": "Census",
+          "id": "http://zotero.org/users/843109/items/WC34ZE84",
+          "issued": {
+            "date-parts": [
+              [
+                "2010"
+              ]
+            ]
+          },
+          "publisher": "Barbados Statistical Service",
+          "publisher-place": "Barbados",
+          "title": "2010 population and housing census",
+          "type": "report"
+        }
+      ],
+      "sibling_pc": 10.4
+    },
+    "bmes": {
+      "agenda": [
+        {
+          "age": "<60",
+          "gender": "male",
+          "positive": 0.3399192356321839,
+          "positive (%)": 1.242064887
+        },
+        {
+          "age": "<60",
+          "gender": "female",
+          "positive": 0.404346429939792,
+          "positive (%)": 1.477481855
+        },
+        {
+          "age": "<60",
+          "gender": "female",
+          "positive": 0.16081333305966064,
+          "positive (%)": 0.587611919
+        },
+        {
+          "age": "<60",
+          "gender": "male",
+          "positive": 0.06998711685823754,
+          "positive (%)": 0.255732925
+        },
+        {
+          "age": "60-69",
+          "gender": "female",
+          "positive": 0.404346429939792,
+          "positive (%)": 1.477481855
+        },
+        {
+          "age": "60-69",
+          "gender": "male",
+          "positive": 0.3399192356321839,
+          "positive (%)": 1.242064887
+        },
+        {
+          "age": "70-79",
+          "gender": "female",
+          "positive": 1.3872219022988506,
+          "positive (%)": 5.068908831
+        },
+        {
+          "age": "70-79",
+          "gender": "male",
+          "positive": 1.1512859515599343,
+          "positive (%)": 4.206798867
+        },
+        {
+          "age": "80+",
+          "gender": "female",
+          "positive": 3.8617694252873562,
+          "positive (%)": 14.11090548
+        },
+        {
+          "age": "80+",
+          "gender": "male",
+          "positive": 2.068248753968254,
+          "positive (%)": 7.557380947
+        }
+      ],
+      "ethnicities": [
+        "White (Northern European: Australian)"
+      ],
+      "expr": [
+        {
+          "extract": "positive (%)",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 3654,
+      "ref": [
+        {
+          "DOI": "10.1016/S0161-6420(96)30449-1",
+          "ISSN": "01616420",
+          "URL": "http://linkinghub.elsevier.com/retrieve/pii/S0161642096304491",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                9,
+                14
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Mitchell",
+              "given": "Paul"
+            },
+            {
+              "family": "Smith",
+              "given": "Wayne"
+            },
+            {
+              "family": "Attebo",
+              "given": "Karin"
+            },
+            {
+              "family": "Healey",
+              "given": "Paul R."
+            }
+          ],
+          "container-title": "Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/DTV644DX",
+          "issue": "10",
+          "issued": {
+            "date-parts": [
+              [
+                "1996",
+                10
+              ]
+            ]
+          },
+          "language": "en",
+          "page": "1661-1669",
+          "source": "CrossRef",
+          "title": "Prevalence of Open-angle Glaucoma in Australia",
+          "type": "article-journal",
+          "volume": "103"
+        }
+      ]
+    },
+    "framingham": {
+      "_ethnicities": [
+        "White [Framingham]",
+        "English [Framingham]",
+        "Scottish [Framingham]",
+        "Wales [Framingham]",
+        "Irish [Framingham]",
+        "Italian [Framingham]",
+        "Canadian [Framingham]",
+        "European [Framingham]"
+      ],
+      "age": {
+        "65-74": 1.8757327080890973,
+        "75+": 1.2626262626262625,
+        "<65": 0.9406657018813314,
+        "_denominator": 100,
+        "all": 1.2922843025465602
+      },
+      "age_map": {
+      },
+      "agenda": [
+        {
+          "age": "<52",
+          "gender": "male",
+          "meth2_prevalence": 1,
+          "meth3_prevalence": 1.2,
+          "n": 601,
+          "oags": 6
+        },
+        {
+          "age": "<52",
+          "gender": "female",
+          "meth2_prevalence": 0.4,
+          "meth3_prevalence": 0.5,
+          "n": 781,
+          "oags": 3
+        },
+        {
+          "age": "<52",
+          "gender": "both",
+          "meth2_prevalence": 0.7,
+          "meth3_prevalence": 0.8,
+          "n": 1382,
+          "oags": 9
+        },
+        {
+          "age": "all",
+          "gender": "male",
+          "meth2_prevalence": 1.9,
+          "meth3_prevalence": 2.2,
+          "n": 1107,
+          "oags": 21
+        },
+        {
+          "age": "52-64",
+          "gender": "male",
+          "meth2_prevalence": 1,
+          "meth3_prevalence": 1.2,
+          "n": 601,
+          "oags": 6
+        },
+        {
+          "age": "65-74",
+          "gender": "male",
+          "meth2_prevalence": 2.6,
+          "meth3_prevalence": 2.9,
+          "n": 346,
+          "oags": 9
+        },
+        {
+          "age": "75-85",
+          "gender": "male",
+          "meth2_prevalence": 3.8,
+          "meth3_prevalence": 5.6,
+          "n": 160,
+          "oags": 6
+        },
+        {
+          "age": "all",
+          "gender": "female",
+          "meth2_prevalence": 0.7,
+          "meth3_prevalence": 1.1,
+          "n": 1524,
+          "oags": 10
+        },
+        {
+          "age": "52-64",
+          "gender": "female",
+          "meth2_prevalence": 0.4,
+          "meth3_prevalence": 0.5,
+          "n": 781,
+          "oags": 3
+        },
+        {
+          "age": "65-74",
+          "gender": "female",
+          "meth2_prevalence": 0.4,
+          "meth3_prevalence": 0.8,
+          "n": 507,
+          "oags": 2
+        },
+        {
+          "age": "75-85",
+          "gender": "female",
+          "meth2_prevalence": 2.1,
+          "meth3_prevalence": 3.9,
+          "n": 236,
+          "oags": 5
+        },
+        {
+          "age": "all",
+          "gender": "both",
+          "meth2_prevalence": 1.2,
+          "meth3_prevalence": 1.6,
+          "n": 2631,
+          "oags": 31
+        },
+        {
+          "age": "52-64",
+          "gender": "both",
+          "meth2_prevalence": 0.7,
+          "meth3_prevalence": 0.8,
+          "n": 1382,
+          "oags": 9
+        },
+        {
+          "age": "65-74",
+          "gender": "both",
+          "meth2_prevalence": 1.3,
+          "meth3_prevalence": 1.7,
+          "n": 853,
+          "oags": 11
+        },
+        {
+          "age": "75-85",
+          "gender": "both",
+          "meth2_prevalence": 2.8,
+          "meth3_prevalence": 4.7,
+          "n": 396,
+          "oags": 11
+        },
+        {
+          "age": "85+",
+          "gender": "male",
+          "meth2_prevalence": 3.8,
+          "meth3_prevalence": 5.6,
+          "n": 160,
+          "oags": 6
+        },
+        {
+          "age": "85+",
+          "gender": "female",
+          "meth2_prevalence": 2.1,
+          "meth3_prevalence": 3.9,
+          "n": 236,
+          "oags": 5
+        },
+        {
+          "age": "85+",
+          "gender": "both",
+          "meth2_prevalence": 2.8,
+          "meth3_prevalence": 4.7,
+          "n": 396,
+          "oags": 11
+        }
+      ],
+      "ethnicities": [
+        "White European (Canadian; Italian; Irish; Welsh; Scottish)"
+      ],
+      "expr": [
+        {
+          "extract": "meth3_prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 2631,
+      "parents_pc": 1.1,
+      "ref": [
+        {
+          "DOI": "10.1016/0039-6257(80)90122-8",
+          "ISSN": "0039-6257",
+          "URL": "http://dx.doi.org/10.1016/0039-6257(80)90122-8",
+          "abstract": "This article briefly summarizes the monograph, The Framingham Eye Study Monograph: An Ophthalmological and Epidemiological Study of Cataract, Glaucoma, Diabetic Retinopathy, Macular Degeneration, and Visual Acuity in a General Population of 2631 Adults, 1973?1975. This 275-page monograph, authored by H. Liebowitz, D. Krueger, C. Maunder et al, has recently been published by Survey of Ophthalmology (Surv Ophthalmol 24 (suppl): 335?610, 1980). The purpose of the study, undertaken by the National Eye Institute, was to provide a description of the prevalence and severity of four diseases that are believed to be the major causes of severe visual handicap among adults in the United States. The monograph presents the detailed protocols and record forms, definitions of the specific abnormalities and characteristics, criteria for suspicion and diagnosis of disease, detailed tables of the basic data, evaluation of quality of the data, and discussion of selected findings.",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                14
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Krueger",
+              "given": "Dean E"
+            },
+            {
+              "family": "Milton",
+              "given": "Roy C"
+            },
+            {
+              "family": "Maunder",
+              "given": "Lucinda R"
+            }
+          ],
+          "container-title": "Survey of Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/GB5I6PVS",
+          "issue": "6",
+          "page": "614-620",
+          "title": "The Framingham eye study: Introduction to the monograph",
+          "type": "article-journal",
+          "volume": "24"
+        },
+        {
+          "ISSN": "0002-9262 0002-9262",
+          "PMID": "7386451",
+          "author": [
+            {
+              "family": "Kahn",
+              "given": "H. A."
+            },
+            {
+              "family": "Milton",
+              "given": "R. C."
+            }
+          ],
+          "container-title": "American journal of epidemiology",
+          "id": "http://zotero.org/users/843109/items/KHCNRZE3",
+          "issue": "6",
+          "issued": {
+            "date-parts": [
+              [
+                "1980",
+                6
+              ]
+            ]
+          },
+          "journalAbbreviation": "Am J Epidemiol",
+          "language": "eng",
+          "note": "PMID: 7386451",
+          "page": "769-776",
+          "title": "Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy.",
+          "type": "article-journal",
+          "volume": "111"
+        },
+        {
+          "DOI": "10.1016/S0065-2660(08)00602-0",
+          "ISSN": "0065-2660",
+          "PMID": "19010253",
+          "abstract": "This article provides an introduction to the Framingham Heart Study (FHS) and the genetic research related to cardiovascular diseases conducted in this unique population. It briefly describes the origins of the study, the risk factors that contribute to heart disease and the approaches taken to discover the genetic basis of some of these risk factors. The genetic architecture of several biological risk factors has been explained using family studies, segregation analysis, heritability, phenotypic and genetic correlations. Many quantitative trait loci underlying cardiovascular diseases have been discovered using different molecular markers. Additionally, results from genome-wide association studies using 100,000 markers, and the prospects of using 550,000 markers for association studies are presented. Finally, the use of this unique sample in genotype and environment interaction is described.",
+          "author": [
+            {
+              "family": "Govindaraju",
+              "given": "Diddahally R."
+            },
+            {
+              "family": "Cupples",
+              "given": "L. Adrienne"
+            },
+            {
+              "family": "Kannel",
+              "given": "William B."
+            },
+            {
+              "family": "O’Donnell",
+              "given": "Christopher J."
+            },
+            {
+              "family": "Atwood",
+              "given": "Larry D."
+            },
+            {
+              "family": "D’Agostino",
+              "given": "Ralph B."
+            },
+            {
+              "family": "Fox",
+              "given": "Caroline S."
+            },
+            {
+              "family": "Larson",
+              "given": "Marty"
+            },
+            {
+              "family": "Levy",
+              "given": "Daniel"
+            },
+            {
+              "family": "Morabito",
+              "given": "Joanne"
+            },
+            {
+              "family": "Vasan",
+              "given": "Ramachandran S."
+            },
+            {
+              "family": "Splansky",
+              "given": "Greta Lee"
+            },
+            {
+              "family": "Wolf",
+              "given": "Philip A."
+            },
+            {
+              "family": "Benjamin",
+              "given": "Emelia J."
+            }
+          ],
+          "container-title": "Advances in genetics",
+          "id": "http://zotero.org/users/843109/items/X9TI96I9",
+          "issued": {
+            "date-parts": [
+              [
+                "2008"
+              ]
+            ]
+          },
+          "journalAbbreviation": "Adv Genet",
+          "language": "eng",
+          "note": "PMID: 19010253",
+          "page": "33-65",
+          "title": "Genetics of the Framingham Heart Study Population",
+          "type": "article-journal",
+          "volume": "62"
+        }
+      ],
+      "sibling_pc": 10.4
+    },
+    "ghana": {
+      "_ethnicities": [
+        "Black [Ghana]",
+        "African [Ghana]",
+        "Ghanaian",
+        "Akwapim",
+        "Ewe",
+        "Ga",
+        "Adangbe"
+      ],
+      "age": {
+        "100+": 16.7,
+        "30-34": 6,
+        "35-39": 6.7,
+        "40-44": 6.2,
+        "45-49": 6.5,
+        "50-54": 7.3,
+        "55-59": 6.5,
+        "60-64": 7.9,
+        "65-69": 10,
+        "70-74": 13.3,
+        "75-79": 27.1,
+        "80-84": 26.5,
+        "85-89": 0,
+        "90-94": 33.3,
+        "94,90-94+": 33.3,
+        "95-100": 16.7,
+        "<30": 6,
+        "_denominator": 100,
+        "all": 8.4
+      },
+      "age_map": {
+      },
+      "ethnicities": [
+        "Black African (Ghana)"
+      ],
+      "expr": [
+        {
+          "key": "age",
+          "take": 1,
+          "type": "map"
+        }
+      ],
+      "n": 1785,
+      "ref": [
+        {
+          "DOI": "10.1038/sj.eye.6700674",
+          "ISSN": "0950-222X, 1476-5454",
+          "URL": "http://www.nature.com/doifinder/10.1038/sj.eye.6700674",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                5,
+                18
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Ntim-Amponsah",
+              "given": "C T"
+            },
+            {
+              "family": "Amoaku",
+              "given": "W M K"
+            },
+            {
+              "family": "Ofosu-Amaah",
+              "given": "S"
+            },
+            {
+              "family": "Ewusi",
+              "given": "R K"
+            },
+            {
+              "family": "Idirisuriya-Khair",
+              "given": "R"
+            },
+            {
+              "family": "Nyatepe-Coo",
+              "given": "E"
+            },
+            {
+              "family": "Adu-Darko",
+              "given": "M"
+            }
+          ],
+          "container-title": "Eye",
+          "id": "http://zotero.org/users/843109/items/UK2A2K8C",
+          "issue": "5",
+          "issued": {
+            "date-parts": [
+              [
+                "2004",
+                5
+              ]
+            ]
+          },
+          "page": "491-497",
+          "source": "CrossRef",
+          "title": "Prevalence of glaucoma in an African population",
+          "type": "article-journal",
+          "volume": "18"
+        }
+      ]
+    },
+    "indian": {
+      "agenda": [
+        {
+          "N": 1265,
+          "age": "<40",
+          "gender": "male",
+          "positive": 38,
+          "prevalence": 3.0039525691699605
+        },
+        {
+          "N": 1217,
+          "age": "<40",
+          "gender": "female",
+          "positive": 34,
+          "prevalence": 2.7937551355792936
+        },
+        {
+          "N": 1265,
+          "age": "40-49",
+          "gender": "male",
+          "positive": 38,
+          "prevalence": 3.0039525691699605
+        },
+        {
+          "N": 973,
+          "age": "50-59",
+          "gender": "male",
+          "positive": 36,
+          "prevalence": 3.6998972250770814
+        },
+        {
+          "N": 879,
+          "age": "60-69",
+          "gender": "male",
+          "positive": 43,
+          "prevalence": 4.891922639362913
+        },
+        {
+          "N": 448,
+          "age": "70+",
+          "gender": "male",
+          "positive": 29,
+          "prevalence": 6.4732142857142865
+        },
+        {
+          "N": 1217,
+          "age": "40-49",
+          "gender": "female",
+          "positive": 34,
+          "prevalence": 2.7937551355792936
+        },
+        {
+          "N": 965,
+          "age": "50-59",
+          "gender": "female",
+          "positive": 33,
+          "prevalence": 3.419689119170984
+        },
+        {
+          "N": 917,
+          "age": "60-69",
+          "gender": "female",
+          "positive": 40,
+          "prevalence": 4.362050163576881
+        },
+        {
+          "N": 464,
+          "age": "70+",
+          "gender": "female",
+          "positive": 18,
+          "prevalence": 3.8793103448275863
+        }
+      ],
+      "ethnicities": [
+        "Indian"
+      ],
+      "expr": [
+        {
+          "extract": "prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 14092,
+      "notes": [
+        "Urban statistics are used"
+      ],
+      "ref": [
+        {
+          "DOI": "10.4103/0301-4738.191497",
+          "ISSN": "0301-4738",
+          "URL": "http://www.ijo.in/text.asp?2016/64/8/578/191497",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                9,
+                11
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Paul",
+              "given": "Chandrima"
+            },
+            {
+              "family": "Sengupta",
+              "given": "Subhrangshu"
+            },
+            {
+              "family": "Choudhury",
+              "given": "Sumit"
+            },
+            {
+              "family": "Banerjee",
+              "given": "Souvik"
+            },
+            {
+              "family": "Sleath",
+              "given": "BetsyL"
+            }
+          ],
+          "container-title": "Indian Journal of Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/2D8W5GGP",
+          "issue": "8",
+          "issued": {
+            "date-parts": [
+              [
+                "2016"
+              ]
+            ]
+          },
+          "language": "en",
+          "page": "578",
+          "shortTitle": "Prevalence of glaucoma in Eastern India",
+          "source": "CrossRef",
+          "title": "Prevalence of glaucoma in Eastern India: The Hooghly River Glaucoma Study",
+          "type": "article-journal",
+          "volume": "64"
+        }
+      ]
+    },
+    "japanese": {
+      "_ethnicities": [
+        "Tajima [Japanese]",
+        "Japanese"
+      ],
+      "age": {
+        "30-39": 1.89549249600724,
+        "40-49": 2.73716568581642,
+        "50-59": 11.326078497068,
+        "60-69": 30,
+        "70-79": 94.5570698594758,
+        "80+": 73.8103215395919,
+        "<30": 1.89549249600724,
+        "_TODO": true,
+        "_denominator": 100000
+      },
+      "age_map": {
+      },
+      "agenda": [
+        {
+          "age": "<40",
+          "gender": "all",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "<40",
+          "gender": "female",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "<40",
+          "gender": "male",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "70-79",
+          "gender": "all",
+          "max_prevalence": 7.2
+        },
+        {
+          "age": "60-69",
+          "gender": "all",
+          "max_prevalence": 7.3
+        },
+        {
+          "age": "40-49",
+          "gender": "all",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "50-59",
+          "gender": "all",
+          "max_prevalence": 7.7
+        },
+        {
+          "age": "80+",
+          "gender": "all",
+          "max_prevalence": 8.1
+        },
+        {
+          "age": "70-79",
+          "gender": "female",
+          "max_prevalence": 7.2
+        },
+        {
+          "age": "60-69",
+          "gender": "female",
+          "max_prevalence": 7.3
+        },
+        {
+          "age": "40-49",
+          "gender": "female",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "50-59",
+          "gender": "female",
+          "max_prevalence": 7.7
+        },
+        {
+          "age": "80+",
+          "gender": "female",
+          "max_prevalence": 8.1
+        },
+        {
+          "age": "70-79",
+          "gender": "male",
+          "max_prevalence": 7.2
+        },
+        {
+          "age": "60-69",
+          "gender": "male",
+          "max_prevalence": 7.3
+        },
+        {
+          "age": "40-49",
+          "gender": "male",
+          "max_prevalence": 7.5
+        },
+        {
+          "age": "50-59",
+          "gender": "male",
+          "max_prevalence": 7.7
+        },
+        {
+          "age": "80+",
+          "gender": "male",
+          "max_prevalence": 8.1
+        }
+      ],
+      "ethnicities": [
+        "Japanese"
+      ],
+      "expr": [
+        {
+          "extract": "max_prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 3021,
+      "normal_tension": true,
+      "ref": [
+        {
+          "DOI": "10.1016/j.ophtha.2004.03.029",
+          "ISSN": "0161-6420",
+          "URL": "http://www.sciencedirect.com/science/article/pii/S0161642004006657",
+          "author": [
+            {
+              "family": "Iwase",
+              "given": "Aiko"
+            },
+            {
+              "family": "Suzuki",
+              "given": "Yasuyuki"
+            },
+            {
+              "family": "Araie",
+              "given": "Makoto"
+            },
+            {
+              "family": "Yamamoto",
+              "given": "Tetsuya"
+            },
+            {
+              "family": "Abe",
+              "given": "Haruki"
+            },
+            {
+              "family": "Shirato",
+              "given": "Shiroaki"
+            },
+            {
+              "family": "Kuwayama",
+              "given": "Yasuaki"
+            },
+            {
+              "family": "Mishima",
+              "given": "Hiromu K."
+            },
+            {
+              "family": "Shimizu",
+              "given": "Hiroyuki"
+            },
+            {
+              "family": "Tomita",
+              "given": "Goji"
+            },
+            {
+              "family": "Inoue",
+              "given": "Yoichi"
+            },
+            {
+              "family": "Kitazawa",
+              "given": "Yoshiaki"
+            }
+          ],
+          "container-title": "Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/J5GE53XW",
+          "issue": "9",
+          "issued": {
+            "date-parts": [
+              [
+                "2004",
+                9,
+                1
+              ]
+            ]
+          },
+          "journalAbbreviation": "Ophthalmology",
+          "page": "1641-1648",
+          "title": "The prevalence of primary open-angle glaucoma in Japanese",
+          "type": "article-journal",
+          "volume": "111"
+        }
+      ]
+    },
+    "korean": {
+      "age": {
+        "40-49": 1,
+        "50-59": 1.99,
+        "60-69": 2.83,
+        "70-79": 3.79,
+        "80+": 3.9,
+        "<40": 1
+      },
+      "age_map": {
+      },
+      "ethnicities": [
+        "Korean"
+      ],
+      "expr": [
+        {
+          "key": "age",
+          "take": 1,
+          "type": "map"
+        }
+      ],
+      "multiplicative_risks": [
+        {
+          "gender": {
+            "female": 1,
+            "male": 1.51
+          }
+        }
+      ],
+      "n": 13831,
+      "notes": [
+      ],
+      "ref": [
+        [
+          {
+            "DOI": "10.1016/j.ophtha.2015.11.004",
+            "ISSN": "0161-6420",
+            "URL": "http://www.sciencedirect.com/science/article/pii/S0161642015013251",
+            "abstract": "Purpose\nTo investigate the prevalence, awareness, and risk factors for primary open-angle glaucoma (POAG) in the Korean population.\nDesign\nThe Korea National Health and Nutrition Examination Survey (KNHANES), a population-based cross-sectional study using a complex, stratified, multistage, probability-cluster survey.\nParticipants\nA total of 13 831 participants 40 years of age or older were included from the KNHANES database for the years 2008 through 2011.\nMethods\nGlaucoma diagnosis was based on the International Society of Geographical and Epidemiological Ophthalmology criteria. The prevalence of POAG and the proportion of POAG patients previously informed of the disease were calculated using KNHANES sample weights. Ocular and systemic factors were compared between the POAG and control groups. Univariate and multivariate logistic regression analyses were used to evaluate the risk factors for POAG.\nMain Outcome Measures\nWeighted prevalence, awareness, and risk factors for POAG.\nResults\nThe prevalence of POAG in the Korean population was 4.7% (95% confidence interval, 4.2–5.1): 5.5% in men and 3.9% in women, respectively, which increased with age (P < 0.001). The mean intraocular pressure (IOP) in POAG eyes was 15.0±0.4 mmHg, which was higher than that of the control group (14.0±0.1 mmHg; P < 0.001). Multivariate logistic regression analysis revealed that older age (P < 0.001), male gender (P < 0.001), higher IOP (P < 0.001), myopia (P < 0.001), hypertension (P = 0.031), and nonoverweight status (P = 0.017) were associated significantly with POAG in the Korean population. Among the 710 study participants diagnosed with POAG, only 8.0% were aware of the disease.\nConclusions\nThis was the first study to examine the prevalence, awareness, and risk factors of POAG in the Korean population using 4-year KNHANES data. Koreans with higher IOP, myopia, older age, male gender, hypertension, and nonoverweight status require more attention and support from the glaucoma screening and surveillance systems.",
+            "author": [
+              {
+                "family": "Kim",
+                "given": "Ko Eun"
+              },
+              {
+                "family": "Kim",
+                "given": "Moon Jung"
+              },
+              {
+                "family": "Park",
+                "given": "Ki Ho"
+              },
+              {
+                "family": "Jeoung",
+                "given": "Jin Wook"
+              },
+              {
+                "family": "Kim",
+                "given": "Seok Hwan"
+              },
+              {
+                "family": "Kim",
+                "given": "Chan Yun"
+              },
+              {
+                "family": "Kang",
+                "given": "Se Woong"
+              }
+            ],
+            "container-title": "Ophthalmology",
+            "id": "http://zotero.org/users/843109/items/BQPKEZUT",
+            "issue": "3",
+            "issued": {
+              "date-parts": [
+                [
+                  "2016",
+                  3,
+                  1
+                ]
+              ]
+            },
+            "journalAbbreviation": "Ophthalmology",
+            "page": "532-541",
+            "title": "Prevalence, Awareness, and Risk Factors of Primary Open-Angle Glaucoma: Korea National Health and Nutrition Examination Survey 2008–2011",
+            "type": "article-journal",
+            "volume": "123"
+          }
+        ]
+      ]
+    },
+    "nepal": {
+      "_ethnicities": [
+        "Ethnicities within the Bhaktapur district of Kathmandu valley"
+      ],
+      "agenda": [
+        {
+          "N": 633,
+          "age": "<40",
+          "gender": "male",
+          "n (%)": "2 (0.32)",
+          "prevalence": 0.32
+        },
+        {
+          "N": 851,
+          "age": "<40",
+          "gender": "female",
+          "n (%)": "1 (0.12)",
+          "prevalence": 0.12
+        },
+        {
+          "N": 633,
+          "age": "40-49",
+          "gender": "male",
+          "n (%)": "2 (0.32)",
+          "prevalence": 0.32
+        },
+        {
+          "N": 506,
+          "age": "50-59",
+          "gender": "male",
+          "n (%)": "4 (0.79)",
+          "prevalence": 0.79
+        },
+        {
+          "N": 419,
+          "age": "60-69",
+          "gender": "male",
+          "n (%)": "7 (1.67)",
+          "prevalence": 1.67
+        },
+        {
+          "N": 218,
+          "age": "70-79",
+          "gender": "male",
+          "n (%)": "11 (5.05)",
+          "prevalence": 5.05
+        },
+        {
+          "N": 43,
+          "age": "80+",
+          "gender": "male",
+          "n (%)": "2 (4.65)",
+          "prevalence": 4.65
+        },
+        {
+          "N": 851,
+          "age": "40-49",
+          "gender": "female",
+          "n (%)": "1 (0.12)",
+          "prevalence": 0.12
+        },
+        {
+          "N": 588,
+          "age": "50-59",
+          "gender": "female",
+          "n (%)": "5 (0.85)",
+          "prevalence": 0.85
+        },
+        {
+          "N": 417,
+          "age": "60-69",
+          "gender": "female",
+          "n (%)": "4 (0.96)",
+          "prevalence": 0.96
+        },
+        {
+          "N": 262,
+          "age": "70-79",
+          "gender": "female",
+          "n (%)": "10 (3.82)",
+          "prevalence": 3.82
+        },
+        {
+          "N": 54,
+          "age": "80+",
+          "gender": "female",
+          "n (%)": "5 (9.26)",
+          "prevalence": 9.26
+        }
+      ],
+      "ethnicities": [
+        "Nepalese"
+      ],
+      "expr": [
+        {
+          "extract": "prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 4800,
+      "ref": [
+        {
+          "DOI": "10.1016/j.ophtha.2011.10.021",
+          "ISSN": "01616420",
+          "URL": "http://linkinghub.elsevier.com/retrieve/pii/S0161642011009869",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                9,
+                22
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Thapa",
+              "given": "Suman S."
+            },
+            {
+              "family": "Paudyal",
+              "given": "Indira"
+            },
+            {
+              "family": "Khanal",
+              "given": "Shankar"
+            },
+            {
+              "family": "Twyana",
+              "given": "Shankha N."
+            },
+            {
+              "family": "Paudyal",
+              "given": "Govinda"
+            },
+            {
+              "family": "Gurung",
+              "given": "Reeta"
+            },
+            {
+              "family": "Ruit",
+              "given": "Sanduk"
+            },
+            {
+              "family": "Rens",
+              "given": "Ger H.M.B.",
+              "non-dropping-particle": "van"
+            }
+          ],
+          "container-title": "Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/66BP7WTI",
+          "issue": "4",
+          "issued": {
+            "date-parts": [
+              [
+                "2012",
+                4
+              ]
+            ]
+          },
+          "language": "en",
+          "page": "759-764",
+          "shortTitle": "A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal",
+          "source": "CrossRef",
+          "title": "A Population-based Survey of the Prevalence and Types of Glaucoma in Nepal: The Bhaktapur Glaucoma Study",
+          "type": "article-journal",
+          "volume": "119"
+        }
+      ]
+    },
+    "olmsted": {
+      "_ethnicities": [
+        "White [Olmsted]",
+        "German [Olmsted]",
+        "Norwegian [Olmsted]",
+        "Irish [Olmsted]",
+        "English [Olmsted]"
+      ],
+      "age": {
+        "30-39": 0.1895492496,
+        "40-49": 0.2737165686,
+        "50-59": 1.13260785,
+        "60-69": 3,
+        "70-79": 9.455706986,
+        "80+": 7.381032154,
+        "<30": 0.1895492496,
+        "_denominator": 100
+      },
+      "age_map": {
+      },
+      "ethnicities": [
+        "White (German; Norwegian; Irish; English)"
+      ],
+      "expr": [
+        {
+          "key": "age",
+          "take": 1,
+          "type": "map"
+        }
+      ],
+      "n": 60666,
+      "parents_pc": 1.1,
+      "ref": [
+        {
+          "DOI": "http://dx.doi.org/10.1016/S0161-6420(01)00550-4",
+          "ISSN": "0161-6420",
+          "URL": "http://www.sciencedirect.com/science/article/pii/S0161642001005504",
+          "abstract": "Purpose To determine the incidence rates of open-angle glaucoma (OAG) in Olmsted County, Minnesota. Design Retrospective population-based estimate of incidence. Participants From the medical histories of 60,666 residents of Olmsted County, Minnesota, who had ocular diagnoses during the study period, 114 subjects with newly diagnosed {OAG} were identified. Methods The database of the Rochester Epidemiology Project was used to identify all Olmsted County residents with a coded diagnosis of OAG, glaucoma suspect, or ocular hypertension during the period 1965 to 1980. Subjects newly diagnosed with and treated for {OAG} who also had documented clinical evidence of elevated intraocular pressure, optic nerve damage, and/or visual field loss consistent with glaucoma were included as incident cases. Population data for Olmsted County were drawn from United States Census data. Crude incidence data were adjusted to the age and gender distribution of the 1990 United States white population. Main outcome measures Estimated incidence rates of OAG. Results The overall age- and gender-adjusted annual incidence rate of {OAG} in a predominantly Caucasian population is conservatively estimated to be 14.5 per 100,000 population. The rates increased with age from 1.6 in the fourth decade of life to 94.3 in the eighth decade. There was no significant difference in incidence by gender. The average annual rate of {OAG} in the last 2 years of the study was 27.7 compared with 12.3 before 1979. This difference is suggestive of the effect of the introduction of a new medical therapy (timolol) for {OAG} during the last 2 years. Conclusions The incidence rates of {OAG} increase markedly with advancing age, and screening efforts should be targeted at both men and women in the older age groups. The advent of new diagnostic and therapeutic modalities can have an effect on incidence rates.",
+          "author": [
+            {
+              "family": "Schoff",
+              "given": "Erik O."
+            },
+            {
+              "family": "Hattenhauer",
+              "given": "Matthew G."
+            },
+            {
+              "family": "Ing",
+              "given": "Helen H."
+            },
+            {
+              "family": "Hodge",
+              "given": "David O."
+            },
+            {
+              "family": "Kennedy",
+              "given": "Robert H."
+            },
+            {
+              "family": "Herman",
+              "given": "David C."
+            },
+            {
+              "family": "Johnson",
+              "given": "Douglas H."
+            }
+          ],
+          "container-title": "Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/WZEDUEDB",
+          "issue": "5",
+          "issued": {
+            "date-parts": [
+              [
+                "2001"
+              ]
+            ]
+          },
+          "page": "882 - 886",
+          "title": "Estimated incidence of open-angle glaucoma in Olmsted County, Minnesota",
+          "type": "article-journal",
+          "volume": "108"
+        },
+        {
+          "URL": "https://www.census.gov/main/www/cen2000.html",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                3,
+                16
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "United States Census Bureau",
+              "given": ""
+            }
+          ],
+          "event-place": "United States of America",
+          "genre": "Census",
+          "id": "http://zotero.org/users/843109/items/JC8J5XII",
+          "issued": {
+            "date-parts": [
+              [
+                "2000"
+              ]
+            ]
+          },
+          "publisher-place": "United States of America",
+          "title": "Census 2000",
+          "type": "report"
+        }
+      ],
+      "sibling_pc": 10.4
+    },
+    "singapore": {
+      "_notes": [
+        {
+          "all": "<.001",
+          "men": 0.02,
+          "note": "P for trend",
+          "women": 0.004
+        }
+      ],
+      "agenda": [
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "gender": "all",
+          "prevalence": 0.4
+        },
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "gender": "male",
+          "prevalence": 0.6
+        },
+        {
+          "_denominator": 100,
+          "age": "<40",
+          "gender": "female",
+          "prevalence": 0.3
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "gender": "all",
+          "prevalence": 0.4
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "gender": "male",
+          "prevalence": 0.6
+        },
+        {
+          "_denominator": 100,
+          "age": "40-49",
+          "gender": "female",
+          "prevalence": 0.3
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "gender": "all",
+          "prevalence": 1.5
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "gender": "male",
+          "prevalence": 2.6
+        },
+        {
+          "_denominator": 100,
+          "age": "50-59",
+          "gender": "female",
+          "prevalence": 0.7
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "gender": "all",
+          "prevalence": 2
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "gender": "male",
+          "prevalence": 3.2
+        },
+        {
+          "_denominator": 100,
+          "age": "60-69",
+          "gender": "female",
+          "prevalence": 0.7
+        },
+        {
+          "_denominator": 100,
+          "age": "70+",
+          "gender": "all",
+          "prevalence": 3
+        },
+        {
+          "_denominator": 100,
+          "age": "70+",
+          "gender": "male",
+          "prevalence": 3.2
+        },
+        {
+          "_denominator": 100,
+          "age": "70+",
+          "gender": "female",
+          "prevalence": 2.7
+        }
+      ],
+      "ethnicities": [
+        "Chinese [Singapore: urban]"
+      ],
+      "expr": [
+        {
+          "extract": "prevalence",
+          "filter": [
+            "age",
+            "gender"
+          ],
+          "key": "agenda",
+          "take": 1
+        }
+      ],
+      "n": 3353,
+      "parents_pc": 1.1,
+      "ref": [
+        {
+          "DOI": "10.1001/jamaophthalmol.2015.1110",
+          "ISSN": "2168-6165",
+          "URL": "http://archopht.jamanetwork.com/article.aspx?doi=10.1001/jamaophthalmol.2015.1110",
+          "accessed": {
+            "date-parts": [
+              [
+                "2017",
+                9,
+                6
+              ]
+            ]
+          },
+          "author": [
+            {
+              "family": "Baskaran",
+              "given": "Mani"
+            },
+            {
+              "family": "Foo",
+              "given": "Reuben C."
+            },
+            {
+              "family": "Cheng",
+              "given": "Ching-Yu"
+            },
+            {
+              "family": "Narayanaswamy",
+              "given": "Arun K."
+            },
+            {
+              "family": "Zheng",
+              "given": "Ying-Feng"
+            },
+            {
+              "family": "Wu",
+              "given": "Renyi"
+            },
+            {
+              "family": "Saw",
+              "given": "Seang-Mei"
+            },
+            {
+              "family": "Foster",
+              "given": "Paul J."
+            },
+            {
+              "family": "Wong",
+              "given": "Tien-Yin"
+            },
+            {
+              "family": "Aung",
+              "given": "Tin"
+            }
+          ],
+          "container-title": "JAMA Ophthalmology",
+          "id": "http://zotero.org/users/843109/items/XUFHH45J",
+          "issue": "8",
+          "issued": {
+            "date-parts": [
+              [
+                "2015",
+                8,
+                1
+              ]
+            ]
+          },
+          "language": "en",
+          "page": "874",
+          "shortTitle": "The Prevalence and Types of Glaucoma in an Urban Chinese Population",
+          "source": "CrossRef",
+          "title": "The Prevalence and Types of Glaucoma in an Urban Chinese Population: The Singapore Chinese Eye Study",
+          "type": "article-journal",
+          "volume": "133"
+        }
+      ],
+      "sibling_pc": 10.4
+    }
+  }
 }
