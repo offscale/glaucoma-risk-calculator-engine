@@ -21,7 +21,6 @@ describe('test calc_relative_risk', () => {
         const study: Study = 'barbados';
 
         it('calculates relative risk', () => {
-            console.info('calc_relative_risk(risk_json, Object.assign({ study }, trans[0]))', calc_relative_risk(risk_json, Object.assign({ study }, trans[0])), ';');
             expect(calc_relative_risk(risk_json, Object.assign({ study }, trans[0]))).to.eql({
                 age: 55,
                 study: 'barbados',
