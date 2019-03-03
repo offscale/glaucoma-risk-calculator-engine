@@ -24,7 +24,7 @@ describe('test ref to HTML', () => {
             .reduce((a, b) => a.concat(b));
 
         const last_elem: string = risk_json.global_notes.pop();
-        if (last_elem.indexOf('Same multiplicative risks used for:') === -1)
+        if (last_elem.indexOf('With the exception of the Korean study') === -1)
             risk_json.global_notes.push(last_elem);
         risk_json.global_notes.push(
             `With the exception of the Korean study, the same multiplicative risks are used for: myopia; hyperopia; diabetes; and family history, as per:` +
