@@ -9,8 +9,10 @@ export type Study =
     | 'barbados'
     | 'bmes'
     | 'framingham'
+    | 'ghana'
     | 'indian'
     | 'japanese'
+    | 'korean'
     | 'nepal'
     | 'olmsted'
     | 'singapore';
