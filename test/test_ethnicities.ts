@@ -11,6 +11,8 @@ describe('ethnicities', () => {
         const ethnicity_list: string[] = list_ethnicities(risk_json) as any;
         expect(ethnicity_list).to.be.an.instanceof(Array);
 
+        expect(ethnicity_list).to.have.length(11);
+
         expect(ethnicity_list.filter(o => Object.keys(o)[0] === 'olmsted')[0]['olmsted']).to.be.eql([
             'White (German; Norwegian; Irish; English)'
         ]);
