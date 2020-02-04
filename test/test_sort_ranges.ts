@@ -16,7 +16,7 @@ const shuffleArray = (array: any[]): any[] => {
 describe('range sorting', () => {
     it('sorts with `all`, `num+` and `_denominator`', () => {
         expect(sort_ranges(['65-74', 'all', '75+', '30-65', '_denominator'])).to.be.eql([
-            '30-65', '65-74', '75+', '_denominator', 'all'
+            '30-65', '65-74', '75+', 'all', '_denominator'
         ]);
 
         expect(sort_ranges(['>=70', '40-49', '50-59', '60-69', 'all'])).to.be.eql([
@@ -24,7 +24,7 @@ describe('range sorting', () => {
         ]);
 
         expect(sort_ranges(['65-74', '75+', '<65', 'all', '_denominator'])).to.be.eql([
-            '<65', '65-74', '75+', '_denominator', 'all'
+            '<65', '65-74', '75+', 'all', '_denominator',
         ]);
     });
 
