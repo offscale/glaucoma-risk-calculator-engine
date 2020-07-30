@@ -1,6 +1,6 @@
 {
   "name": "glaucoma-risk-calculator-engine",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "description": "Glaucoma risk calculator compute engine",
   "main": "index.js",
   "scripts": {
@@ -13,18 +13,18 @@
     "url": "https://github.com/glaucoma-australia/glaucoma-risk-calculator-engine"
   },
   "dependencies": {
-    "mathjs": "^6.6.0"
+    "mathjs": "^7.1.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.8",
-    "@types/mathjs": "6.0.4",
-    "@types/mocha": "^7.0.1",
-    "@types/node": "^13.7.0",
+    "@types/chai": "^4.2.12",
+    "@types/mathjs": "6.0.5",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.27",
     "chai": "^4.2.0",
     "citation-js": "^0.4.10",
     "json-stable-stringify": "^1.0.1",
-    "mocha": "^7.0.1",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }
